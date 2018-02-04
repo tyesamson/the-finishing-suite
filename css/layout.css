@@ -1,0 +1,187 @@
+
+body {
+	margin:0;
+	padding:0;
+	}
+	
+#header {
+	background-color:#e1903e;
+	float:left;
+	margin:0;
+	padding:0;
+	position:relative;
+	width:100%;
+	}
+
+#header .height {
+	min-height:640px;
+	}
+
+#header .content {
+	bottom:0;
+	left:0;
+	position:absolute;
+	right:0;
+	top:0;
+	width:100%;
+	z-index:2;
+	}
+
+#header .block {
+	display:table;
+	height:100%;
+	width:100%;
+	}
+
+#header .card {
+	display:table-cell;
+	vertical-align:middle;
+	text-align:center;
+	}
+	
+#menu {
+	display:none;
+	float:left;
+	height:55px;
+	width:100%;
+	}
+	
+#nav {
+	background:#0b0b0b;
+	height:55px;
+	width:100%;
+	}
+	
+#nav.stick {
+	left:0;
+	position:fixed;
+	top:0;
+	right:0;
+	z-index:3000;
+	}
+	
+.section {
+	float:left;
+	margin:0;
+	overflow:hidden;
+	padding:0;
+	width:100%;
+	}
+	
+.section .content {
+	margin:0 auto;
+	max-width:1160px;
+	padding:20px 0;
+	width:100%;
+	}
+
+.section .padding {
+	padding:0 20px 20px 20px;
+	}
+
+#about {
+	background-color:#5e97a0;
+	}
+
+#services {
+	background:#fff;
+	}
+
+#buy,
+#about,	
+#services {
+	font-size:0;
+	}
+
+#services {
+	text-align:center;
+	}
+
+#buy .package,
+	
+#about .crew {
+	display:inline-block;
+	vertical-align:top;
+	text-align:left;
+	width:100%;
+	}
+
+
+
+#gallery {
+	background-color:#1b1b19;
+	float:left;
+	width:100%;
+	}
+
+#footer {
+	background:#0b0b0b;
+	float:left;
+	width:100%;
+	}
+
+#footer .content {
+	margin:0 auto;
+	max-width:1000px;
+	width:100%;
+	}
+
+#footer .content .padding {
+	padding:0 20px;
+	}
+
+@media all and (min-width:724px) {
+
+	#header {
+		background-image:url(../images/header.jpg);
+		background-position:center 0;
+		background-repeat:no-repeat;
+		-webkit-background-size:cover!important;
+		-moz-background-size:cover;
+		-o-background-size:cover;
+		background-size:cover;
+		}
+
+	#menu {
+		display:block;
+		}
+	
+	.section .content {
+		padding:120px 0;
+		}
+		
+	.section .padding {
+		padding:0 40px 40px 40px;
+		}
+
+
+	
+}
+	
+@media all and (min-width:968px) {
+	
+	
+	#about {
+		background-image:url(../images/panel.jpg);
+		}
+	
+	#services {
+		background-image:url(../images/couch.jpg);
+		}
+		
+	#about {
+		background-attachment:fixed;
+		background-position:center 0;
+		background-repeat:no-repeat;
+		-webkit-background-size:cover!important;
+		-moz-background-size:cover;
+		-o-background-size:cover;
+		background-size:cover;
+		}
+		
+	#gallery {
+		background:#fff;
+		padding:55px 0 0 0;
+		}
+						
+}
