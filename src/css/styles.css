@@ -1,4 +1,3 @@
-
 body {
 	font-family:'Open Sans', 'sans-serif';
 	}
@@ -10,6 +9,10 @@ a {
 	        transition:all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86) 0ms;
 	       	outline:none;
 }
+
+/**
+ * Header
+ * --------------------------------------------------------------------------*/
 
 #header h1 {
 	background:url(../images/tfs_logo.png) 50% 0 no-repeat;
@@ -296,8 +299,8 @@ img.image {
 #showtimes p,	
 #about h2,
 #about p {
-	color:#fff;
-	}
+	color: #fff;
+}
 
 #about p {
 	padding:0;
@@ -375,7 +378,8 @@ img.image {
 	height:60px;
 	text-indent:-9999px;
 	width:100%;
-	}
+  }
+
 
 @media all and (min-width:724px) {
 
@@ -490,4 +494,22 @@ img.image {
 		padding:0 260px;
 		}
 
+}
+
+
+
+
+.crew h3,
+.crew h3 a {
+  color: #fff;
+  text-decoration: none;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+.crew h3 em {
+  font-size: 26px;
+}
+
+.crew h3 a {
+  font-size: 42px;
 }
