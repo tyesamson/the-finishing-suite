@@ -527,11 +527,13 @@ img.image {
 }
 
 #footer h2 {
-  margin-bottom: 8px;
-
-  color: #fff;
-  font-size: 24px;
-  text-transform: lowercase;
+	background:url(../images/tfs_logo.png) 50% 0 no-repeat;
+	background-size:auto 100%;
+	display:block;
+	height:80px;
+	margin:0 0 16px 0;
+	text-indent:-9999px;
+	width:100%;
 }
 
 #footer .content {
