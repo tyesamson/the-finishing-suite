@@ -514,6 +514,7 @@ img.image {
 }
 
 #services {
+  position: relative;
   background-color: #e1903e;
 }
 
@@ -564,9 +565,35 @@ img.image {
 }
 
 @media all and (min-width:968px) {
-  .crew h3,
-  #services {
+  .crew h3 {
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+  }
+
+  #services,
+  #services h2 {
+    color: #fff;
+    text-shadow: 3px 3px 5px rgba(0,0,0,0.2);
+  }
+
+  #services .content {
+    position: relative;
+  }
+
+  #services ul {
+    font-weight: normal;
+    position: relative;
+  }
+
+  #services::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-color: rgba(0,0,0,.3);
   }
 
   .service-list {
