@@ -526,11 +526,29 @@ img.image {
   text-align: left;
 }
 
+#footer h2 {
+  margin-bottom: 8px;
+
+  color: #fff;
+  font-size: 24px;
+  text-transform: lowercase;
+}
+
+#footer .content {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
 @media all and (min-width:724px) {
   .service-list {
     margin-left: auto;
     margin-right: auto;
     width: 60vw;
+  }
+
+  #footer .content {
+    padding-bottom: 60px;
+    padding-top: 60px;
   }
 }
 
@@ -542,5 +560,14 @@ img.image {
 
   .service-list {
     width: 40vw;
+  }
+
+  #footer .content {
+    padding-bottom: 120px;
+    padding-top: 120px;
+  }
+
+  #footer h2 {
+    font-size: 36px;
   }
 }
