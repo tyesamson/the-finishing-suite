@@ -526,6 +526,15 @@ img.image {
   text-align: left;
 }
 
+#footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#footer p + p {
+  margin-top: 8px;
+}
+
 #footer h2 {
 	background:url(../images/tfs_logo.png) 50% 0 no-repeat;
 	background-size:auto 100%;
