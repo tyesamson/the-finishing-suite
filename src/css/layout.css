@@ -88,10 +88,9 @@ body {
 	}
 
 #buy,
-#about,	
-#services {
-	font-size:0;
-	}
+#about {
+	font-size: 0;
+}
 
 #services {
 	text-align:center;

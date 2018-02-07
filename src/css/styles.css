@@ -503,7 +503,6 @@ img.image {
 .crew h3 a {
   color: #fff;
   text-decoration: none;
-  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
 }
 
 .crew h3 em {
@@ -512,4 +511,36 @@ img.image {
 
 .crew h3 a {
   font-size: 42px;
+}
+
+#services {
+  background-color: #e1903e;
+}
+
+#services,
+#services h2 {
+  color: #fff;
+}
+
+#services .padding {
+  text-align: left;
+}
+
+@media all and (min-width:724px) {
+  .service-list {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60vw;
+  }
+}
+
+@media all and (min-width:968px) {
+  .crew h3,
+  #services {
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+  }
+
+  .service-list {
+    width: 40vw;
+  }
 }
