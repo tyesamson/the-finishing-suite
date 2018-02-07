@@ -551,6 +551,11 @@ img.image {
   padding-bottom: 30px;
 }
 
+#footer .map {
+  height: 50vh;
+  width: 100%;
+}
+
 @media all and (min-width:724px) {
   .service-list {
     margin-left: auto;
@@ -561,6 +566,11 @@ img.image {
   #footer .content {
     padding-bottom: 60px;
     padding-top: 60px;
+  }
+
+  #footer .map {
+    width: 60vw;
+    max-height: 400px;
   }
 }
 
