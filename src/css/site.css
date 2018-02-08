@@ -171,6 +171,11 @@ section .img--round {
   margin-right: -2.4rem;
 }
 
+.flex-item {
+  width: 100%;
+  height: 56.25vw;
+}
+
 /**
  * Footer
  * ------------------------------------------- */
