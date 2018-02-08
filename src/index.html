@@ -44,7 +44,9 @@
   <script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
   <script type="text/javascript">
     $(window).load(function () {
-      $('.flexslider').flexslider();
+      $('.flexslider').flexslider({
+        slideshow: false
+      });
     });
   </script>
 </head>
@@ -147,9 +149,25 @@
 
       <ul class="slides" title="Click for high resolution image">
         <li>
-          <a href="images/slides/large/slide1.jpg" target="_blank">
-            <img class="flext-item" src="images/slides/slide1.jpg" alt="" />
-          </a>
+          <img class="flext-item" src="images/slides/slide1.jpg" alt="" />
+          <h4>The Lion Queen</h4>
+          <p>Seasons 1 &amp; 2</p>
+          <dl>
+            <dt>Online and Colour Grading</dt>
+            <dd>The Finishing Suite</dd>
+            
+            <dt>Finishing Artist</dt>
+            <dd>Alastair Tye Samson</dd>
+
+            <dt>Client</dt>
+            <dd>Top Shelf Productions &amp; Clawed Hat Productions</dd>
+
+            <dt>Producers</dt>
+            <dd>Brian Holland &amp; Anton Leach</dd>
+
+            <dt>Directory of Photography</dt>
+            <dd>Anton Leach</dd>
+          </dl>
         </li>
         <li>
           <a href="images/slides/large/slide2.jpg" target="_blank">

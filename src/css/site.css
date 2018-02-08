@@ -206,6 +206,38 @@ section .img--round {
   height: 56.25vw;
 }
 
+.portfolio .flexslider h4 {
+  margin-bottom: 0;
+  font-size: 2.4rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.portfolio .flexslider p {
+  text-align: center;
+}
+
+.portfolio .flexslider dl {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.portfolio .flexslider dt,
+.portfolio .flexslider dd {
+  padding: 0 1.2rem;
+  box-sizing: border-box;
+  flex: 0 0 100%;
+
+  text-align: center;
+}
+
+.portfolio .flexslider dd {
+  margin-bottom: 1.2rem;
+  margin-left: 0;
+
+  text-transform: uppercase;
+}
+
 /**
  * Footer
  * ------------------------------------------- */
@@ -321,6 +353,24 @@ section .img--round {
     max-width: 50rem;
     margin-left: auto;
     margin-right: auto;
+  }
+
+
+  /**
+   * Portfolio
+   * ------------------------------------------- */
+
+  .portfolio .flexslider dt,
+  .portfolio .flexslider dd {
+    flex: 0 0 50%;
+  }
+
+  .portfolio .flexslider dt {
+    text-align: right;
+  }
+
+  .portfolio .flexslider dd {
+    text-align: left;
   }
 
 
