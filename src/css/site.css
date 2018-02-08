@@ -188,6 +188,12 @@ section .img--round {
   width: 100%;
 }
 
+.footer-links a {
+  display: block;
+
+  margin-bottom: 2.4rem;
+}
+
 
 
 /**
@@ -345,5 +351,23 @@ section .img--round {
   .portfolio .flexslider {
     margin-left: -26rem;
     margin-right: -26rem;
+  }
+
+  /**
+   * Footer
+   * ------------------------------------------- */
+
+  .footer-links a {
+    display: inline-block;
+    margin-bottom: 0;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .footer-links a + a::before {
+    position: relative;
+    left: -2rem;
+
+    content: "•"
   }
  }
