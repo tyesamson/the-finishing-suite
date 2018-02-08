@@ -1,0 +1,182 @@
+/**
+ * Site.css
+ * ========================================================================= */
+
+/**
+ * Default < XXXpx
+ * ------------------------------------------------------------------------- */
+
+/**
+ * Structure
+ * ------------------------------------------- */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: 'Open Sans', 'sans-serif';
+  font-size: 62.5%;
+  color: #fff;
+
+  background-color: #000;
+}
+
+a {
+  color: #eee;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #fff;
+}
+
+h1,
+h2 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+
+  font-family: 'Vollkorn', 'serif';
+  font-weight: 400;
+
+  text-align: center;
+}
+
+h2 {
+  font-size: 4.2rem;
+}
+
+h2 small {
+  font-size: 2.6rem;
+}
+
+p {
+  margin-bottom: 2.4rem;
+  line-height: 2.4rem;
+}
+
+p.featured {
+  font-weight: 600;
+}
+
+small {
+  display: block;
+}
+
+.tfs-logo {
+  width: 100%;
+
+  background: url(../images/tfs_logo.png) 50% 0 no-repeat;
+  background-size: auto 100%;
+  text-indent: -9999px;
+}
+
+/**
+ * Header
+ * ------------------------------------------- */
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  height: 98vh;
+
+  background-color: #e1903e;
+}
+
+.header .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  width: 100%;
+}
+
+.header h1 {
+  height: 8rem;
+}
+
+.header .social {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+/**
+ * Nav
+ * ------------------------------------------- */
+
+.nav {
+  display: none;
+}
+
+
+/**
+ * Sections
+ * ------------------------------------------- */
+
+section,
+footer {
+  padding: 2.4rem;
+
+  font-size: 1.6rem;
+}
+
+section .img--round {
+  display: block;
+  width: 20rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2.4rem;
+
+  border-radius: 50%;
+}
+
+
+/**
+ * About
+ * ------------------------------------------- */
+
+.about {
+  background-color: #5e97a0;
+}
+
+
+/**
+ * Services
+ * ------------------------------------------- */
+
+.services {
+  background-color: #e1903e;
+}
+
+
+/**
+ * Portfolio
+ * ------------------------------------------- */
+
+.portfolio .flexslider {
+  margin-left: -2.4rem;
+  margin-right: -2.4rem;
+}
+
+/**
+ * Footer
+ * ------------------------------------------- */
+
+.footer {
+  text-align: center;
+}
+
+.footer h2 {
+  height: 8rem;
+}
+
+.footer .map {
+  height: 50vh;
+  width: 100%;
+}
