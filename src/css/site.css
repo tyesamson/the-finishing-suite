@@ -168,18 +168,18 @@ section .img--round {
 
 .portfolio {
   padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .portfolio .flexslider {
   position: relative;
-  width: 100vw;
-  height: 56.25vw;
-  margin-left: -2.4rem;
-  margin-right: -2.4rem;
   margin-bottom: 0;
 
   background-color: transparent;
   border: 0 none;
+
+  text-shadow: none;
 }
 
 .portfolio .flex-control-nav {
@@ -200,7 +200,7 @@ section .img--round {
 }
 
 .portfolio .flex-item {
-  width: 100vw;
+  width: 100%;
   height: 56.25vw;
 }
 
@@ -323,15 +323,6 @@ section .img--round {
 
 
   /**
-   * Portfolio
-   * ------------------------------------------- */
-  
-  .portfolio .flexslider {
-    margin-left: -4rem;
-    margin-right: -4rem;
-  }
-
-  /**
    * Footer
    * ------------------------------------------- */
 
@@ -378,14 +369,6 @@ section .img--round {
     background-size: cover;
   }
 
-  /**
-   * Portfolio
-   * ------------------------------------------- */
-
-  .portfolio .flexslider {
-    margin-left: -26rem;
-    margin-right: -26rem;
-  }
 
   /**
    * Footer
