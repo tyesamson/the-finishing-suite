@@ -381,6 +381,10 @@ section .img--round {
   /**
    * Footer
    * ------------------------------------------- */
+  
+  .footer {
+    padding-bottom: 10rem; 
+  }
 
   .footer .map {
     width: 60vw;
