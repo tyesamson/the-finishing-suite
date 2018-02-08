@@ -2,7 +2,7 @@
 $(document).ready(function ($) {
   // Cache selectors
   var lastId,
-    topMenu = $("#menu"),
+    topMenu = $("#nav"),
     topMenuHeight = topMenu.outerHeight() + 15,
     // All list items
     menuItems = topMenu.find("a"),
@@ -16,7 +16,7 @@ $(document).ready(function ($) {
       if (href.substring(0,1) === '#' && item.length) { return item; }
     });
 
-  $(".scroll").click(function (event) {
+  $("nav a").click(function (event) {
     event.preventDefault();
     $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 500);
   });
@@ -40,8 +40,8 @@ $(document).ready(function ($) {
       lastId = id;
 
       // Set/remove active class
-      $('.active', '#menu').removeClass('active');
-      $(`[href="#${id}"]`, '#menu').addClass('active');
+      $('.active', '#nav').removeClass('active');
+      $(`[href="#${id}"]`, '#nav').addClass('active');
       return;
     }
   });
