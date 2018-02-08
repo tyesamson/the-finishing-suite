@@ -186,7 +186,7 @@ section .img--round {
 
 .portfolio .flex-control-nav {
   position: absolute;
-  bottom: 2.4rem;
+  top: 50vw;
   z-index: 500;
 }
 
@@ -199,6 +199,10 @@ section .img--round {
 
 .portfolio .flex-control-paging li a.flex-active {
   background-color: rgba(255,255,255,.9);
+}
+
+.portfolio .flex-direction-nav a {
+  top: 28vw;
 }
 
 .portfolio .flex-item {
