@@ -259,11 +259,11 @@ section .img--round {
   }
 
   .nav a.active {
-    color: #e1903e;
+    color: #cf2525;
   }
 
   .nav a:hover {
-    color: #e1903e;
+    color: #cf2525;
   }
 
 
