@@ -166,13 +166,41 @@ section .img--round {
  * Portfolio
  * ------------------------------------------- */
 
-.portfolio .flexslider {
-  margin-left: -2.4rem;
-  margin-right: -2.4rem;
+.portfolio {
+  padding-bottom: 0;
 }
 
-.flex-item {
-  width: 100%;
+.portfolio .flexslider {
+  position: relative;
+  width: 100vw;
+  height: 56.25vw;
+  margin-left: -2.4rem;
+  margin-right: -2.4rem;
+  margin-bottom: 0;
+
+  background-color: transparent;
+  border: 0 none;
+}
+
+.portfolio .flex-control-nav {
+  position: absolute;
+  bottom: 2.4rem;
+  z-index: 500;
+}
+
+.portfolio .flex-control-paging li a {
+  width: 1.6rem;
+  height: 1.6rem;
+
+  background-color: rgba(255,255,255,.5);
+}
+
+.portfolio .flex-control-paging li a.flex-active {
+  background-color: rgba(255,255,255,.9);
+}
+
+.portfolio .flex-item {
+  width: 100vw;
   height: 56.25vw;
 }
 
@@ -186,6 +214,7 @@ section .img--round {
 
 .footer h2 {
   height: 8rem;
+  margin-top: 2.4rem;
 }
 
 .footer .map {
