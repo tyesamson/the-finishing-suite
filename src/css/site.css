@@ -215,6 +215,8 @@ section .img--round {
   .header {
     background: no-repeat center url(../images/header.jpg);
     background-size: cover;
+
+    height: calc(100vh - 5.5rem);
   }
 
   .header h1 {
@@ -298,3 +300,50 @@ section .img--round {
     max-height: 40rem;
   }
 }
+
+
+/**
+ * Large < 968px
+ * ------------------------------------------------------------------------- */
+
+ @media screen and (min-width: 968px) {
+
+  /**
+   * Sections
+   * ------------------------------------------- */
+
+  section {
+    padding-left: 26rem;
+    padding-right: 26rem;
+
+    text-shadow: .3rem .3rem .5rem rgba(0, 0, 0, 0.4);
+  }
+
+  /**
+   * About
+   * ------------------------------------------- */
+
+  .about {
+    background: no-repeat center url(../images/panel.jpg);
+    background-size: cover;
+    background-position: cover;
+  }
+
+  /**
+   * Services
+   * ------------------------------------------- */
+
+  .services {
+    background: no-repeat center url(../images/couch.jpg);
+    background-size: cover;
+  }
+
+  /**
+   * Portfolio
+   * ------------------------------------------- */
+
+  .portfolio .flexslider {
+    margin-left: -26rem;
+    margin-right: -26rem;
+  }
+ }
