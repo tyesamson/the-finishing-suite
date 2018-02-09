@@ -287,11 +287,22 @@ section .img--round {
  * ------------------------------------------- */
 
 .footer {
-  min-height: 100vh;
   text-align: center;
 }
 
+.footer .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  min-height: 70vh;
+}
+
 .footer h2 {
+  margin-bottom: 0;
+}
+
+.footer h3 {
   height: 8rem;
   margin-top: 2.4rem;
 }
@@ -430,9 +441,13 @@ section .img--round {
   /**
    * Footer
    * ------------------------------------------- */
-  
+
   .footer {
-    padding-bottom: 10rem; 
+    padding-bottom: 0;
+  }
+
+  .footer .content {
+    min-height: calc(100vh - 11rem);
   }
 
   .footer .map {
