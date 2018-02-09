@@ -145,6 +145,10 @@ section .img--round {
   border-radius: 50%;
 }
 
+section .content img {
+  max-width: 100%;
+}
+
 
 /**
  * About
