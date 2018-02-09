@@ -44,7 +44,16 @@
   <script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
   <script type="text/javascript">
     $(window).load(function () {
-      $('.flexslider').flexslider();
+      $('.slide-image').each(function (i, el) {
+        var $img = $(el),
+          $bg = $img.siblings('.slide-text').children('.slide-text-bg'),
+          src = $img.attr('src');
+
+        $bg.css('background-image', `url(${src})`);
+      });
+      $('.flexslider').flexslider({
+        slideshow: false
+      });
     });
   </script>
 </head>
@@ -147,33 +156,32 @@
 
       <ul class="slides" title="Click for high resolution image">
         <li>
-          <img class="flext-item" src="images/slides/slide1.jpg" alt="" />
-          <h4>The Lion Queen</h4>
-          <p>Seasons 1 &amp; 2</p>
-          <dl>
-            <dt>Online and Colour Grading</dt>
-            <dd>The Finishing Suite</dd>
-            
-            <dt>Finishing Artist</dt>
-            <dd>Alastair Tye Samson</dd>
+          <a href="https://www.youtube.com/watch?v=Kp4y0zUsKrA" target="_blank">
+            <img class="slide-image" src="images/slides/wanted_season_2.jpg" alt="Wanted Season 2" />
+            <div class="slide-text">
+              <div class="slide-text-bg"></div>
+              <h4>Wanted Season 2</h4>
+              <p>International Sales Trailer</p>
+              <dl>
+                <dt>Trailer Production</dt>
+                <dd>The Finishing Suite</dd>
+                
+                <dt>Trailer Producer</dt>
+                <dd>Alastair Tye Samson</dd>
 
-            <dt>Client</dt>
-            <dd>Top Shelf Productions &amp; Clawed Hat Productions</dd>
+                <dt>Trailer Editor</dt>
+                <dd class="m-b">Peter Evans</dd>
 
-            <dt>Producers</dt>
-            <dd>Brian Holland &amp; Anton Leach</dd>
-
-            <dt>Directory of Photography</dt>
-            <dd>Anton Leach</dd>
-          </dl>
-        </li>
-        <li>
-          <a href="images/slides/large/slide2.jpg" target="_blank">
-            <img class="flex-item" src="images/slides/slide2.jpg" alt="" />
+                <dt>Client</dt>
+                <dd>Matchbox Pictures &amp; NBC Universal</dd>
+              </dl>
+            </div>
           </a>
         </li>
         <li>
-          <iframe class="flex-item" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <a href="images/slides/large/slide2.jpg" target="_blank">
+            <img src="images/slides/slide2.jpg" alt="" />
+          </a>
         </li>
       </ul>
 
