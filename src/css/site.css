@@ -427,6 +427,10 @@ section .img--round {
    * Portfolio
    * ------------------------------------------- */
 
+  .portfolio {
+    padding-top: 2.4rem;
+  }
+
   .portfolio .flexslider dt,
   .portfolio .flexslider dd {
     flex: 0 0 50%;
@@ -503,6 +507,18 @@ section .img--round {
   .services {
     background: no-repeat center url(../images/couch.jpg);
     background-size: cover;
+  }
+
+  /**
+   * Portfolio
+   * ------------------------------------------- */
+
+  .portfolio {
+    padding-top: 4.8rem;
+  }
+
+  .portfolio h2 {
+    margin-bottom: 4rem;
   }
 
 
