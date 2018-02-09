@@ -176,6 +176,7 @@ section .img--round {
  * ------------------------------------------- */
 
 .footer {
+  min-height: 100vh;
   text-align: center;
 }
 
