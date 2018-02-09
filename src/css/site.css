@@ -288,6 +288,9 @@ section .img--round {
 
 .footer {
   text-align: center;
+
+  background: no-repeat center url(../images/wall.jpg);
+  background-size: cover;
 }
 
 .footer .content {
@@ -310,6 +313,8 @@ section .img--round {
 .footer .map {
   height: 50vh;
   width: 100%;
+
+  box-shadow: .3rem .3rem .5rem rgba(0, 0, 0, 0.4);
 }
 
 .footer-links a {
@@ -446,8 +451,12 @@ section .img--round {
     padding-bottom: 0;
   }
 
+  .footer h2 {
+    margin-top: 12rem;
+  }
+
   .footer .content {
-    min-height: calc(100vh - 11rem);
+    min-height: calc(100vh - 20rem);
   }
 
   .footer .map {
@@ -470,7 +479,10 @@ section .img--round {
   section {
     padding-left: 26rem;
     padding-right: 26rem;
+  }
 
+  section,
+  footer {
     text-shadow: .3rem .3rem .5rem rgba(0, 0, 0, 0.4);
   }
 
