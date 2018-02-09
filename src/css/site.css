@@ -452,7 +452,7 @@ section .img--round {
    * ------------------------------------------- */
 
   .footer {
-    padding-bottom: 0;
+    padding-bottom: 20vh;
   }
 
   .footer h2 {
@@ -460,7 +460,7 @@ section .img--round {
   }
 
   .footer .content {
-    min-height: calc(100vh - 20rem);
+    min-height: calc(80vh - 20rem);
   }
 
   .footer .map {
