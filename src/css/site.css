@@ -90,7 +90,8 @@ ul {
 
   height: 98vh;
 
-  background-color: #e1903e;
+  background: no-repeat center url(../images/header.jpg) #e1903e;
+  background-size: cover;
 }
 
 .header .content {
@@ -131,6 +132,7 @@ footer {
   padding: 2.4rem;
 
   font-size: 1.4rem;
+  text-shadow: .3rem .3rem .5rem rgba(0, 0, 0, 0.4);
 }
 
 section .img--round {
@@ -149,7 +151,8 @@ section .img--round {
  * ------------------------------------------- */
 
 .about {
-  background-color: #5e97a0;
+  background: no-repeat center url(../images/panel.jpg) #5e97a0;
+  background-position: cover;
 }
 
 
@@ -158,7 +161,8 @@ section .img--round {
  * ------------------------------------------- */
 
 .services {
-  background-color: #e1903e;
+  background: no-repeat center url(../images/couch.jpg) #e1903e;
+  background-size: cover;
 }
 
 
@@ -348,9 +352,6 @@ section .img--round {
    * ----------------------------------------- */
 
   .header {
-    background: no-repeat center url(../images/header.jpg);
-    background-size: cover;
-
     height: calc(100vh - 5.5rem);
   }
 
@@ -483,30 +484,6 @@ section .img--round {
   section {
     padding-left: 26rem;
     padding-right: 26rem;
-  }
-
-  section,
-  footer {
-    text-shadow: .3rem .3rem .5rem rgba(0, 0, 0, 0.4);
-  }
-
-  /**
-   * About
-   * ------------------------------------------- */
-
-  .about {
-    background: no-repeat center url(../images/panel.jpg);
-    background-size: cover;
-    background-position: cover;
-  }
-
-  /**
-   * Services
-   * ------------------------------------------- */
-
-  .services {
-    background: no-repeat center url(../images/couch.jpg);
-    background-size: cover;
   }
 
   /**
