@@ -36,14 +36,24 @@
   <link rel="stylesheet" href="css/flexslider.css">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600" />
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Vollkorn:400italic,400" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+  <script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
   <script type="text/javascript" src="js/jquery.height.js"></script>
   <script type="text/javascript" src="js/jquery.scroll.js"></script>
   <script type="text/javascript" src="js/jquery.stuck.js"></script>
-  <script type="text/javascript" src="js/jquery.flexslider.js"></script>
+  <script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
   <script type="text/javascript">
     $(window).load(function () {
-      $('.flexslider').flexslider();
+      $('.slide-image').each(function (i, el) {
+        var $img = $(el),
+          $bg = $img.siblings('.slide-text').children('.slide-text-bg'),
+          src = $img.attr('src');
+
+        $bg.css('background-image', `url(${src})`);
+      });
+      $('.flexslider').flexslider({
+        slideshow: true
+      });
     });
   </script>
 </head>
@@ -148,43 +158,198 @@
 
       <ul class="slides" title="Click for high resolution image">
         <li>
-          <a href="images/slides/large/slide1.jpg" target="_blank">
-            <img src="images/slides/slide1.jpg" alt="" />
+          <a href="https://www.youtube.com/watch?v=Kp4y0zUsKrA" target="_blank">
+            <img class="slide-image" src="images/slides/wanted_season_2.jpg" alt="Wanted Season 2" />
+            <div class="slide-text">
+              <div class="slide-text-bg"></div>
+              <h4>Wanted Season 2</h4>
+              <p>International Sales Trailer</p>
+              <dl>
+                <dt>Trailer Production</dt>
+                <dd>The Finishing Suite</dd>
+                
+                <dt>Trailer Producer</dt>
+                <dd>Alastair Tye Samson</dd>
+
+                <dt>Trailer Editor</dt>
+                <dd class="m-b">Peter Evans</dd>
+
+                <dt>Client</dt>
+                <dd>Matchbox Pictures &amp; NBC Universal</dd>
+              </dl>
+            </div>
           </a>
         </li>
+
         <li>
-          <a href="images/slides/large/slide2.jpg" target="_blank">
-            <img src="images/slides/slide2.jpg" alt="" />
+          <img class="slide-image" src="images/slides/hyundai_master_content.jpg" alt="Hyundai Master Content Packages" />
+          <div class="slide-text">
+            <div class="slide-text-bg"></div>
+            <h4>Hyundai</h4>
+            <p>Master Content Packages</p>
+            <dl>
+              <dt>Edit, Online, VFX, Colour Grade</dt>
+              <dd>The Finishing Suite</dd>
+              
+              <dt>Editor & Finishing Artist</dt>
+              <dd class="m-b">Alastair Tye Samson</dd>
+
+              <dt>Client</dt>
+              <dd>Shine</dd>
+            </dl>
+          </div>
+        </li>
+
+        <li>
+          <a href="https://www.youtube.com/watch?v=RDqPPi2yblM" target="_blank">
+            <img class="slide-image" src="images/slides/forensics.jpg" alt="Forensics" />
+            <div class="slide-text">
+              <div class="slide-text-bg"></div>
+              <h4>Forensics</h4>
+              <p>Season 1</p>
+              <dl>
+                <dt>Online, Colour Grade</dt>
+                <dd>The Finishing Suite</dd>
+                
+                <dt>Finishing Artist</dt>
+                <dd class="m-b">Alastair Tye Samson</dd>
+
+                <dt>Client</dt>
+                <dd>South Pacific Pictures</dd>
+              </dl>
+            </div>
           </a>
         </li>
+
         <li>
-          <a href="images/slides/large/slide3.jpg" target="_blank">
-            <img src="images/slides/slide3.jpg" alt="" />
-          </a>
+          <img class="slide-image" src="images/slides/abcs_of_death.gif" alt="The ABC's of Death" />
+          <div class="slide-text">
+            <div class="slide-text-bg"></div>
+            <h4>The ABC's of Death</h4>
+            <p>End Credits</p>
+            <dl>              
+              <dt>End Credits Title Design</dt>
+              <dd class="m-b">Alastair Tye Samson</dd>
+
+              <dt>Client</dt>
+              <dd>Magnet Releasing &amp; Drafthouse Films &amp; Timpson Films</dd>
+            </dl>
+          </div>
         </li>
+
         <li>
-          <a href="images/slides/large/slide4.jpg" target="_blank">
-            <img src="images/slides/slide4.jpg" alt="" />
-          </a>
+          <img class="slide-image" src="images/slides/lion_queen.jpg" alt="The Lion Queen" />
+          <div class="slide-text">
+            <div class="slide-text-bg"></div>
+            <h4>The Lion Queen</h4>
+            <p>Seasons 1 &amp; 2</p>
+            <dl>              
+              <dt>Online & Colour Grading</dt>
+              <dd>The Finishing Suite</dd>
+
+              <dt>Finishing Artist</dt>
+              <dd class="m-b">Alastair Tye Samson</dd>
+
+              <dt>Client</dt>
+              <dd>Top Shelf Productions &amp; Clawed Hat Productions</dd>
+            </dl>
+          </div>
         </li>
+
         <li>
-          <a href="images/slides/large/slide5.jpg" target="_blank">
-            <img src="images/slides/slide5.jpg" alt="" />
-          </a>
+          <img class="slide-image" src="images/slides/meadow_fresh.jpg" alt="Meadow Fresh Barista" />
+          <div class="slide-text">
+            <div class="slide-text-bg"></div>
+            <h4>Meadow Fresh</h4>
+            <p>Barista</p>
+            <dl>              
+              <dt>Edit, Online, VFX & Colour Grade</dt>
+              <dd>The Finishing Suite</dd>
+
+              <dt>Editor & Finishing Artist</dt>
+              <dd class="m-b">Alastair Tye Samson</dd>
+
+              <dt>Client</dt>
+              <dd>Shine</dd>
+            </dl>
+          </div>
         </li>
+
         <li>
-          <a href="images/slides/large/slide6.jpg" target="_blank">
-            <img src="images/slides/slide6.jpg" alt="" />
-          </a>
+          <img class="slide-image" src="images/slides/ybitr.jpg" alt="You're Back in the Room" />
+          <div class="slide-text">
+            <div class="slide-text-bg"></div>
+            <h4>You're Back in the Room</h4>
+            <p>Season 1</p>
+            <dl>              
+              <dt>Online & Colour Grading</dt>
+              <dd>The Finishing Suite</dd>
+
+              <dt>Finishing Artist</dt>
+              <dd class="m-b">Alastair Tye Samson</dd>
+
+              <dt>Client</dt>
+              <dd>Screentime New Zealand</dd>
+            </dl>
+          </div>
         </li>
+
         <li>
-          <a href="images/slides/large/slide7.jpg" target="_blank">
-            <img src="images/slides/slide7.jpg" alt="" />
-          </a>
+          <img class="slide-image" src="images/slides/glad.jpg" alt="Glad 50 Years" />
+          <div class="slide-text">
+            <div class="slide-text-bg"></div>
+            <h4>Glad</h4>
+            <p>50 Years</p>
+            <dl>              
+              <dt>Online, VFX & Colour Grade</dt>
+              <dd>The Finishing Suite</dd>
+
+              <dt>Finishing Artist</dt>
+              <dd class="m-b">Alastair Tye Samson</dd>
+
+              <dt>Client</dt>
+              <dd>MAD Content</dd>
+            </dl>
+          </div>
         </li>
+
         <li>
-          <a href="images/slides/large/slide8.jpg" target="_blank">
-            <img src="images/slides/slide8.jpg" alt="" />
+          <img class="slide-image" src="images/slides/wild_animal_rescue.jpg" alt="Wild Animal Rescue" />
+          <div class="slide-text">
+            <div class="slide-text-bg"></div>
+            <h4>Wild Animal Rescue</h4>
+            <p>Season 1</p>
+            <dl>              
+              <dt>Online & Colour Grade</dt>
+              <dd>The Finishing Suite</dd>
+
+              <dt>Finishing Artist</dt>
+              <dd class="m-b">Alastair Tye Samson</dd>
+
+              <dt>Client</dt>
+              <dd>Top Shelf Productions &amp; Clawed Hat Productions</dd>
+            </dl>
+          </div>
+        </li>
+
+        <li>
+          <a href="https://www.youtube.com/watch?v=WAbL7ozWQCM" target="_blank">
+            <img class="slide-image" src="images/slides/prouds_something_new.jpg" alt="Prouds Something New" />
+            <div class="slide-text">
+              <div class="slide-text-bg"></div>
+              <h4>Prouds</h4>
+              <p>Something New</p>
+              <dl>
+                <dt>Editor</dt>
+                <dd class="m-b">Alastair Tye Samson</dd>
+
+                <dt>Client</dt>
+                <dd>Video Parlour</dd>
+
+                <dt>Online & Grade</dt>
+                <dd>Images&Sound</dd>
+              </dl>
+            </div>
           </a>
         </li>
       </ul>
