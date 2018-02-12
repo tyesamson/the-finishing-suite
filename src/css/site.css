@@ -152,7 +152,7 @@ section .img--round {
 
 .about {
   background: no-repeat center url(../images/panel.jpg);
-  background-position: cover;
+  background-size: cover;
 }
 
 
