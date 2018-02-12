@@ -140,7 +140,7 @@
 
       <ul class="slides" title="Click for high resolution image">
         <li>
-          <a href="https://www.youtube.com/watch?v=Kp4y0zUsKrA" target="_blank">
+          <a href="https://www.youtube.com/watch?v=Kp4y0zUsKrA" class="popup">
             <img class="slide-image" src="images/slides/wanted_season_2.jpg" alt="Wanted Season 2" />
             <div class="slide-text">
               <div class="slide-text-bg"></div>
@@ -366,8 +366,9 @@
   <script type="text/javascript" src="js/jquery.scroll.js"></script>
   <script type="text/javascript" src="js/jquery.stuck.js"></script>
   <script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+  <script type="text/javascript" src="js/jquery.magnific-popup.js"></script>
   <script type="text/javascript">
-    $(window).load(function () {
+    $(function() {
       $('.slide-image').each(function (i, el) {
         var $img = $(el),
           $bg = $img.siblings('.slide-text').children('.slide-text-bg'),
@@ -375,10 +376,21 @@
 
         $bg.css('background-image', `url(${src})`);
       });
+
       $('.flexslider').flexslider({
         slideshow: true
       });
+
+      $('.popup').magnificPopup({
+        disableOn: 700,
+        type: 'iframe',
+        mainClass: 'mfp-fade',
+        removalDelay: 160,
+        preloader: false,
+        fixedContentPos: false
+      });
     });
+
   </script>
 
 </body>
