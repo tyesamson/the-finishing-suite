@@ -35,25 +35,6 @@
   <link rel="stylesheet" href="css/flexslider.css">
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600" />
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Vollkorn:400italic,400" />
-
-  <script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
-  <script type="text/javascript" src="js/jquery.scroll.js"></script>
-  <script type="text/javascript" src="js/jquery.stuck.js"></script>
-  <script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
-  <script type="text/javascript">
-    $(window).load(function () {
-      $('.slide-image').each(function (i, el) {
-        var $img = $(el),
-          $bg = $img.siblings('.slide-text').children('.slide-text-bg'),
-          src = $img.attr('src');
-
-        $bg.css('background-image', `url(${src})`);
-      });
-      $('.flexslider').flexslider({
-        slideshow: true
-      });
-    });
-  </script>
 </head>
 
 <body data-spy="scroll" data-target="menu">
@@ -380,6 +361,25 @@
     </div>
 
   </footer>
+
+  <script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script type="text/javascript" src="js/jquery.scroll.js"></script>
+  <script type="text/javascript" src="js/jquery.stuck.js"></script>
+  <script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+  <script type="text/javascript">
+    $(window).load(function () {
+      $('.slide-image').each(function (i, el) {
+        var $img = $(el),
+          $bg = $img.siblings('.slide-text').children('.slide-text-bg'),
+          src = $img.attr('src');
+
+        $bg.css('background-image', `url(${src})`);
+      });
+      $('.flexslider').flexslider({
+        slideshow: true
+      });
+    });
+  </script>
 
 </body>
 </html>
