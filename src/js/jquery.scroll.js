@@ -16,7 +16,7 @@ $(document).ready(function ($) {
       if (href.substring(0,1) === '#' && item.length) { return item; }
     });
 
-  $("nav a").click(function (event) {
+  $("nav a[data-scroll]").click(function (event) {
     event.preventDefault();
     $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 500);
   });
