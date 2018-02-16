@@ -92,6 +92,7 @@ ul {
 
   background: no-repeat center url(../images/header.jpg);
   background-size: cover;
+  background-position: fixed;
 }
 
 .header .content {
@@ -152,6 +153,7 @@ section .img--round {
 
 .about {
   background: no-repeat center url(../images/panel.jpg);
+  background-attachment: fixed;
   background-size: cover;
 }
 
@@ -162,6 +164,7 @@ section .img--round {
 
 .services {
   background: no-repeat center url(../images/couch.jpg);
+  background-attachment: fixed;
   background-size: cover;
 }
 
@@ -294,6 +297,7 @@ section .img--round {
   text-align: center;
 
   background: no-repeat center url(../images/wall.jpg);
+  background-attachment: fixed;
   background-size: cover;
 }
 
