@@ -31,9 +31,8 @@
   <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
 
+  <link rel="stylesheet" href="css/gridder.min.css">
   <link rel="stylesheet" href="css/site.css">
-  <link rel="stylesheet" href="css/flexslider.css">
-  <link rel="stylesheet" href="css/magnific-popup.css">
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600" />
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Vollkorn:400italic,400" />
 
@@ -47,11 +46,11 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window,document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '327862094287109'); 
+    fbq('init', '327862094287109');
     fbq('track', 'PageView');
   </script>
   <noscript>
-    <img height="1" width="1" 
+    <img height="1" width="1"
     src="https://www.facebook.com/tr?id=327862094287109&ev=PageView
     &noscript=1"/>
   </noscript>
@@ -95,7 +94,7 @@
       <h2>About</h2>
 
       <p class="featured">Not long ago, high-end motion picture finishing required expensive turn-key systems and huge overheads, but not anymore.</p>
-  
+
 	  <p>A downside of technology becoming so accessible has been many in the new generation of post-production operators who don't fully understand the craft, what they're doing or why they’re doing it. They may be able to get your work through a tech check, but are they making it the best it can be, or letting down your project at the final hurdle?
 
  	  <p>At The Finishing Suite, you have the best of both worlds — the low overheads and flexibility of a modern boutique shop, driven by a finishing expert with 15 years of experience working in high-end facilities.
@@ -107,7 +106,7 @@
 	  <p>From TVCs to television to feature films and all points in between, I'm passionate about using the finishing process to tastefully enhance your storytelling and take your work to the next level.
 
  	  <p>Want to know more? Drop by, raid the beer fridge, and let's talk about how we can give your project the finish it deserves.</p>
-   
+
       <p>The Finishing Suite is conveniently located right in the heart of Ponsonby — just two minutes walk from Ponsonby Central.</p>
 
       <a href="https://www.imdb.com/name/nm1403724" target="_blank">
@@ -119,7 +118,7 @@
       </a>
 
       <p>For fifteen years I have worked as an Online Editor, Colourist, and all-round motion picture finishing nerd.</p>
-      <p>I offer inspiration and experience using DaVinci Resolve, Autodesk Smoke, and Avid Symphony to finesse films, television shows, music videos and TVCs to be more awesome. I am fast and meticulous with an up-to-date knowledge of technology and a strong creative eye.</p>            
+      <p>I offer inspiration and experience using DaVinci Resolve, Autodesk Smoke, and Avid Symphony to finesse films, television shows, music videos and TVCs to be more awesome. I am fast and meticulous with an up-to-date knowledge of technology and a strong creative eye.</p>
       <p>Over my 20 years experience in the screen industries I have worked with many high profile companies such as Weta Digital, Images&Sound, Warner Brothers NZ, South Pacific Pictures, Jam TV and heaps of others.</p>
       <p>I love stories and storytelling. In 2009 I co-founded Hybrid Motion Pictures, a filmmaking collective with whom I produced and self-distributed my first indie feature film, JAKE, which was released theatrically in 2014.</p>
     </div>
@@ -177,221 +176,53 @@
   </section>
 
   <section class="portfolio" id="portfolio">
-
     <h2>Portfolio</h2>
 
-    <div class="flexslider">
-
-      <ul class="slides" title="Click for high resolution image">
-
-		 <li>
-          <img class="slide-image" src="images/slides/unwomen.jpg" alt="UN Women" />
-          <div class="slide-text">
-            <div class="slide-text-bg"></div>
-            <h4>A Conversation with Jacinda Ardern & Helen Clark</h4>
-            <p>Celebrating 125 years of Women's Suffrage</p>
-            <dl>
-              <dt>Edit, Online, Colour Grade</dt>
-              <dd>The Finishing Suite</dd>
-              
-              <dt>Editor & Finishing Artist</dt>
-              <dd class="m-b">Alastair Tye Samson</dd>
-                   
-              <dt>Client</dt>
-              <dd>UN Women Aotearoa & LS Productions</dd>
-            </dl>
-          </div>
-        </li>
-        
-        <li>
-          <img class="slide-image" src="images/slides/heatandeat.jpg" alt="Diamond Pasta" />
-          <div class="slide-text">
-            <div class="slide-text-bg"></div>
-            <h4>Diamond Pasta "Heat and Eat"</h4>
-            <p>30" TVC</p>
-            <dl>
-              <dt>Edit, Online, Colour Grade</dt>
-              <dd>The Finishing Suite</dd>
-              
-              <dt>Editor & Finishing Artist</dt>
-              <dd class="m-b">Alastair Tye Samson</dd>
-                   
-              <dt>Client</dt>
-              <dd>LS Productions</dd>
-            </dl>
-          </div>
+    <div class="gridder-container">
+      <ul class="gridder" id="portfolioGrid">
+        <!-- THUMBNAILS GO HERE-->
+        <li data-griddercontent="#item1" class="gridder-list">
+          <img src="images/slides/breakingandentering_sq.jpg" alt="Item 1"/>
         </li>
 
-        <li>
-          <img class="slide-image" src="images/slides/dancingonicebergs.jpg" alt="Dancing on Icebergs" />
-          <div class="slide-text">
-            <div class="slide-text-bg"></div>
-            <h4>Dancing on Icebergs</h4>
-            <p>Documentary Telefeature</p>
-            <dl>
-              <dt>Online, Colour Grade, DCP Mastering</dt>
-              <dd>The Finishing Suite</dd>
-              
-              <dt>Finishing Artist</dt>
-              <dd class="m-b">Alastair Tye Samson</dd>
-                   
-              <dt>Client</dt>
-              <dd>Top Shelf Productions</dd>
-            </dl>
-          </div>
+        <li data-griddercontent="#item2" class="gridder-list">
+          <img src="images/slides/breakingandentering_sq.jpg" alt="Item 2"/>
         </li>
-        
-		<li>
-          <img class="slide-image" src="images/slides/shockedtodeath.jpg" alt="Shocked to Death" />
-          <div class="slide-text">
-            <div class="slide-text-bg"></div>
-            <h4>Stälker "Shocked to Death"</h4>
-            <p>Music Video</p>
-            <dl>
-              <dt>Online, Colour Grade</dt>
-              <dd>The Finishing Suite</dd>
-              
-              <dt>Finishing Artist</dt>
-              <dd class="m-b">Alastair Tye Samson</dd>
-                   
-              <dt>Client</dt>
-              <dd>Napalm Records</dd>
-            </dl>
-          </div>
-        </li>
-
-        <li>
-          <img class="slide-image" src="images/slides/unorthodocs.jpg" alt="Unorthodocs" />
-          <div class="slide-text">
-            <div class="slide-text-bg"></div>
-            <h4>Unorthodocs: Chelsea Jade</h4>
-            <p>Short Doco</p>
-            <dl>
-              <dt>Online & Colour Grade</dt>
-              <dd>The Finishing Suite</dd>
-              
-              <dt>Finishing Artist</dt>
-              <dd class="m-b">Alastair Tye Samson</dd>
-                   
-              <dt>Client</dt>
-              <dd>Two Heads</dd>
-            </dl>
-          </div>
-        </li>
-
-        <li>
-          <img class="slide-image" src="images/slides/breakingandentering.jpg" alt="Breaking and Entering" />
-          <div class="slide-text">
-            <div class="slide-text-bg"></div>
-            <h4>Breaking and Entering</h4>
-            <p>Short Film</p>
-            <dl>
-              <dt>Online, Colour Grade</dt>
-              <dd>The Finishing Suite</dd>
-              
-              <dt>Finishing Artist</dt>
-              <dd class="m-b">Alastair Tye Samson</dd>
-                   
-              <dt>Client</dt>
-              <dd>Free Agent Films</dd>
-            </dl>
-          </div>
-        </li>
-
-		 <li>
-          <img class="slide-image" src="images/slides/tewakaawhina.jpg" alt="Te Waka Āwhina" />
-          <div class="slide-text">
-            <div class="slide-text-bg"></div>
-            <h4>Te Waka Āwhena</h4>
-            <p>Short documentary</p>
-            <dl>
-              <dt>Edit, Online, Colour Grade</dt>
-              <dd>The Finishing Suite</dd>
-              
-              <dt>Editor & Finishing Artist</dt>
-              <dd class="m-b">Alastair Tye Samson</dd>
-                   
-              <dt>Client</dt>
-              <dd>Triton Hearing</dd>
-            </dl>
-          </div>
-        </li>
-        
-        <li>
-          <a href="https://www.youtube.com/watch?v=KvoYEzI_Jp8" class="popup">
-            <img class="slide-image" src="images/slides/dreamlab.jpg" alt="Vodafone Dreamlab" />
-            <div class="slide-text">
-              <div class="slide-text-bg"></div>
-              <h4>Vodafone Dreamlab</h4>
-              <p>TVC Campaign</p>
-              <dl>
-                <dt>Edit, Online, Colour Grade, VFX</dt>
-                <dd>The Finishing Suite</dd>
-                
-				<dt>Editor & Finishing Artist</dt>
-                <dd>Alastair Tye Samson</dd>
-                
-                <dt>Graphics</dt>
-                <dd class="m-b">FCB</dd>
-
-                <dt>Client</dt>
-                <dd>LS Productions & FCB</dd>
-              </dl>
-            </div>
-          </a>
-        </li>
-       
-		<li>
-          <img class="slide-image" src="images/slides/grossincome.jpg" alt="Gross Income" />
-          <div class="slide-text">
-            <div class="slide-text-bg"></div>
-            <h4>Climate Change "Gross Income"</h4>
-            <p>Music Video</p>
-            <dl>
-              <dt>Online, Colour Grade</dt>
-              <dd>The Finishing Suite</dd>
-              
-              <dt>Finishing Artist</dt>
-              <dd class="m-b">Alastair Tye Samson</dd>
-                   
-              <dt>Client</dt>
-              <dd>Climate Change</dd>
-            </dl>
-          </div>
-        </li>       
-       
-        <li>
-          <a href="https://www.youtube.com/watch?v=SHFJVSl-DGI" class="popup">
-            <img class="slide-image" src="images/slides/calocurb.jpg" alt="Calocurb Product Lanch Promo" />
-            <div class="slide-text">
-              <div class="slide-text-bg"></div>
-              <h4>Calocurb</h4>
-              <p>Product Launch Promo</p>
-              <dl>
-                <dt>Edit, Online, Colour Grade, VFX</dt>
-                <dd>The Finishing Suite</dd>
-                
-				<dt>Editor & Finishing Artist</dt>
-                <dd>Alastair Tye Samson</dd>
-                
-                <dt>Motion Graphics Artist</dt>
-                <dd class="m-b">Carlos Purcell</dd>
-
-                <dt>Client</dt>
-                <dd>LS Productions</dd>
-              </dl>
-            </div>
-          </a>
-        </li>
-        
-
-
-
-        
       </ul>
 
-    </div><!--/flexslider-->
+      <!-- CONTENT GOES HERE-->
+      <div id="item1" class="gridder-content">
+        <img src="images/slides/breakingandentering.jpg" alt="Item 1"/>
+        <h4>A Conversation with Jacinda Ardern & Helen Clark</h4>
+        <p>Celebrating 125 years of Women's Suffrage</p>
+        <dl>
+          <dt>Edit, Online, Colour Grade</dt>
+          <dd>The Finishing Suite</dd>
 
+          <dt>Editor & Finishing Artist</dt>
+          <dd class="m-b">Alastair Tye Samson</dd>
+
+          <dt>Client</dt>
+          <dd>UN Women Aotearoa & LS Productions</dd>
+        </dl>
+      </div>
+
+      <div id="item2" class="gridder-content">
+        <img src="images/slides/unwomen.jpg" alt="Item 2"/>
+        <h4>Diamond Pasta "Heat and Eat"</h4>
+        <p>30" TVC</p>
+        <dl>
+          <dt>Edit, Online, Colour Grade</dt>
+          <dd>The Finishing Suite</dd>
+
+          <dt>Editor & Finishing Artist</dt>
+          <dd class="m-b">Alastair Tye Samson</dd>
+
+          <dt>Client</dt>
+          <dd>LS Productions</dd>
+        </dl>
+      </div>
+    </div>
   </section>
 
   <footer class="footer" id="footer">
@@ -419,29 +250,14 @@
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
   <script type="text/javascript" src="js/jquery.scroll.js"></script>
   <script type="text/javascript" src="js/jquery.stuck.js"></script>
-  <script type="text/javascript" src="js/jquery.flexslider.min.js"></script>
-  <script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
+  <script type="text/javascript" src="js/jquery.gridder.min.js"></script>
   <script type="text/javascript">
     $(function() {
-      $('.slide-image').each(function (i, el) {
-        var $img = $(el),
-          $bg = $img.siblings('.slide-text').children('.slide-text-bg'),
-          src = $img.attr('src');
-
-        $bg.css('background-image', `url(${src})`);
-      });
-
-      $('.flexslider').flexslider({
-        slideshow: false
-      });
-
-      $('.popup').magnificPopup({
-        disableOn: 700,
-        type: 'iframe',
-        mainClass: 'mfp-fade',
-        removalDelay: 160,
-        preloader: false,
-        fixedContentPos: false
+      $('#portfolioGrid').gridderExpander({
+        scroll: true,
+        scrollOffset: 100,
+        scrollTo: 'panel',
+        showNav: false
       });
     });
 
