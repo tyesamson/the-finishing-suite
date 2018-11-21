@@ -205,6 +205,7 @@ section .img--round {
 .gridder-show {
   margin-bottom: 2.4rem;
   background-color: #111;
+  z-index: 2;
 }
 
 .gridder-show h4,
@@ -216,15 +217,11 @@ section .img--round {
 
 .gridder-show h4 {
   margin-bottom: 1.2rem;
-  margin-top: 1.2rem;
+  margin-top: 0;
 
   font-size: 2.4rem;
   text-align: center;
   text-transform: uppercase;
-}
-
-.gridder-show img {
-  width: 100%;
 }
 
 .gridder-show p {
@@ -233,6 +230,7 @@ section .img--round {
 
 .gridder-show dl {
   display: flex;
+  margin: 0;
   flex-wrap: wrap;
 }
 
@@ -263,6 +261,44 @@ section .img--round {
 
   background: #111;
   opacity: .5;
+}
+
+.slide-image {
+  display: block;
+  width: 100%;
+}
+
+.slide-text {
+  position: relative;
+  padding-top: 2.4rem;
+  padding-bottom: 2.4rem;
+}
+
+.slide-text-bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -2;
+
+  background-position: bottom center;
+  background-size: cover;
+
+  transform: scaleY(-1);
+}
+
+.slide-text-bg:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -2;
+
+  content: " ";
+
+  background: linear-gradient(0deg, rgba(0,0,0,.5), rgba(0,0,0,1));
 }
 
 
@@ -420,12 +456,9 @@ section .img--round {
     width: 25%;
   }
 
-  .gridder-expanded-content {
+  .slide-content {
+    padding-top: 1.2rem;
     padding-bottom: 1.2rem;
-  }
-
-  .gridder-expanded-content > img {
-    margin-bottom: 1.2rem;
   }
 
   .gridder-show dt,

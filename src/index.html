@@ -106,35 +106,41 @@
 
         <!-- CONTENT GOES HERE-->
         <div id="item1" class="gridder-content">
-          <img src="images/slides/breakingandentering.jpg" alt="Item 1"/>
-          <h4>A Conversation with Jacinda Ardern & Helen Clark</h4>
-          <p>Celebrating 125 years of Women's Suffrage</p>
-          <dl>
-            <dt>Edit, Online, Colour Grade</dt>
-            <dd>The Finishing Suite</dd>
+          <img src="images/slides/breakingandentering.jpg" alt="Item 1" class="slide-image"/>
+          <div class="slide-text">
+            <div class="slide-text-bg"></div>
+            <h4>A Conversation with Jacinda Ardern & Helen Clark</h4>
+            <p>Celebrating 125 years of Women's Suffrage</p>
+            <dl>
+              <dt>Edit, Online, Colour Grade</dt>
+              <dd>The Finishing Suite</dd>
 
-            <dt>Editor & Finishing Artist</dt>
-            <dd class="m-b">Alastair Tye Samson</dd>
+              <dt>Editor & Finishing Artist</dt>
+              <dd class="m-b">Alastair Tye Samson</dd>
 
-            <dt>Client</dt>
-            <dd>UN Women Aotearoa & LS Productions</dd>
-          </dl>
+              <dt>Client</dt>
+              <dd>UN Women Aotearoa & LS Productions</dd>
+            </dl>
+          </div>
         </div>
 
         <div id="item2" class="gridder-content">
-          <img src="images/slides/unwomen.jpg" alt="Item 2"/>
-          <h4>Diamond Pasta "Heat and Eat"</h4>
-          <p>30" TVC</p>
-          <dl>
-            <dt>Edit, Online, Colour Grade</dt>
-            <dd>The Finishing Suite</dd>
+          <img src="images/slides/unwomen.jpg" alt="Item 2" class="slide-image"/>
+          <div class="slide-text">
+            <div class="slide-text-bg"></div>
+            <h4>Diamond Pasta "Heat and Eat"</h4>
+            <p>30" TVC</p>
+            <dl>
+              <dt>Edit, Online, Colour Grade</dt>
+              <dd>The Finishing Suite</dd>
 
-            <dt>Editor & Finishing Artist</dt>
-            <dd class="m-b">Alastair Tye Samson</dd>
+              <dt>Editor & Finishing Artist</dt>
+              <dd class="m-b">Alastair Tye Samson</dd>
 
-            <dt>Client</dt>
-            <dd>LS Productions</dd>
-          </dl>
+              <dt>Client</dt>
+              <dd>LS Productions</dd>
+            </dl>
+          </div>
         </div>
       </div>
     </section>
@@ -253,6 +259,14 @@
   <script type="text/javascript" src="js/jquery.gridder.min.js"></script>
   <script type="text/javascript">
     $(function() {
+      $('.slide-image').each(function (i, el) {
+        var $img = $(el),
+            $bg = $img.siblings('.slide-text').children('.slide-text-bg'),
+            src = $img.attr('src');
+
+        $bg.css('background-image', `url(${src})`);
+      });
+
       $('#portfolioGrid').gridderExpander({
         scroll: true,
         scrollOffset: 100,
