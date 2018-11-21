@@ -181,6 +181,9 @@ section .img--round {
   color: #eee;
 
   background-color: #111;
+  background: no-repeat center url(../images/portfolio.jpg);
+  background-size: cover;
+  background-position: fixed;
 }
 
 .gridder-list {
