@@ -224,7 +224,7 @@ section .img--round {
 }
 
 .gridder-show img {
-  max-width: 100%;
+  width: 100%;
 }
 
 .gridder-show p {
@@ -418,6 +418,32 @@ section .img--round {
 
   .gridder-list {
     width: 25%;
+  }
+
+  .gridder-expanded-content {
+    padding-bottom: 1.2rem;
+  }
+
+  .gridder-expanded-content > img {
+    margin-bottom: 1.2rem;
+  }
+
+  .gridder-show dt,
+  .gridder-show dd {
+    flex: 0 0 50%;
+  }
+
+  .gridder-show dt {
+    text-align: right;
+  }
+
+  .gridder-show dd {
+    margin-bottom: 0.6rem;
+    text-align: left;
+  }
+
+  .gridder-show dd.m-b {
+    margin-bottom: 2.4rem;
   }
 
 
