@@ -81,13 +81,63 @@
 
   <div id="menu">
     <nav class="nav" id="nav">
+      <a href="#portfolio" data-scroll>Portfolio</a>
       <a href="#about" data-scroll>About</a>
       <a href="#services" data-scroll>Services</a>
-      <a href="#portfolio" data-scroll>Portfolio</a>
       <a href="#footer" data-scroll>Contact</a>
       <a href="docs/tfs_requirements_for_delivery.pdf" target="_blank">Deliverables</a>
     </nav>
   </div>
+
+  <section class="portfolio" id="portfolio">
+      <h2>Portfolio</h2>
+
+      <div class="gridder-container">
+        <ul class="gridder" id="portfolioGrid">
+          <!-- THUMBNAILS GO HERE-->
+          <li data-griddercontent="#item1" class="gridder-list">
+            <img src="images/slides/breakingandentering_sq.jpg" alt="Item 1"/>
+          </li>
+
+          <li data-griddercontent="#item2" class="gridder-list">
+            <img src="images/slides/breakingandentering_sq.jpg" alt="Item 2"/>
+          </li>
+        </ul>
+
+        <!-- CONTENT GOES HERE-->
+        <div id="item1" class="gridder-content">
+          <img src="images/slides/breakingandentering.jpg" alt="Item 1"/>
+          <h4>A Conversation with Jacinda Ardern & Helen Clark</h4>
+          <p>Celebrating 125 years of Women's Suffrage</p>
+          <dl>
+            <dt>Edit, Online, Colour Grade</dt>
+            <dd>The Finishing Suite</dd>
+
+            <dt>Editor & Finishing Artist</dt>
+            <dd class="m-b">Alastair Tye Samson</dd>
+
+            <dt>Client</dt>
+            <dd>UN Women Aotearoa & LS Productions</dd>
+          </dl>
+        </div>
+
+        <div id="item2" class="gridder-content">
+          <img src="images/slides/unwomen.jpg" alt="Item 2"/>
+          <h4>Diamond Pasta "Heat and Eat"</h4>
+          <p>30" TVC</p>
+          <dl>
+            <dt>Edit, Online, Colour Grade</dt>
+            <dd>The Finishing Suite</dd>
+
+            <dt>Editor & Finishing Artist</dt>
+            <dd class="m-b">Alastair Tye Samson</dd>
+
+            <dt>Client</dt>
+            <dd>LS Productions</dd>
+          </dl>
+        </div>
+      </div>
+    </section>
 
   <section class="about" id="about">
     <div class="content">
@@ -173,56 +223,6 @@
       </ul>
     </ul>
 
-  </section>
-
-  <section class="portfolio" id="portfolio">
-    <h2>Portfolio</h2>
-
-    <div class="gridder-container">
-      <ul class="gridder" id="portfolioGrid">
-        <!-- THUMBNAILS GO HERE-->
-        <li data-griddercontent="#item1" class="gridder-list">
-          <img src="images/slides/breakingandentering_sq.jpg" alt="Item 1"/>
-        </li>
-
-        <li data-griddercontent="#item2" class="gridder-list">
-          <img src="images/slides/breakingandentering_sq.jpg" alt="Item 2"/>
-        </li>
-      </ul>
-
-      <!-- CONTENT GOES HERE-->
-      <div id="item1" class="gridder-content">
-        <img src="images/slides/breakingandentering.jpg" alt="Item 1"/>
-        <h4>A Conversation with Jacinda Ardern & Helen Clark</h4>
-        <p>Celebrating 125 years of Women's Suffrage</p>
-        <dl>
-          <dt>Edit, Online, Colour Grade</dt>
-          <dd>The Finishing Suite</dd>
-
-          <dt>Editor & Finishing Artist</dt>
-          <dd class="m-b">Alastair Tye Samson</dd>
-
-          <dt>Client</dt>
-          <dd>UN Women Aotearoa & LS Productions</dd>
-        </dl>
-      </div>
-
-      <div id="item2" class="gridder-content">
-        <img src="images/slides/unwomen.jpg" alt="Item 2"/>
-        <h4>Diamond Pasta "Heat and Eat"</h4>
-        <p>30" TVC</p>
-        <dl>
-          <dt>Edit, Online, Colour Grade</dt>
-          <dd>The Finishing Suite</dd>
-
-          <dt>Editor & Finishing Artist</dt>
-          <dd class="m-b">Alastair Tye Samson</dd>
-
-          <dt>Client</dt>
-          <dd>LS Productions</dd>
-        </dl>
-      </div>
-    </div>
   </section>
 
   <footer class="footer" id="footer">
