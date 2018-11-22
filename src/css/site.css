@@ -72,9 +72,10 @@ ul {
 
 .tfs-logo {
   width: 100%;
+  max-width: 95vw;
 
   background: url(../images/tfs_logo.png) 50% 0 no-repeat;
-  background-size: auto 100%;
+  background-size: contain;
   text-indent: -9999px;
 }
 
