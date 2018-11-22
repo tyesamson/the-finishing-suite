@@ -80,7 +80,10 @@
   </header>
 
   <div id="menu">
-    <nav class="nav" id="nav">
+    <button class="nav-toggler" id="navToggle" type="button">
+      <span class="nav-toggler-icon"></span>
+    </button>
+    <nav class="nav collapsed" id="nav">
       <a href="#portfolio" data-scroll>Portfolio</a>
       <a href="#about" data-scroll>About</a>
       <a href="#services" data-scroll>Services</a>
@@ -259,6 +262,10 @@
   <script type="text/javascript" src="js/jquery.gridder.min.js"></script>
   <script type="text/javascript">
     $(function() {
+      $('#navToggle').click(function () {
+        $('#nav').toggleClass('collapsed');
+      });
+
       $('.slide-image').each(function (i, el) {
         var $img = $(el),
             $bg = $img.siblings('.slide-text').children('.slide-text-bg'),
