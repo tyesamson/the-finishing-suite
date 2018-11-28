@@ -35,6 +35,7 @@
   <link rel="stylesheet" href="css/site.css">
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600" />
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Vollkorn:400italic,400" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
   <!-- Facebook Pixel Code -->
   <script>
@@ -73,7 +74,7 @@
       <h1 class="tfs-logo">The Finishing Suite</h1>
       <ul class="social">
         <li class="facebook">
-          <a href="https://www.facebook.com/thefinishingsuite" target="_blank"><img src="images/facebook.png" alt="Facebook"/></a>
+          <a href="https://www.facebook.com/thefinishingsuite" target="_blank"><i class="fab fa-facebook-square"></i></a>
         </li>
       </ul>
     </div>
@@ -81,7 +82,7 @@
 
   <div id="menu">
     <button class="nav-toggler" id="navToggle" type="button">
-      <span class="nav-toggler-icon"></span>
+      <i class="fas fa-bars"></i>
     </button>
     <nav class="nav collapsed" id="nav">
       <a href="#portfolio" data-scroll>Portfolio</a>
@@ -102,6 +103,30 @@
             <img src="images/slides/breakingandentering_sq.jpg" alt="Item 1"/>
           </li>
 
+          <li data-griddercontent="#item2" class="gridder-list">
+            <img src="images/slides/breakingandentering_sq.jpg" alt="Item 2"/>
+          </li>
+          <li data-griddercontent="#item2" class="gridder-list">
+            <img src="images/slides/breakingandentering_sq.jpg" alt="Item 2"/>
+          </li>
+          <li data-griddercontent="#item2" class="gridder-list">
+            <img src="images/slides/breakingandentering_sq.jpg" alt="Item 2"/>
+          </li>
+          <li data-griddercontent="#item2" class="gridder-list">
+            <img src="images/slides/breakingandentering_sq.jpg" alt="Item 2"/>
+          </li>
+          <li data-griddercontent="#item2" class="gridder-list">
+            <img src="images/slides/breakingandentering_sq.jpg" alt="Item 2"/>
+          </li>
+          <li data-griddercontent="#item2" class="gridder-list">
+            <img src="images/slides/breakingandentering_sq.jpg" alt="Item 2"/>
+          </li>
+          <li data-griddercontent="#item2" class="gridder-list">
+            <img src="images/slides/breakingandentering_sq.jpg" alt="Item 2"/>
+          </li>
+          <li data-griddercontent="#item2" class="gridder-list">
+            <img src="images/slides/breakingandentering_sq.jpg" alt="Item 2"/>
+          </li>
           <li data-griddercontent="#item2" class="gridder-list">
             <img src="images/slides/breakingandentering_sq.jpg" alt="Item 2"/>
           </li>
@@ -278,7 +303,10 @@
         scroll: true,
         scrollOffset: 100,
         scrollTo: 'panel',
-        showNav: false
+        showNav: true,
+        closeText: '<i class="far fa-2x fa-times-circle"></i>',
+        nextText: '<i class="fas fa-2x fa-chevron-right"></i>',
+        prevText: '<i class="fas fa-2x fa-chevron-left"></i>',
       });
     });
 

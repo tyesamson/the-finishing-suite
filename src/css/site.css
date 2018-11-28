@@ -109,6 +109,8 @@ ul {
   margin: 0;
   padding: 0;
 
+  font-size: 4rem;
+
   list-style: none;
 }
 
@@ -146,30 +148,18 @@ ul {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 3.6rem;
-  padding: .25rem .75rem;
+  padding: 1rem 1.2rem;
 
   background-color: transparent;
   border: 1px solid rgba(255,255,255,.1);
   border-radius: .25rem;
   color: rgba(255,255,255,.9);
-  font-size: 1.25rem;
+  font-size: 2rem;
   line-height: 1;
 }
 
 #menu .nav-toggler:focus {
   outline: 0 none transparent;
-}
-
-#menu .nav-toggler-icon {
-  display: inline-block;
-  width: 1.5em;
-  height: 1.5em;
-  vertical-align: middle;
-  content: "";
-  background: no-repeat center center;
-  background-size: 100% 100%;
-  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 
@@ -251,6 +241,7 @@ section .img--round {
   width: 100%;
 }
 
+
 .gridder-show {
   margin-bottom: 2.4rem;
   background-color: #111;
@@ -310,6 +301,42 @@ section .img--round {
 
   background: #111;
   opacity: .5;
+}
+
+/* gridder-navigation */
+
+.gridder-close,
+.gridder-nav {
+  position: absolute;
+  z-index: 2;
+
+  opacity: 0.3;
+}
+
+.gridder-close:hover,
+.gridder-nav:hover {
+  opacity: 0.7;
+}
+
+.gridder-close {
+  top: 1.2rem;
+  right: 1.2rem;
+}
+
+.gridder-nav {
+  top: calc(50% - 16px);
+}
+
+.gridder-nav.disabled {
+  display: none;
+}
+
+.gridder-nav.prev {
+  left: 1.2rem;
+}
+
+.gridder-nav.next {
+  right: 1.2rem;
 }
 
 .slide-image {
