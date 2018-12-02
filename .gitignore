@@ -1,1 +1,2 @@
-src.copy/
+*.log
+node_modules/
