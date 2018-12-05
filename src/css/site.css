@@ -191,6 +191,7 @@ section .img--round {
  * ------------------------------------------- */
 
 .about {
+  clear: both;
   background: no-repeat center url(../images/panel.jpg);
   background-attachment: fixed;
   background-size: cover;
@@ -251,8 +252,9 @@ section .img--round {
 
 
 .gridder-show {
-  background-color: #111;
   z-index: 2;
+
+  background-color: #111;
 }
 
 .gridder-show h4,
@@ -331,7 +333,7 @@ section .img--round {
 }
 
 .gridder-nav {
-  top: calc(50% - 16px);
+  bottom: 1.6rem;
 }
 
 .gridder-nav.disabled {
@@ -339,11 +341,11 @@ section .img--round {
 }
 
 .gridder-nav.prev {
-  left: 1.2rem;
+  left: calc(50% - 3rem);
 }
 
 .gridder-nav.next {
-  right: 1.2rem;
+  right: calc(50% - 3rem);
 }
 
 .slide-image {
@@ -354,7 +356,7 @@ section .img--round {
 .slide-text {
   position: relative;
   padding-top: 2.4rem;
-  padding-bottom: 2.4rem;
+  padding-bottom: 6rem;
 }
 
 .slide-text-bg {
