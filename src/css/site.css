@@ -213,15 +213,23 @@ section .img--round {
  * ------------------------------------------- */
 
 .portfolio {
-  padding-left: 0;
-  padding-right: 0;
+  padding: 0;
 
   color: #eee;
 
   background-color: #111;
+}
+
+.portfolio h2 {
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  margin-bottom: 0;
+
   background: no-repeat top center url(../images/portfolio.jpg);
   background-size: cover;
   background-position: fixed;
+
+  line-height: 1;
 }
 
 .gridder-list {
@@ -243,7 +251,6 @@ section .img--round {
 
 
 .gridder-show {
-  margin-bottom: 2.4rem;
   background-color: #111;
   z-index: 2;
 }
@@ -300,7 +307,7 @@ section .img--round {
   content: "";
 
   background: #111;
-  opacity: .5;
+  opacity: .7;
 }
 
 /* gridder-navigation */
@@ -540,8 +547,13 @@ section .img--round {
    * Portfolio
    * ------------------------------------------- */
 
+  .portfolio {
+    padding-bottom: 0;
+  }
+
   .portfolio h2 {
-    padding-bottom: 4rem;
+    padding-top: 4rem;
+    padding-bottom: 3.6rem;
   }
 
   .gridder-list {
@@ -615,6 +627,11 @@ section .img--round {
    * Portfolio
    * ------------------------------------------- */
 
+  .portfolio h2 {
+    padding-top: 6rem;
+    padding-bottom: 5rem;
+  }
+
   .gridder-list {
     width: 20%;
   }
@@ -651,6 +668,5 @@ section .img--round {
    * ------------------------------------------- */
 
   .gridder-list {
-    width: 10%;
   }
 }
