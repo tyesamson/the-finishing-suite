@@ -1,4 +1,5 @@
-const mix = require('laravel-mix');
+const mix = require('laravel-mix'),
+  tailwindcss = require('tailwindcss');
 
 const paths = {
   sass: {
@@ -11,5 +12,6 @@ mix
   // Compile Sass
   .sass(paths.sass.src, paths.sass.dest)
   .options({
-    processCssUrls: false
-  })
+    processCssUrls: false,
+    postCss: [tailwindcss('tailwind.config.js')]
+  });
