@@ -1,2 +1,7 @@
 *.log
+
+mix-manifest.json
+
+dist/
 node_modules/
+
