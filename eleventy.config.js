@@ -21,13 +21,24 @@ module.exports = eleventyConfig => {
     }
   });
 
+  // Layout aliases
+  eleventyConfig.addLayoutAlias('default', 'layouts/default.njk');
+
+  // Static assets
+  eleventyConfig.addPassthroughCopy('site/favicon*.*')
+
   // Watch CSS
-  eleventyConfig.addWatchTarget('./dist/css/');
+  // eleventyConfig.addWatchTarget('./dist/css/');
 
   return {
+    templateFormats: ['md', 'njk'],
+    markdownTemplateEngine: 'njk',
+    htmlTemplateEngine: 'njk',
     dir: {
-      input: 'src',
-      output: 'dist'
+      input: 'site',
+      output: 'dist',
+      includes: 'includes',
+      data: 'globals'
     }
   };
 

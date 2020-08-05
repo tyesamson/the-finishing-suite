@@ -1,0 +1,10 @@
+{
+  "name": "The Finishing Suite",
+  "url": "http://www.thefinishingsuite.co.nz",
+  "images": {
+    "favicon": "/favicon.ico",
+    "logo": "/images/logo/tfs_logo.png",
+    "og": "/images/logo/tfs_logo.png",
+    "twitter": "/images/logo/tfs_logo.png"
+  }
+}

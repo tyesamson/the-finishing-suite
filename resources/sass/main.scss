@@ -3,6 +3,9 @@
 // Import Tailwind preflight
 @tailwind base;
 
+// Import our custom component styles
+@import 'base/all';
+
 // Import Tailwind components
 @tailwind components;
 
