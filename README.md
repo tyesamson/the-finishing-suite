@@ -7,3 +7,9 @@ Website built with Eleventy and TailwindCSS.
 ```
 yarn install
 ```
+
+## Development
+
+```
+yarn run dev
+```
