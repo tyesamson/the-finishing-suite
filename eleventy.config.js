@@ -26,6 +26,7 @@ module.exports = eleventyConfig => {
 
   // Static assets
   eleventyConfig.addPassthroughCopy('site/favicon*.*')
+  eleventyConfig.addPassthroughCopy('site/images/**/*')
 
   // Watch CSS
   // eleventyConfig.addWatchTarget('./dist/css/');
