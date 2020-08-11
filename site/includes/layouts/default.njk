@@ -20,6 +20,11 @@
   {% include "components/social-meta.njk" %}
   {% include "components/icons.njk" %}
 
+  {% if helpers.environment === "development" %}
+    <script src="/js/main.js" defer></script>
+  {% else %}
+    <script src="/js/main.min.js" defer></script>
+  {% endif %}
 </head>
 
 <body class="bg-black text-white">
