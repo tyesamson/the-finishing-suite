@@ -2,12 +2,12 @@ import $$ from '@utilities/selectors';
 
 const MobileNav = function MobileNav() {
   $$.navToggle.addEventListener('click', () => {
-    $$.nav.classList.toggle('hidden');
+    $$.nav.classList.toggle('in');
   });
 
   $$.navItems.forEach(item => {
     item.addEventListener('click', () => {
-      $$.nav.classList.add('hidden');
+      $$.nav.classList.remove('in');
     });
   });
 }();

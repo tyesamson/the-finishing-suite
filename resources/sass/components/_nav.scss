@@ -23,12 +23,29 @@
   @apply top-0;
   @apply z-40;
 
+  @apply flex;
+  @apply flex-col;
+  @apply items-center;
+
   @apply w-full;
 
   @apply bg-black;
 
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+
+  transition: height 300ms ease-in-out, opacity 300ms ease-in-out;
+
+  &.in {
+    height: 240px;
+    opacity: .8;
+  }
+
   a {
-    transition: color 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86) 0ms;
+    @apply p-2;
+
+    transition: color 300ms ease-in-out;
 
     &.active,
     &:hover {
@@ -49,6 +66,16 @@
 
   #nav {
     @apply static;
-    @apply block;
+
+    @apply flex-row;
+    @apply justify-center;
+
+    height: auto;
+    opacity: 1;
+
+    &.in {
+      height: auto;
+      opacity: 1;
+    }
   }
 }
