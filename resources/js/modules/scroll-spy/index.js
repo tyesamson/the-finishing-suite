@@ -1,7 +1,7 @@
 import $$ from '@utilities/selectors';
 
 const checkPosition = () => {
-  const fromTop = window.scrollY;
+  const fromTop = window.scrollY + 1;
 
   $$.navItems
     .forEach(link => {
