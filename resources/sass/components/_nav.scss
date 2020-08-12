@@ -1,10 +1,52 @@
 .nav {
-  display: flex;
-  flex-direction: column;
+  // @apply sticky;
+  // @apply top-0;
+}
 
-  text-align: center;
+#nav-toggle {
+  @apply fixed;
+  @apply top-0;
+  @apply right-0;
+  @apply z-50;
+
+  @apply mr-3;
+
+  @apply text-2xl;
+
+  @apply cursor-pointer;
+  @apply opacity-75;
+}
+
+#nav {
+  @apply fixed;
+  @apply top-0;
+  @apply z-40;
+
+  @apply w-full;
+
+  @apply bg-black;
 
   a {
-    display: block;
+    transition: color 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86) 0ms;
+
+    &.active,
+    &:hover {
+      color: $red;
+    }
+  }
+}
+
+@screen sm {
+  #nav-toggle {
+    @apply hidden;
+  }
+
+  nav {
+    @apply sticky;
+    @apply top-0;
+  }
+
+  #nav {
+    @apply block;
   }
 }
