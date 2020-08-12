@@ -1,6 +1,14 @@
 //==========  Typography ==========//
 
 // Headings
-h1 {
+h1, h2 {
   @apply font-serif;
+}
+
+h2 {
+  @apply pt-10;
+
+  @apply font-serif;
+  @apply text-center;
+  @apply text-5xl;
 }

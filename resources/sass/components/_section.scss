@@ -1,0 +1,13 @@
+//==========  Section ==========//
+
+.section {
+  @apply pb-20;
+
+  @apply bg-cover;
+  @apply bg-center;
+  @apply bg-fixed;
+
+  &.about {
+    background-image: url('/images/backgrounds/resolve-panel.jpg');
+  }
+}
