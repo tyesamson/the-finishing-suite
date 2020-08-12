@@ -2,6 +2,12 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
   theme: {
+    container: {
+      padding: {
+        default: '2rem',
+        lg: '5rem'
+      }
+    },
     fontFamily: {
       serif: [
         'Vollkorn',

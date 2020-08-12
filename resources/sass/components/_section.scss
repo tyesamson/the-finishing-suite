@@ -1,13 +1,15 @@
 //==========  Section ==========//
 
 .section {
-  @apply pb-20;
+  @apply py-20;
 
   @apply bg-cover;
   @apply bg-center;
   @apply bg-fixed;
 
   &.about {
+    @apply text-center;
+
     background-image: url('/images/backgrounds/resolve-panel.jpg');
   }
 
@@ -15,8 +17,26 @@
     background-image: url('/images/backgrounds/bricks.jpg');
   }
 
+  &.portfolio {
+    @apply pb-20;
+
+    @apply bg-no-repeat;
+    @apply bg-scroll;
+
+    background-image: url('/images/backgrounds/portfolio.jpg');
+  }
+
   &.services {
     background-image: url('/images/backgrounds/couch.jpg');
+
+    ul {
+      @apply list-disc;
+      @apply list-inside;
+
+      + h4 {
+        @apply mt-5;
+      }
+    }
   }
 
   &.upload {
