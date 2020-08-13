@@ -8,8 +8,6 @@
   @apply bg-fixed;
 
   &.about {
-    @apply text-center;
-
     background-image: url('/images/backgrounds/resolve-panel.jpg');
   }
 
@@ -75,5 +73,19 @@
 
   &.upload {
     background-image: url('/images/backgrounds/cans.jpg');
+  }
+
+  .container {
+    @apply p-8;
+    @apply rounded-lg;
+
+    max-width: 90vw;
+
+    background-color: rgba(0,0,0,.3);
+    backdrop-filter: blur(20px);
+
+    @screen md {
+      max-width: 680px;
+    }
   }
 }
