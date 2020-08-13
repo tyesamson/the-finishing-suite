@@ -77,15 +77,18 @@
 
   .container {
     @apply p-8;
-    @apply rounded-lg;
 
     max-width: 90vw;
 
-    background-color: rgba(0,0,0,.3);
-    backdrop-filter: blur(20px);
-
     @screen md {
       max-width: 680px;
+    }
+
+    &.blur {
+      @apply rounded-lg;
+
+      background-color: rgba(0,0,0,.3);
+      backdrop-filter: blur(20px);
     }
   }
 }
