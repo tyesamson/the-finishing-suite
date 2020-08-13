@@ -51,6 +51,10 @@
     }
   }
 
+  &.news {
+    background-image: url('/images/backgrounds/bricks.jpg');
+  }
+
   &.portfolio {
     @apply bg-no-repeat;
     @apply bg-scroll;
