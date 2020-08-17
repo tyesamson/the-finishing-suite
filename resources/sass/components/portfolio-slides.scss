@@ -1,0 +1,85 @@
+//==========  Portfolio Slides ==========//
+
+.portfolio-open {
+  overflow: hidden;
+}
+
+.portfolio-slides {
+  @apply invisible fixed inset-0 z-50;
+
+  @apply bg-black bg-opacity-75;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    @apply mr-8;
+    @apply mt-8;
+    @apply z-50;
+
+    opacity: .5;
+    transition: opacity .15s ease-in-out;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.portfolio-slide {
+  @apply m-4;
+  @apply bg-black;
+
+  position: relative;
+  width: auto;
+  text-align: center;
+
+  .text {
+    @apply py-8;
+  }
+
+  dl {
+    display: grid;
+    grid-template-columns: 100%;
+
+    dd {
+      text-transform: uppercase;
+
+      + dt {
+        @apply mt-4;
+      }
+    }
+  }
+}
+
+@screen sm {
+  .portfolio-slides {
+    dl {
+      grid-template-columns: 50% 50%;
+      @apply col-gap-4;
+
+
+      dt {
+        text-align: right;
+      }
+
+      dd {
+        text-align: left;
+
+        + dt {
+          @apply mt-0;
+        }
+      }
+    }
+  }
+
+  .portfolio-slide {
+    max-width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

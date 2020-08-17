@@ -1,0 +1,72 @@
+//==========  Carousel ==========//
+
+.carousel {
+  position: relative;
+}
+
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-item {
+  position: relative;
+  float: left;
+
+  display: none;
+  width: 100%;
+  margin-right: -100%;
+
+  backface-visibility: hidden;
+  transition: transform .6s ease-in-out;
+
+  &.active {
+    display: block;
+  }
+
+  > img {
+    display: block;
+    width: 100%;
+  }
+
+  > iframe {
+    width: 100%;
+    height: 56.25vw;
+  }
+
+  .text {
+    clear: both;
+  }
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15%;
+
+  text-align: center;
+
+  cursor: pointer;
+  opacity: .5;
+  transition: opacity .15s ease-in-out;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.carousel-control-prev {
+  left: 0;
+}
+
+.carousel-control-next {
+  right: 0;
+}
