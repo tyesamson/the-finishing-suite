@@ -1,0 +1,8 @@
+<div class="">
+  {%- for project in collections.portfolio | reverse -%}
+    <div class="">
+      <h3>{{ project.data.title }}</h3>
+      <p>{{ project.data.description}}</h3>
+    </div>
+  {%- endfor -%}
+</div>

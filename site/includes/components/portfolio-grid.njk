@@ -1,0 +1,7 @@
+<div class="portfolio-grid">
+  {%- for project in collections.portfolio | reverse -%}
+    <div title="{{ project.data.title }}">
+      <img src="{{ project.data.thumb }}" alt="{{ project.data.title }}">
+    </div>
+  {%- endfor -%}
+</div>
