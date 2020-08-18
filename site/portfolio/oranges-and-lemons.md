@@ -3,8 +3,9 @@ tags: portfolio
 date: 2020-07-28
 title: Oranges & Lemons
 description: Short Film
-thumb: /images/portfolio/orangesandlemons.jpg
+thumb: /images/portfolio/thumbs/orangesandlemons.jpg
 images:
+ - /images/portfolio/orangesandlemons.jpg
  - https://source.unsplash.com/random/1920x1200
 ---
 
@@ -13,8 +14,10 @@ images:
   <dd>The Finishing Suite</dd>
 
   <dt>Finishing Artist</dt>
-  <dd class="mb-4">Alastair Tye Samson</dd>
+  <dd>Alastair Tye Samson</dd>
+</dl>
 
+<dl>
   <dt>Cinematographer</dt>
   <dd>John Cavill</dd>
 

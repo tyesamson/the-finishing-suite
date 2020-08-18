@@ -3,8 +3,9 @@ tags: portfolio
 date: 2020-07-29
 title: Albi & The Wolves - "Story"
 description: Music Video
-thumb: /images/portfolio/aatwstory.jpg
+thumb: /images/portfolio/thumbs/aatwstory.jpg
 images:
+ - /images/portfolio/aatwstory.jpg
  - https://source.unsplash.com/random/1920x1200
 ---
 
@@ -13,8 +14,10 @@ images:
   <dd>The Finishing Suite</dd>
 
   <dt>Finishing Artist</dt>
-  <dd class="m-b">Alastair Tye Samson</dd>
+  <dd>Alastair Tye Samson</dd>
+</dl>
 
+<dl>
   <dt>Cinematographer</dt>
   <dd>Alexander Campbell</dd>
 

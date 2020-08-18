@@ -3,8 +3,9 @@ tags: portfolio
 date: 2020-07-30
 title: Chorus - "Fastest Fibre"
 description: 30" TV Spot
-thumb: /images/portfolio/fastestfibre.jpg
+thumb: /images/portfolio/thumbs/fastestfibre.jpg
 images:
+ - /images/portfolio/fastestfibre.jpg
  - https://source.unsplash.com/random/1920x1200
 #  - https://source.unsplash.com/random/1920x1200
 #  - https://source.unsplash.com/random/1920x1200
@@ -19,7 +20,9 @@ images:
 
   <dt>Finishing Artist</dt>
   <dd>Alastair Tye Samson</dd>
+</dl>
 
+<dl>
   <dt>VFX</dt>
   <dd class="m-b">Richard Borg</dd>
 

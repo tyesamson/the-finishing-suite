@@ -22,7 +22,7 @@
     @apply mt-8;
     @apply z-50;
 
-    opacity: .5;
+    opacity: .25;
     transition: opacity .15s ease-in-out;
 
     &:hover {
@@ -65,6 +65,10 @@
         @apply mt-4;
       }
     }
+
+    + dl {
+      @apply mt-4;
+    }
   }
 
   .slide {
@@ -103,12 +107,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 15%;
+  width: 10%;
 
   text-align: center;
 
   cursor: pointer;
-  opacity: .5;
+  opacity: .25;
   transition: opacity .15s ease-in-out;
 
   &:hover {
