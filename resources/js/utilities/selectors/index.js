@@ -6,6 +6,8 @@ const $$ = {
   portfolio: {
     close   : document.getElementById('portfolioClose'),
     grid    : document.getElementById('portfolioGrid'),
+    next    : document.getElementById('portfolioNext'),
+    prev    : document.getElementById('portfolioPrev'),
     slides  : document.getElementById('portfolioSlides')
   },
   sections  : document.querySelectorAll('section')

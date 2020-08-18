@@ -5,10 +5,11 @@
 }
 
 .portfolio-slides {
-  @apply invisible fixed inset-0 z-50;
+  @apply fixed inset-0 z-50;
 
   @apply bg-black bg-opacity-75;
 
+  display: none;
   overflow-x: hidden;
   overflow-y: auto;
 
@@ -32,20 +33,26 @@
   > .container {
     position: relative;
   }
+
+  .slide {
+    display: none;
+
+    &.in {
+      display: block;
+    }
+  }
 }
 
-.portfolio-slide {
+.portfolio-images {
+  position: relative;
+}
+
+.portfolio-text {
   @apply bg-black;
 
-  display: none;
   position: relative;
-  width: auto;
 
   text-align: center;
-
-  .text {
-    @apply py-8;
-  }
 
   dl {
     display: grid;
@@ -59,10 +66,14 @@
       }
     }
   }
+
+  .slide {
+    @apply py-8;
+  }
 }
 
 @screen sm {
-  .portfolio-slides {
+  .portfolio-text {
     dl {
       grid-template-columns: 50% 50%;
       @apply col-gap-4;
@@ -81,4 +92,29 @@
       }
     }
   }
+}
+
+.portfolio-control {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15%;
+
+  text-align: center;
+
+  cursor: pointer;
+  opacity: .5;
+  transition: opacity .15s ease-in-out;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &.prev { left: 0; }
+  &.next { right: 0; }
 }

@@ -5,10 +5,9 @@
       <span aria-hidden="true"><i class="fas fa-times-circle fa-2x"></i></span>
     </button>
 
-    {%- for project in collections.portfolio | reverse -%}
-      <div class="portfolio-slide" id="portfolioSlide{{loop.index}}">
-
-        <div class="carousel">
+    <div class="portfolio-images">
+      {%- for project in collections.portfolio | reverse -%}
+        <div class="slide carousel" id="portfolioCarousel{{loop.index}}">
           <div class="carousel-inner">
             {%- for image in project.data.images -%}
               <div class="carousel-item active">
@@ -22,18 +21,29 @@
               </div>
             {%- endfor -%}
           </div>
-          <div class="carousel-control-prev"><i class="fas fa-chevron-left fa-3x"></i></div>
-          <div class="carousel-control-next"><i class="fas fa-chevron-right fa-3x"></i></div>
         </div>
+      {%- endfor -%}
 
-        <div class="text">
+      <div class="portfolio-control next"><i class="fas fa-chevron-left fa-3x"></i></div>
+      <div class="portfolio-control prev"><i class="fas fa-chevron-right fa-3x"></i></div>
+    </div>
+
+    <div class="portfolio-text">
+      {%- for project in collections.portfolio | reverse -%}
+        <div class="slide" id="portfolioText{{loop.index}}">
           <h3>{{ project.data.title }}</h3>
           <p>{{ project.data.description}}</h3>
           {{ project.templateContent | safe }}
         </div>
+      {%- endfor -%}
 
+      <div class="portfolio-control prev" id="portfolioPrev">
+        <i class="fas fa-chevron-left fa-3x"></i>
       </div>
-    {%- endfor -%}
 
+      <div class="portfolio-control next" id="portfolioNext">
+        <i class="fas fa-chevron-right fa-3x"></i>
+      </div>
+    </div>
   </div>
 </div>
