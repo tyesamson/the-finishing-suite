@@ -1,16 +1,18 @@
 const $$ = {
-  body      : document.querySelector('body'),
-  nav       : document.getElementById('nav'),
-  navItems  : document.querySelectorAll('#nav a'),
-  navToggle : document.getElementById('nav-toggle'),
+  body        : document.querySelector('body'),
+  nav         : document.getElementById('nav'),
+  navItems    : document.querySelectorAll('#nav a'),
+  navToggle   : document.getElementById('nav-toggle'),
   portfolio: {
-    close   : document.getElementById('portfolioClose'),
-    grid    : document.getElementById('portfolioGrid'),
-    next    : document.getElementById('portfolioNext'),
-    prev    : document.getElementById('portfolioPrev'),
-    slides  : document.getElementById('portfolioSlides')
+    close     : document.getElementById('portfolioClose'),
+    grid      : document.getElementById('portfolioGrid'),
+    imageNext : document.getElementById('portfolioImageNext'),
+    imagePrev : document.getElementById('portfolioImagePrev'),
+    next      : document.getElementById('portfolioNext'),
+    prev      : document.getElementById('portfolioPrev'),
+    slides    : document.getElementById('portfolioSlides')
   },
-  sections  : document.querySelectorAll('section')
+  sections    : document.querySelectorAll('section')
 }
 
 export default $$

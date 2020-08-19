@@ -11,12 +11,14 @@
           <div class="carousel-inner">
             {%- for image in project.data.images -%}
               <div class="carousel-item{%if loop.first %} active{% endif %}">
-                <img src="{{ image }}" />
+                <div class="aspect-ratio"></div>
+                <img data-lazy="{{ image }}" />
               </div>
             {%- endfor -%}
 
             {%- for video in project.data.videos -%}
               <div class="carousel-item">
+                <div class="aspect-ratio"></div>
                 <iframe src="{{ video }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
             {%- endfor -%}
@@ -24,10 +26,10 @@
         </div>
       {%- endfor -%}
 
-      <div class="portfolio-control prev" title="Previous Image">
+      <div class="portfolio-control prev" id="portfolioImagePrev" title="Previous Image">
         <i class="fas fa-chevron-left fa-2x"></i>
       </div>
-      <div class="portfolio-control next" title="Next Image">
+      <div class="portfolio-control next" id="portfolioImageNext" title="Next Image">
         <i class="fas fa-chevron-right fa-2x"></i>
       </div>
     </div>

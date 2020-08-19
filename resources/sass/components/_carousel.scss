@@ -25,17 +25,12 @@
     display: block;
   }
 
-  > img {
-    display: block;
-    width: 100%;
+  .aspect-ratio {
+    padding-bottom: 56.25%;
   }
 
+  > img,
   > iframe {
-    width: 100%;
-    height: 56.25vw;
-  }
-
-  .text {
-    clear: both;
+    @apply absolute left-0 top-0 w-full h-full object-cover;
   }
 }

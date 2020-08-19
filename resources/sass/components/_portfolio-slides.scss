@@ -31,6 +31,8 @@
   }
 
   > .container {
+    @apply bg-black;
+
     position: relative;
   }
 
@@ -48,8 +50,6 @@
 }
 
 .portfolio-text {
-  @apply bg-black;
-
   position: relative;
 
   text-align: center;

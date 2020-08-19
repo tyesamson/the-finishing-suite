@@ -1,8 +1,5 @@
 import $$ from '@utilities/selectors';
 
-// Need to add .portfolio-open class to body when open
-// Add .visible to #portfolioSlides
-
 let slideCount = 0;
 let currentSlide = -1;
 
