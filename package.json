@@ -9,6 +9,7 @@
     "Matt Dwen <matt@dwen.co.nz> (https://dwen.co.nz)"
   ],
   "scripts": {
+    "build": "webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js && npx @11ty/eleventy --config=eleventy.config.js",
     "dev": "cross-env ELEVENTY_ENV=development run-p eleventy:serve webpack:watch",
     "eleventy:serve": "npx @11ty/eleventy --config=eleventy.config.js --serve",
     "webpack:watch": "webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
