@@ -1,6 +1,8 @@
 const mix = require('laravel-mix'),
   tailwindcss = require('tailwindcss');
 
+require('laravel-mix-purgecss');
+
 const paths = {
   javascript: {
     src: './resources/js/main.js',
@@ -31,4 +33,10 @@ mix
   .options({
     processCssUrls: false,
     postCss: [tailwindcss('tailwind.config.js')]
-  });
+  })
+
+  if (mix.inProduction()) {
+    mix
+      .minify(paths.sass.dest + 'main.css')
+      .minify(paths.javascript.dest + 'main.js')
+  }

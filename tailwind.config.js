@@ -1,6 +1,12 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
+  purge: {
+    content: [
+      './site/**/*.html',
+      './site/**/*.njk',
+    ]
+  },
   theme: {
     fontFamily: {
       serif: [
