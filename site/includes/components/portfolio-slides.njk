@@ -8,6 +8,7 @@
     <div class="portfolio-images">
       {%- for project in collections.portfolio | reverse -%}
         <div class="slide carousel" id="portfolioCarousel{{loop.index}}">
+          {% set carouselNo = loop.index %}
           <div class="carousel-inner">
             {%- for image in project.data.images -%}
               <div class="carousel-item{%if loop.first %} active{% endif %}">
@@ -23,15 +24,31 @@
               </div>
             {%- endfor -%}
           </div>
+
+          <div class="portfolio-images-controls">
+            <div class="portfolio-image-prev" id="portfolioImagePrev" title="Previous Image">
+              <i class="fas fa-chevron-left fa-fw"></i>
+            </div>
+            {% set slideCount = 0 %}
+            {%- for image in project.data.images -%}
+              {% set slideCount = slideCount + 1 %}
+              <div class="indicator{%if loop.first %} active{% endif %}" data-target="portfolioCarousel{{carouselNo}}" data-slide="{{slideCount}}">
+                <i class="fas fa-circle fa-fw fa-sm"></i>
+              </div>
+            {%- endfor -%}
+            {%- for video in project.data.videos -%}
+              {% set slideCount = slideCount + 1 %}
+              <div class="indicator" data-target="portfolioCarousel{{carouselNo}}" data-slide="{{slideCount}}">
+                <i class="fas fa-circle fa-fw fa-sm"></i>
+              </div>
+            {%- endfor -%}
+            <div class="portfolio-image-next" id="portfolioImageNext" title="Next Image">
+              <i class="fas fa-chevron-right fa-fw"></i>
+            </div>
+          </div>
+
         </div>
       {%- endfor -%}
-
-      <div class="portfolio-control prev" id="portfolioImagePrev" title="Previous Image">
-        <i class="fas fa-chevron-left fa-2x"></i>
-      </div>
-      <div class="portfolio-control next" id="portfolioImageNext" title="Next Image">
-        <i class="fas fa-chevron-right fa-2x"></i>
-      </div>
     </div>
 
     <div class="portfolio-text">

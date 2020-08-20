@@ -23,8 +23,23 @@ const Carousel = function Carousel() {
   //
 
   function _addEventListeners() {
-    $$.portfolio.imagePrev.addEventListener('click', _ => prev());
-    $$.portfolio.imageNext.addEventListener('click', _ => next());
+    const imagePrev = $$.portfolio.imagePrev;
+    for (let i = 0; i < imagePrev.length; i++) {
+      imagePrev[i].addEventListener('click', _ => prev());
+    }
+
+    const imageNext = $$.portfolio.imageNext;
+    for (let i = 0; i < imageNext.length; i++) {
+      imageNext[i].addEventListener('click', _ => next());
+    }
+
+    const indicators = $$.portfolio.indicators;
+    for (let i = 0; i < indicators.length; i++) {
+      const indicator = indicators[i];
+      const slideNo = parseInt(indicator.dataset.slide, 10);
+      const target = indicator.dataset.target;
+      indicator.addEventListener('click', _ => showSlide(target, slideNo));
+    }
   }
 
   function _getItemByDirection(direction, items, activeItem) {
@@ -44,8 +59,11 @@ const Carousel = function Carousel() {
     if (carouselItems.length === 1) { return; }
 
     const activeItem = carouselItems.find(item => item.classList.contains('active'));
-    // const activeItemIndex = carouselItems.indexOf(activeItem);
     const nextItem = _getItemByDirection(direction, carouselItems, activeItem);
+
+    const carouselIndicators = [].slice.call(activeCarousel.getElementsByClassName('indicator'));
+    const activeIndicator = carouselIndicators.find(item => item.classList.contains('active'));
+    const nextIndicator = _getItemByDirection(direction, carouselIndicators, activeIndicator);
 
     let directionalClassName;
     let eventDirectionName;
@@ -68,12 +86,11 @@ const Carousel = function Carousel() {
 
     _isSliding = true;
 
-    // nextItem.classList.add(orderClassName);
-    // activeItem.classList.add(directionalClassName);
-    // nextItem.classList.add(directionalClassName);
-
     activeItem.classList.remove(ClassName.ACTIVE);
+    activeIndicator.classList.remove(ClassName.ACTIVE);
+
     nextItem.classList.add(ClassName.ACTIVE);
+    nextIndicator.classList.add(ClassName.ACTIVE);
 
     _isSliding = false;
   }
@@ -91,6 +108,28 @@ const Carousel = function Carousel() {
     if (!_isSliding) {
       _slide(Direction.NEXT);
     }
+  }
+
+  function showSlide(target, slideNo) {
+    const activeCarousel = document.getElementById(target);
+    const carouselItems = [].slice.call(activeCarousel.getElementsByClassName('carousel-item'));
+    const carouselIndicators = [].slice.call(activeCarousel.getElementsByClassName('indicator'));
+
+    const activeItem = carouselItems.find(item => item.classList.contains('active'));
+    const activeIndicator = carouselIndicators.find(item => item.classList.contains('active'));
+
+    const nextItem = carouselItems[slideNo - 1];
+    const nextIndicator = carouselIndicators[slideNo - 1];
+
+    _isSliding = true;
+
+    activeItem.classList.remove(ClassName.ACTIVE);
+    activeIndicator.classList.remove(ClassName.ACTIVE);
+
+    nextItem.classList.add(ClassName.ACTIVE);
+    nextIndicator.classList.add(ClassName.ACTIVE);
+
+    _isSliding = false;
   }
 
   // Init
