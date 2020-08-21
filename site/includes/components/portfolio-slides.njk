@@ -13,7 +13,7 @@
             {%- for image in project.data.images -%}
               <div class="carousel-item{%if loop.first %} active{% endif %}">
                 <div class="aspect-ratio"></div>
-                <img data-lazy="{{ image }}" />
+                <img data-lazy-late="{{ image }}" />
               </div>
             {%- endfor -%}
 
