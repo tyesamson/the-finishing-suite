@@ -3,10 +3,24 @@ import $$ from '@utilities/selectors';
 let slideCount = 0;
 let currentSlide = -1;
 
+const Config = {
+  TRANSITION_DURATION: 250
+};
+
+const Classes = {
+  IN: 'in',
+  TRANSITIONING: 'transitioning'
+};
+
 function closePortfolio() {
   hideSlide(currentSlide);
   $$.body.classList.remove('portfolio-open');
-  $$.portfolio.slides.classList.remove('block');
+
+  $$.portfolio.slides.classList.add(Classes.TRANSITIONING);
+  $$.portfolio.slides.classList.remove(Classes.IN);
+  window.setTimeout(() => {
+    $$.portfolio.slides.classList.remove(Classes.TRANSITIONING);
+  }, Config.TRANSITION_DURATION);
 }
 
 function hideSlide(slideNo) {
@@ -35,7 +49,11 @@ function onPortfolioPrev() {
 
 function showPortfolio() {
   $$.body.classList.add('portfolio-open');
-  $$.portfolio.slides.classList.add('block');
+  $$.portfolio.slides.classList.add(Classes.TRANSITIONING);
+  $$.portfolio.slides.classList.add(Classes.IN);
+  window.setTimeout(() => {
+    $$.portfolio.slides.classList.remove(Classes.TRANSITIONING);
+  }, Config.TRANSITION_DURATION);
 }
 
 function showSlide(slideNo) {

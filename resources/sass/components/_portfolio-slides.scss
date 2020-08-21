@@ -13,6 +13,18 @@
   overflow-x: hidden;
   overflow-y: auto;
 
+  opacity: 0;
+  transition: opacity .25s ease-in-out;
+
+  &.transitioning {
+    display: block;
+  }
+
+  &.in {
+    display: block;
+    opacity: 1;
+  }
+
   .close {
     position: absolute;
     top: 0;
