@@ -11,10 +11,10 @@
 }
 
 .carousel-item {
+  display: none;
   position: relative;
   float: left;
 
-  display: none;
   width: 100%;
   margin-right: -100%;
 
@@ -23,6 +23,7 @@
 
   &.active {
     display: block;
+    transform: translateX(0);
   }
 
   .aspect-ratio {
@@ -31,6 +32,23 @@
 
   > img,
   > iframe {
-    @apply absolute left-0 top-0 w-full h-full object-cover;
+    @apply absolute;
+    @apply left-0;
+    @apply top-0;
+    @apply w-full;
+    @apply h-full;
+    @apply object-cover;
   }
+}
+
+.carousel-item-left {
+  display: block;
+}
+
+.carousel-item-left {
+  transform: translateX(-100%);
+}
+
+.carousel-item-right {
+  transform: translateX(100%);
 }

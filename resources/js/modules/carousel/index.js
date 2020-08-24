@@ -2,8 +2,12 @@ import $$ from '@utilities/selectors';
 
 const ClassName = {
   ACTIVE: 'active',
+  CAROUSEL: 'carousel',
+  INDICATOR: 'indicator',
+  ITEM: 'carousel-item',
   NEXT: 'carousel-item-next',
-  PREV: 'carousel-item-prev'
+  PREV: 'carousel-item-prev',
+  SHOW: 'show'
 }
 
 const Direction = {
@@ -13,24 +17,27 @@ const Direction = {
   RIGHT: 'right'
 }
 
-const Carousel = function Carousel() {
+class Carousel  {
 
-  // Declarations
+  constructor() {
+    this._isSliding = false;
 
-  let _isSliding = false;
+    this._addEventListeners();
+  }
+
+
 
   // Private
-  //
 
-  function _addEventListeners() {
+  _addEventListeners() {
     const imagePrev = $$.portfolio.imagePrev;
     for (let i = 0; i < imagePrev.length; i++) {
-      imagePrev[i].addEventListener('click', _ => prev());
+      imagePrev[i].addEventListener('click', _ => this.prev());
     }
 
     const imageNext = $$.portfolio.imageNext;
     for (let i = 0; i < imageNext.length; i++) {
-      imageNext[i].addEventListener('click', _ => next());
+      imageNext[i].addEventListener('click', _ => this.next());
     }
 
     const indicators = $$.portfolio.indicators;
@@ -38,11 +45,11 @@ const Carousel = function Carousel() {
       const indicator = indicators[i];
       const slideNo = parseInt(indicator.dataset.slide, 10);
       const target = indicator.dataset.target;
-      indicator.addEventListener('click', _ => showSlide(target, slideNo));
+      indicator.addEventListener('click', _ => this.showSlide(target, slideNo));
     }
   }
 
-  function _getItemByDirection(direction, items, activeItem) {
+  _getItemByDirection(direction, items, activeItem) {
     const activeIndex = items.indexOf(activeItem);
     const delta = direction === Direction.PREV ? -1 : 1;
     const itemIndex = (activeIndex + delta) % items.length;
@@ -52,18 +59,18 @@ const Carousel = function Carousel() {
       : items[itemIndex];
   }
 
-  function _slide(direction) {
-    const activeCarousel = document.getElementsByClassName('carousel in')[0];
-    const carouselItems = [].slice.call(activeCarousel.getElementsByClassName('carousel-item'));
+  _slide(direction) {
+    const activeCarousel = document.getElementsByClassName(`${ClassName.CAROUSEL} ${ClassName.SHOW}`)[0];
+    const carouselItems = [].slice.call(activeCarousel.getElementsByClassName(ClassName.ITEM));
 
     if (carouselItems.length === 1) { return; }
 
-    const activeItem = carouselItems.find(item => item.classList.contains('active'));
-    const nextItem = _getItemByDirection(direction, carouselItems, activeItem);
+    const activeItem = carouselItems.find(item => item.classList.contains(ClassName.ACTIVE));
+    const nextItem = this._getItemByDirection(direction, carouselItems, activeItem);
 
-    const carouselIndicators = [].slice.call(activeCarousel.getElementsByClassName('indicator'));
-    const activeIndicator = carouselIndicators.find(item => item.classList.contains('active'));
-    const nextIndicator = _getItemByDirection(direction, carouselIndicators, activeIndicator);
+    const carouselIndicators = [].slice.call(activeCarousel.getElementsByClassName(ClassName.INDICATOR));
+    const activeIndicator = carouselIndicators.find(item => item.classList.contains(ClassName.ACTIVE));
+    const nextIndicator = this._getItemByDirection(direction, carouselIndicators, activeIndicator);
 
     let directionalClassName;
     let eventDirectionName;
@@ -80,11 +87,11 @@ const Carousel = function Carousel() {
     }
 
     if (nextItem && nextItem.classList.contains(ClassName.ACTIVE)) {
-      _isSliding = false;
+      this._isSliding = false;
       return;
     }
 
-    _isSliding = true;
+    this._isSliding = true;
 
     activeItem.classList.remove(ClassName.ACTIVE);
     activeIndicator.classList.remove(ClassName.ACTIVE);
@@ -92,36 +99,36 @@ const Carousel = function Carousel() {
     nextItem.classList.add(ClassName.ACTIVE);
     nextIndicator.classList.add(ClassName.ACTIVE);
 
-    _isSliding = false;
+    this._isSliding = false;
   }
 
   // Public
   //
 
-  function prev() {
-    if (!_isSliding) {
-      _slide(Direction.PREV);
+  prev() {
+    if (!this._isSliding) {
+      this._slide(Direction.PREV);
     }
   }
 
-  function next() {
-    if (!_isSliding) {
-      _slide(Direction.NEXT);
+  next() {
+    if (!this._isSliding) {
+      this._slide(Direction.NEXT);
     }
   }
 
-  function showSlide(target, slideNo) {
+  showSlide(target, slideNo) {
     const activeCarousel = document.getElementById(target);
-    const carouselItems = [].slice.call(activeCarousel.getElementsByClassName('carousel-item'));
-    const carouselIndicators = [].slice.call(activeCarousel.getElementsByClassName('indicator'));
+    const carouselItems = [].slice.call(activeCarousel.getElementsByClassName(ClassName.ACTIVE));
+    const carouselIndicators = [].slice.call(activeCarousel.getElementsByClassName(ClassName.INDICATOR));
 
-    const activeItem = carouselItems.find(item => item.classList.contains('active'));
-    const activeIndicator = carouselIndicators.find(item => item.classList.contains('active'));
+    const activeItem = carouselItems.find(item => item.classList.contains(ClassName.ACTIVE));
+    const activeIndicator = carouselIndicators.find(item => item.classList.contains(ClassName.ACTIVE));
 
     const nextItem = carouselItems[slideNo - 1];
     const nextIndicator = carouselIndicators[slideNo - 1];
 
-    _isSliding = true;
+    this._isSliding = true;
 
     activeItem.classList.remove(ClassName.ACTIVE);
     activeIndicator.classList.remove(ClassName.ACTIVE);
@@ -129,13 +136,11 @@ const Carousel = function Carousel() {
     nextItem.classList.add(ClassName.ACTIVE);
     nextIndicator.classList.add(ClassName.ACTIVE);
 
-    _isSliding = false;
+    this._isSliding = false;
   }
 
-  // Init
-  //
+}
 
-  _addEventListeners();
-}()
+new Carousel();
 
-export default Carousel
+export default Carousel;
