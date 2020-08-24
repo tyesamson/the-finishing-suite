@@ -38,25 +38,6 @@ function onPortfolioPrev() {
   showSlide(prev);
 }
 
-function showPortfolio() {
-
-  $$.portfolio.slides.classList.add(Classes.TRANSITIONING);
-  $$.portfolio.slides.classList.add(Classes.IN);
-  window.setTimeout(() => {
-    $$.portfolio.slides.classList.remove(Classes.TRANSITIONING);
-  }, Config.TRANSITION_DURATION);
-}
-
-function showSlide(slideNo) {
-  if (currentSlide === slideNo) { return; }
-
-  if (currentSlide > 0) { hideSlide(currentSlide); }
-
-  document.getElementById(`portfolioCarousel${slideNo}`).classList.add('in');
-  document.getElementById(`portfolioText${slideNo}`).classList.add('in');
-  currentSlide = slideNo;
-}
-
 class Portfolio {
 
   // Constructor
@@ -87,12 +68,12 @@ class Portfolio {
 
     const transitionDuration = getTransitionDurationFromElement(this._container);
 
-    this._hideCurrentGridItem();
-
     this._container.classList.remove(CLASS_NAME_SHOW);
     this._element.classList.remove(CLASS_NAME_SHOW);
 
     setTimeout(() => {
+      this._hideCurrentGridItem();
+
       this._element.style.display = 'none'
       this._isTransitioning = false;
 
@@ -117,14 +98,15 @@ class Portfolio {
   }
 
 
+
   // Private
 
   _addEventListeners() {
-    // $$.portfolio.slides.addEventListener('click', (e) => {
-    //   if (e.target === $$.portfolio.slides) {
-    //     closePortfolio();
-    //   }
-    // });
+    $$.portfolio.slides.addEventListener('click', (e) => {
+      if (e.target === $$.portfolio.slides) {
+        this.hide();
+      }
+    });
     $$.portfolio.close.addEventListener('click', _ => this.hide());
     // $$.portfolio.next.addEventListener('click', _ => onPortfolioNext());
     // $$.portfolio.prev.addEventListener('click', _ => onPortfolioPrev());
@@ -145,6 +127,8 @@ class Portfolio {
 
     document.getElementById(`portfolioCarousel${this._currentSlideNo}`).classList.remove(CLASS_NAME_SHOW);
     document.getElementById(`portfolioText${this._currentSlideNo}`).classList.remove(CLASS_NAME_SHOW);
+
+    this._currentSlideNo = -1;
   }
 
   _removeBackdrop() {
@@ -200,8 +184,11 @@ class Portfolio {
       this._container.classList.add(CLASS_NAME_SHOW);
 
       setTimeout(() => {
+        this._currentSlideNo = slideNo;
         this._isTransitioning = false;
       }, transitionDuration);
+    } else {
+      this._currentSlideNo = slideNo;
     }
   }
 
