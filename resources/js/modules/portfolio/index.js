@@ -4,39 +4,9 @@ import {
   reflow
 } from '@utilities/helpers'
 
-
 const CLASS_NAME_BACKDROP = 'portfolio-backdrop';
 const CLASS_NAME_OPEN = 'portfolio-open';
 const CLASS_NAME_SHOW = 'show';
-
-function closePortfolio() {
-  hideSlide(currentSlide);
-  $$.body.classList.remove('portfolio-open');
-
-  $$.portfolio.slides.classList.add(Classes.TRANSITIONING);
-  $$.portfolio.slides.classList.remove(Classes.IN);
-  window.setTimeout(() => {
-    $$.portfolio.slides.classList.remove(Classes.TRANSITIONING);
-  }, Config.TRANSITION_DURATION);
-}
-
-function hideSlide(slideNo) {
-  document.getElementById(`portfolioCarousel${slideNo}`).classList.remove('in');
-  document.getElementById(`portfolioText${slideNo}`).classList.remove('in');
-  currentSlide = -1;
-}
-
-function onPortfolioNext() {
-  let next = currentSlide + 1;
-  if (next > slideCount) { next = 1; }
-  showSlide(next);
-}
-
-function onPortfolioPrev() {
-  let prev = currentSlide - 1;
-  if (prev < 1) { prev = slideCount; }
-  showSlide(prev);
-}
 
 class Portfolio {
 
@@ -48,6 +18,7 @@ class Portfolio {
     this._currentSlideNo = -1;
     this._element = $$.portfolio.slides;
     this._isShown = false;
+    this._isSlideTransitioning = false;
     this._isTransitioning = false;
     this._slideCount = 0;
 
@@ -108,8 +79,8 @@ class Portfolio {
       }
     });
     $$.portfolio.close.addEventListener('click', _ => this.hide());
-    // $$.portfolio.next.addEventListener('click', _ => onPortfolioNext());
-    // $$.portfolio.prev.addEventListener('click', _ => onPortfolioPrev());
+    $$.portfolio.next.addEventListener('click', _ => this._onPortfolioNext());
+    $$.portfolio.prev.addEventListener('click', _ => this._onPortfolioPrev());
 
     const gridItems = $$.portfolio.grid.children;
     this._slideCount = gridItems.length;
@@ -129,6 +100,18 @@ class Portfolio {
     document.getElementById(`portfolioText${this._currentSlideNo}`).classList.remove(CLASS_NAME_SHOW);
 
     this._currentSlideNo = -1;
+  }
+
+  _onPortfolioNext() {
+    let next = this._currentSlideNo + 1;
+    if (next > this._slideCount) { next = 1; }
+    this._showSlideNo(next);
+  }
+
+  _onPortfolioPrev() {
+    let prev = this._currentSlideNo - 1;
+    if (prev < 1) { prev = this._slideCount; }
+    this._showSlideNo(prev);
   }
 
   _removeBackdrop() {
@@ -164,7 +147,15 @@ class Portfolio {
 
   _showGridItem(gridItem) {
     const slideNo = parseInt(gridItem.id.substring(13), 10);
+    this._showSlideNo(slideNo);
+  }
+
+  _showSlideNo(slideNo) {
+    if (this._isSlideTransitioning) { return; }
+
     if (this._currentSlideNo === slideNo) { return; }
+
+    this._isSlideTransitioning = true;
 
     if (this._currentSlideNo > 0) {
       this._hideCurrentGridItem();
@@ -186,6 +177,7 @@ class Portfolio {
       setTimeout(() => {
         this._currentSlideNo = slideNo;
         this._isTransitioning = false;
+        this._isSlideTransitioning = false;
       }, transitionDuration);
     } else {
       this._currentSlideNo = slideNo;
