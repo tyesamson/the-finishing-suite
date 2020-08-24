@@ -4,24 +4,35 @@
   overflow: hidden;
 }
 
-.portfolio-slides {
-  @apply fixed inset-0 z-50;
+.portfolio-backdrop {
+  @apply fixed;
+  @apply inset-0;
+  @apply bg-black;
+  @apply bg-opacity-75;
 
-  @apply bg-black bg-opacity-75;
+  opacity: 0;
+  z-index: $z-index-portfolio-backdrop;
+
+  transition: opacity .25s ease-in-out;
+
+  &.show {
+    opacity: 1;
+  }
+}
+
+.portfolio-slides {
+  @apply fixed;
+  @apply inset-0;
 
   display: none;
   overflow-x: hidden;
   overflow-y: auto;
+  z-index: $z-index-portfolio;
 
   opacity: 0;
   transition: opacity .25s ease-in-out;
 
-  &.transitioning {
-    display: block;
-  }
-
-  &.in {
-    display: block;
+  &.show {
     opacity: 1;
   }
 
@@ -46,12 +57,19 @@
     @apply bg-black;
 
     position: relative;
+
+    transform: translate(0, -20vh);
+    transition: transform .3s ease-out;
+
+    &.show {
+      transform: none;
+    }
   }
 
   .slide {
     display: none;
 
-    &.in {
+    &.show {
       display: block;
     }
   }

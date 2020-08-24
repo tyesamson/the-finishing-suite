@@ -11,7 +11,8 @@ const $$ = {
     indicators  : document.getElementsByClassName('indicator'),
     next        : document.getElementById('portfolioNext'),
     prev        : document.getElementById('portfolioPrev'),
-    slides      : document.getElementById('portfolioSlides')
+    slides      : document.getElementById('portfolioSlides'),
+    slidesContainer : document.getElementById('portfolioSlidesContainer')
   },
   sections      : document.querySelectorAll('section')
 }

@@ -6,7 +6,6 @@ nav {
   @apply fixed;
   @apply top-0;
   @apply right-0;
-  @apply z-50;
 
   @apply mt-1;
   @apply mr-3;
@@ -15,6 +14,8 @@ nav {
 
   @apply cursor-pointer;
   @apply opacity-75;
+
+  z-index: $z-index-nav;
 }
 
 #nav {
