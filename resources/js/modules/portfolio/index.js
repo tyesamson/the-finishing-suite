@@ -67,6 +67,11 @@ function showSlide(slideNo) {
 }
 
 const Portfolio = function Portfolio() {
+  $$.portfolio.slides.addEventListener('click', (e) => {
+    if (e.target === $$.portfolio.slides) {
+      closePortfolio();
+    }
+  });
   $$.portfolio.close.addEventListener('click', _ => closePortfolio());
   $$.portfolio.next.addEventListener('click', _ => onPortfolioNext());
   $$.portfolio.prev.addEventListener('click', _ => onPortfolioPrev());
