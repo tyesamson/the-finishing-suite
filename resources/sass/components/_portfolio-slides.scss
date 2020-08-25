@@ -72,7 +72,8 @@
     h3 {
       @apply font-sans;
       @apply mb-4;
-      @apply text-uppercase;
+
+      text-transform: uppercase;
     }
 
     &.show {
