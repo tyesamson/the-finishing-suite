@@ -1,12 +1,18 @@
 import $$ from '@utilities/selectors';
+import {
+  getTransitionDurationFromElement,
+  reflow
+} from '@utilities/helpers'
 
 const ClassName = {
   ACTIVE: 'active',
   CAROUSEL: 'carousel',
   INDICATOR: 'indicator',
   ITEM: 'carousel-item',
+  LEFT: 'carousel-item-left',
   NEXT: 'carousel-item-next',
   PREV: 'carousel-item-prev',
+  RIGHT: 'carousel-item-right',
   SHOW: 'show'
 }
 
@@ -68,6 +74,10 @@ class Carousel  {
     const activeItem = carouselItems.find(item => item.classList.contains(ClassName.ACTIVE));
     const nextItem = this._getItemByDirection(direction, carouselItems, activeItem);
 
+    if (!activeItem && !nextItem) {
+      return;
+    }
+
     const carouselIndicators = [].slice.call(activeCarousel.getElementsByClassName(ClassName.INDICATOR));
     const activeIndicator = carouselIndicators.find(item => item.classList.contains(ClassName.ACTIVE));
     const nextIndicator = this._getItemByDirection(direction, carouselIndicators, activeIndicator);
@@ -93,13 +103,26 @@ class Carousel  {
 
     this._isSliding = true;
 
-    activeItem.classList.remove(ClassName.ACTIVE);
-    activeIndicator.classList.remove(ClassName.ACTIVE);
+    nextItem.classList.add(orderClassName);
 
-    nextItem.classList.add(ClassName.ACTIVE);
+    reflow(nextItem);
+
+    activeItem.classList.add(directionalClassName);
+    nextItem.classList.add(directionalClassName);
+
+    activeIndicator.classList.remove(ClassName.ACTIVE);
     nextIndicator.classList.add(ClassName.ACTIVE);
 
-    this._isSliding = false;
+    const transitionDuration = getTransitionDurationFromElement(activeItem);
+
+    setTimeout(() => {
+      nextItem.classList.remove(directionalClassName, orderClassName);
+      nextItem.classList.add(ClassName.ACTIVE);
+
+      activeItem.classList.remove(ClassName.ACTIVE, orderClassName, directionalClassName);
+
+      this._isSliding = false;
+    }, transitionDuration);
   }
 
   // Public

@@ -19,11 +19,18 @@
   margin-right: -100%;
 
   backface-visibility: hidden;
-  transition: transform .6s ease-in-out;
+  transition: transform .25s ease-in-out;
 
   &.active {
     display: block;
-    transform: translateX(0);
+
+    &.carousel-item-left {
+      transform: translateX(-100%);
+    }
+
+    &.carousel-item-right {
+      transform: translateX(100%);
+    }
   }
 
   .aspect-ratio {
@@ -41,14 +48,19 @@
   }
 }
 
-.carousel-item-left {
+.carousel-item-prev,
+.carousel-item-next {
   display: block;
 }
 
-.carousel-item-left {
-  transform: translateX(-100%);
+.carousel-item-next {
+  &:not(.carousel-item-left) {
+    transform: translateX(100%);
+  }
 }
 
-.carousel-item-right {
-  transform: translateX(100%);
+.carousel-item-prev {
+  &:not(.carousel-item-right) {
+    transform: translateX(-100%);
+  }
 }
