@@ -55,47 +55,7 @@ class Carousel  {
     }
   }
 
-  _getItemByDirection(direction, items, activeItem) {
-    const activeIndex = items.indexOf(activeItem);
-    const delta = direction === Direction.PREV ? -1 : 1;
-    const itemIndex = (activeIndex + delta) % items.length;
-
-    return itemIndex === -1
-      ? items[items.length - 1]
-      : items[itemIndex];
-  }
-
-  _slide(direction) {
-    const activeCarousel = document.getElementsByClassName(`${ClassName.CAROUSEL} ${ClassName.SHOW}`)[0];
-    const carouselItems = [].slice.call(activeCarousel.getElementsByClassName(ClassName.ITEM));
-
-    if (carouselItems.length === 1) { return; }
-
-    const activeItem = carouselItems.find(item => item.classList.contains(ClassName.ACTIVE));
-    const nextItem = this._getItemByDirection(direction, carouselItems, activeItem);
-
-    if (!activeItem && !nextItem) {
-      return;
-    }
-
-    const carouselIndicators = [].slice.call(activeCarousel.getElementsByClassName(ClassName.INDICATOR));
-    const activeIndicator = carouselIndicators.find(item => item.classList.contains(ClassName.ACTIVE));
-    const nextIndicator = this._getItemByDirection(direction, carouselIndicators, activeIndicator);
-
-    let directionalClassName;
-    let eventDirectionName;
-    let orderClassName;
-
-    if (direction === Direction.NEXT) {
-      directionalClassName = ClassName.LEFT
-      eventDirectionName = Direction.LEFT;
-      orderClassName = ClassName.NEXT;
-    } else {
-      directionalClassName = ClassName.RIGHT
-      eventDirectionName = Direction.RIGHT;
-      orderClassName = ClassName.PREV;
-    }
-
+  _doSlide(activeItem, nextItem, activeIndicator, nextIndicator, orderClassName, directionalClassName) {
     if (nextItem && nextItem.classList.contains(ClassName.ACTIVE)) {
       this._isSliding = false;
       return;
@@ -125,6 +85,47 @@ class Carousel  {
     }, transitionDuration);
   }
 
+  _getItemByDirection(direction, items, activeItem) {
+    const activeIndex = items.indexOf(activeItem);
+    const delta = direction === Direction.PREV ? -1 : 1;
+    const itemIndex = (activeIndex + delta) % items.length;
+
+    return itemIndex === -1
+      ? items[items.length - 1]
+      : items[itemIndex];
+  }
+
+  _slide(direction) {
+    const activeCarousel = document.getElementsByClassName(`${ClassName.CAROUSEL} ${ClassName.SHOW}`)[0];
+    const carouselItems = [].slice.call(activeCarousel.getElementsByClassName(ClassName.ITEM));
+
+    if (carouselItems.length === 1) { return; }
+
+    const activeItem = carouselItems.find(item => item.classList.contains(ClassName.ACTIVE));
+    const nextItem = this._getItemByDirection(direction, carouselItems, activeItem);
+
+    if (!activeItem && !nextItem) {
+      return;
+    }
+
+    const carouselIndicators = [].slice.call(activeCarousel.getElementsByClassName(ClassName.INDICATOR));
+    const activeIndicator = carouselIndicators.find(item => item.classList.contains(ClassName.ACTIVE));
+    const nextIndicator = this._getItemByDirection(direction, carouselIndicators, activeIndicator);
+
+    let directionalClassName;
+    let orderClassName;
+
+    if (direction === Direction.NEXT) {
+      directionalClassName = ClassName.LEFT
+      orderClassName = ClassName.NEXT;
+    } else {
+      directionalClassName = ClassName.RIGHT
+      orderClassName = ClassName.PREV;
+    }
+
+    this._doSlide(activeItem, nextItem, activeIndicator, nextIndicator, orderClassName, directionalClassName);
+  }
+
   // Public
   //
 
@@ -141,8 +142,10 @@ class Carousel  {
   }
 
   showSlide(target, slideNo) {
+    if (this._isSliding) { return; }
+
     const activeCarousel = document.getElementById(target);
-    const carouselItems = [].slice.call(activeCarousel.getElementsByClassName(ClassName.ACTIVE));
+    const carouselItems = [].slice.call(activeCarousel.getElementsByClassName(ClassName.ITEM));
     const carouselIndicators = [].slice.call(activeCarousel.getElementsByClassName(ClassName.INDICATOR));
 
     const activeItem = carouselItems.find(item => item.classList.contains(ClassName.ACTIVE));
@@ -151,15 +154,20 @@ class Carousel  {
     const nextItem = carouselItems[slideNo - 1];
     const nextIndicator = carouselIndicators[slideNo - 1];
 
-    this._isSliding = true;
+    const activeSlideNo = parseInt(activeItem.dataset.slide);
 
-    activeItem.classList.remove(ClassName.ACTIVE);
-    activeIndicator.classList.remove(ClassName.ACTIVE);
+    let directionalClassName;
+    let orderClassName;
 
-    nextItem.classList.add(ClassName.ACTIVE);
-    nextIndicator.classList.add(ClassName.ACTIVE);
+    if (activeSlideNo < slideNo) {
+      directionalClassName = ClassName.LEFT
+      orderClassName = ClassName.NEXT;
+    } else {
+      directionalClassName = ClassName.RIGHT
+      orderClassName = ClassName.PREV;
+    }
 
-    this._isSliding = false;
+    this._doSlide(activeItem, nextItem, activeIndicator, nextIndicator, orderClassName, directionalClassName);
   }
 
 }
