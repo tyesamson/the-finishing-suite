@@ -6,7 +6,6 @@ description: Short Film
 thumb: /images/portfolio/thumbs/orangesandlemons.jpg
 images:
  - /images/portfolio/orangesandlemons.jpg
- - https://source.unsplash.com/random/1920x1200
 ---
 
 <dl>
