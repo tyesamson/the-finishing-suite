@@ -69,6 +69,12 @@
   .slide {
     display: none;
 
+    h3 {
+      @apply font-sans;
+      @apply mb-4;
+      @apply text-uppercase;
+    }
+
     &.show {
       display: block;
     }

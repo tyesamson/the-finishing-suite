@@ -1,11 +1,11 @@
 ---
 tags: portfolio
-date: 2020-07-29
-title: Albi & The Wolves - "Story"
+date: 2020-07-23
+title: Stälker — "Shocked to Death"
 description: Music Video
-thumb: /images/portfolio/thumbs/aatwstory.jpg
+thumb: /images/portfolio/thumbs/shockedtodeath.jpg
 images:
- - /images/portfolio/aatwstory.jpg
+ - /images/portfolio/shockedtodeath.jpg
 ---
 
 <dl>
@@ -18,14 +18,14 @@ images:
 
 <dl>
   <dt>Cinematographer</dt>
-  <dd>Alexander Campbell</dd>
+  <dd>Matt Henley</dd>
 
   <dt>Editor</dt>
-  <dd>Laura McBeath</dd>
+  <dd>Bailey Palmer</dd>
 
   <dt>Director</dt>
-  <dd>Gal Hochman</dd>
+  <dd>Dave Hampton</dd>
 
   <dt>Label</dt>
-  <dd>Second Hand Records</dd>
+  <dd>Napalm Records</dd>
 </dl>

@@ -1,13 +1,11 @@
 ---
 tags: portfolio
-date: 2020-07-30
-title: Chorus - "Fastest Fibre"
-description: 30" TV Spot
-thumb: /images/portfolio/thumbs/fastestfibre.jpg
+date: 2020-07-27
+title: The Strat - "Top of the World"
+description: Superbowl Spot
+thumb: /images/portfolio/thumbs/totw.jpg
 images:
- - /images/portfolio/fastestfibre.jpg
-videos:
- - https://www.youtube.com/embed/s1x-TkF4f7A
+ - /images/portfolio/totw.jpg
 ---
 
 <dl>
@@ -17,13 +15,13 @@ videos:
   <dt>Finishing Artist</dt>
   <dd>Alastair Tye Samson</dd>
 
-  <dt>VFX</dt>
+  <dt>Additional VFX</dt>
   <dd>Richard Borg</dd>
 </dl>
 
 <dl>
   <dt>Cinematographer</dt>
-  <dd>Paul Ross Jones</dd>
+  <dd>Eric Giovon</dd>
 
   <dt>Editor</dt>
   <dd>Philippe Lods</dd>
@@ -32,5 +30,5 @@ videos:
   <dd>Paul Ross Jones</dd>
 
   <dt>Agency</dt>
-  <dd>Saatchi &amp; Saatchi</dd>
+  <dd>LaneTerralever</dd>
 </dl>
