@@ -11,46 +11,6 @@
     background-image: url('/images/backgrounds/resolve-panel.jpg');
   }
 
-  &.contact {
-    @apply text-center;
-
-    background-image: url('/images/backgrounds/bricks.jpg');
-
-    img {
-      @apply my-10;
-      @apply w-3/4;
-      @apply mx-auto;
-
-      @screen sm {
-        @apply w-1/2;
-      }
-    }
-
-    .contact-links {
-      @apply flex;
-      @apply flex-col;
-
-      a {
-        @apply mb-5;
-      }
-
-      @screen sm {
-        @apply flex-row;
-        @apply justify-around;
-      }
-    }
-
-    iframe {
-      @apply w-full;
-      @apply h-64;
-      @apply mx-auto;
-
-      @screen sm {
-        @apply w-3/4;
-      }
-    }
-  }
-
   &.news {
     background-image: url('/images/backgrounds/bricks.jpg');
   }
