@@ -21,6 +21,10 @@
   backface-visibility: hidden;
   transition: transform .25s ease-in-out;
 
+  > img {
+    width: 100%;
+  }
+
   &.active {
     display: block;
 

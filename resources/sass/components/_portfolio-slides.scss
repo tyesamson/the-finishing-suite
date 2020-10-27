@@ -53,19 +53,6 @@
     }
   }
 
-  > .container {
-    @apply bg-black;
-
-    position: relative;
-
-    transform: translate(0, -20vh);
-    transition: transform .3s ease-out;
-
-    &.show {
-      transform: none;
-    }
-  }
-
   .slide {
     display: none;
 
@@ -79,6 +66,19 @@
     &.show {
       display: block;
     }
+  }
+}
+
+.portfolio-slides-container {
+  @apply bg-black;
+
+  position: relative;
+
+  transform: translate(0, -20vh);
+  transition: transform .3s ease-out;
+
+  &.show {
+    transform: none;
   }
 }
 
