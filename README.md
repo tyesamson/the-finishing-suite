@@ -13,3 +13,11 @@ yarn install
 ```
 yarn run dev
 ```
+
+## Deployment
+
+```
+yarn run build
+```
+
+Then copy everything from `dist`.
