@@ -23,6 +23,8 @@ nav {
   @apply top-0;
   @apply z-40;
 
+  @apply pt-1;
+
   @apply flex;
   @apply flex-col;
   @apply items-center;
@@ -38,12 +40,15 @@ nav {
   transition: height 300ms ease-in-out, opacity 300ms ease-in-out;
 
   &.in {
-    height: 240px;
+    height: 350px;
     opacity: .8;
   }
 
   a {
-    @apply p-2;
+    @apply px-2;
+    @apply py-3;
+
+    @apply uppercase;
 
     transition: color 300ms ease-in-out;
 
@@ -76,6 +81,10 @@ nav {
     &.in {
       height: auto;
       opacity: 1;
+    }
+
+    a {
+      @apply py-5;
     }
   }
 }
