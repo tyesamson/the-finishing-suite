@@ -3,9 +3,9 @@ tags: portfolio
 date: 2020-07-26
 title: Razorwyre - "The Conjourer"
 description: Music Video
-thumb: /images/portfolio/thumbs/conjourer.jpg
+thumb: images/portfolio/thumbs/conjourer.jpg
 images:
- - /images/portfolio/conjourer.jpg
+ - images/portfolio/conjourer.jpg
 ---
 
 <dl>

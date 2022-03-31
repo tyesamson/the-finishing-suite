@@ -3,9 +3,9 @@ tags: portfolio
 date: 2020-07-27
 title: The Strat - "Top of the World"
 description: Superbowl Spot
-thumb: /images/portfolio/thumbs/totw.jpg
+thumb: images/portfolio/thumbs/totw.jpg
 images:
- - /images/portfolio/totw.jpg
+ - images/portfolio/totw.jpg
 ---
 
 <dl>

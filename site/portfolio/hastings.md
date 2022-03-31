@@ -3,9 +3,9 @@ tags: portfolio
 date: 2020-07-25
 title: Hastings
 description: 4352x576 Art Installation
-thumb: /images/portfolio/thumbs/vineyards.jpg
+thumb: images/portfolio/thumbs/vineyards.jpg
 images:
- - /images/portfolio/vineyards.jpg
+ - images/portfolio/vineyards.jpg
 ---
 
 <dl>

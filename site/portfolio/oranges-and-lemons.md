@@ -3,9 +3,9 @@ tags: portfolio
 date: 2020-07-28
 title: Oranges & Lemons
 description: Short Film
-thumb: /images/portfolio/thumbs/orangesandlemons.jpg
+thumb: images/portfolio/thumbs/orangesandlemons.jpg
 images:
- - /images/portfolio/orangesandlemons.jpg
+ - images/portfolio/orangesandlemons.jpg
 ---
 
 <dl>

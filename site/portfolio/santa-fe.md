@@ -3,9 +3,9 @@ tags: portfolio
 date: 2020-07-19
 title: Hyundai Best Santa Fe Yet
 description: 30" TV Spot
-thumb: /images/portfolio/thumbs/bestsantafe.jpg
+thumb: images/portfolio/thumbs/bestsantafe.jpg
 images:
- - /images/portfolio/bestsantafe.jpg
+ - images/portfolio/bestsantafe.jpg
 ---
 
 <dl>

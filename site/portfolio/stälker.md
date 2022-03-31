@@ -3,9 +3,9 @@ tags: portfolio
 date: 2020-07-23
 title: Stälker — "Shocked to Death"
 description: Music Video
-thumb: /images/portfolio/thumbs/shockedtodeath.jpg
+thumb: images/portfolio/thumbs/shockedtodeath.jpg
 images:
- - /images/portfolio/shockedtodeath.jpg
+ - images/portfolio/shockedtodeath.jpg
 ---
 
 <dl>

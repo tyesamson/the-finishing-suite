@@ -3,9 +3,9 @@ tags: portfolio
 date: 2020-07-24
 title: Diamond Pasta - "Heat and Eat"
 description: 30" TV spot
-thumb: /images/portfolio/thumbs/heatandeat.jpg
+thumb: images/portfolio/thumbs/heatandeat.jpg
 images:
- - /images/portfolio/heatandeat.jpg
+ - images/portfolio/heatandeat.jpg
 ---
 
 <dl>

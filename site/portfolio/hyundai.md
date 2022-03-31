@@ -3,9 +3,9 @@ tags: portfolio
 date: 2020-07-18
 title: Hyundai Master Content
 description: 53 x 30" Spots
-thumb: /images/portfolio/thumbs/hyundai.jpg
+thumb: images/portfolio/thumbs/hyundai.jpg
 images:
- - /images/portfolio/hyundai.jpg
+ - images/portfolio/hyundai.jpg
 ---
 
 <dl>

@@ -3,9 +3,9 @@ tags: portfolio
 date: 2020-07-22
 title: Breaking and Entering
 description: Short Film
-thumb: /images/portfolio/thumbs/breakingandentering.jpg
+thumb: images/portfolio/thumbs/breakingandentering.jpg
 images:
- - /images/portfolio/breakingandentering.jpg
+ - images/portfolio/breakingandentering.jpg
 ---
 
 <dl>

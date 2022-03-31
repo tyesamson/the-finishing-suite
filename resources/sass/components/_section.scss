@@ -8,22 +8,22 @@
   @apply bg-fixed;
 
   &.about {
-    background-image: url('/images/backgrounds/resolve-panel.jpg');
+    background-image: url('../images/backgrounds/resolve-panel.jpg');
   }
 
   &.news {
-    background-image: url('/images/backgrounds/bricks.jpg');
+    background-image: url('../images/backgrounds/bricks.jpg');
   }
 
   &.portfolio {
     @apply bg-no-repeat;
     @apply bg-scroll;
 
-    background-image: url('/images/backgrounds/portfolio.jpg');
+    background-image: url('../images/backgrounds/portfolio.jpg');
   }
 
   &.services {
-    background-image: url('/images/backgrounds/couch.jpg');
+    background-image: url('../images/backgrounds/couch.jpg');
 
     ul {
       @apply list-disc;
@@ -36,7 +36,7 @@
   }
 
   &.upload {
-    background-image: url('/images/backgrounds/cans.jpg');
+    // background-image: url('../images/backgrounds/cans.jpg');
   }
 
   .container {

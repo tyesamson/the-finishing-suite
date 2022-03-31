@@ -3,9 +3,9 @@ tags: portfolio
 date: 2020-07-29
 title: Albi & The Wolves - "Story"
 description: Music Video
-thumb: /images/portfolio/thumbs/aatwstory.jpg
+thumb: images/portfolio/thumbs/aatwstory.jpg
 images:
- - /images/portfolio/aatwstory.jpg
+ - images/portfolio/aatwstory.jpg
 ---
 
 <dl>

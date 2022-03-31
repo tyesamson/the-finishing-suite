@@ -3,9 +3,9 @@ tags: portfolio
 date: 2020-07-17
 title: Hyundai Thomas Burkle
 description: 6 x 30" Spots
-thumb: /images/portfolio/thumbs/burkle.jpg
+thumb: images/portfolio/thumbs/burkle.jpg
 images:
- - /images/portfolio/burkle.jpg
+ - images/portfolio/burkle.jpg
 ---
 
 <dl>

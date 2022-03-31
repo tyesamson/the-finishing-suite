@@ -3,9 +3,9 @@ tags: portfolio
 date: 2020-07-21
 title: Vodafone — "Dreamlab"
 description: 60" TVC
-thumb: /images/portfolio/thumbs/dreamlab.jpg
+thumb: images/portfolio/thumbs/dreamlab.jpg
 images:
- - /images/portfolio/dreamlab.jpg
+ - images/portfolio/dreamlab.jpg
 ---
 
 <dl>

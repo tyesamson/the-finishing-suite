@@ -3,9 +3,9 @@ tags: portfolio
 date: 2020-07-17
 title: ABCs of Death
 description: Anthology Feature Film
-thumb: /images/portfolio/thumbs/abcsofdeath.jpg
+thumb: images/portfolio/thumbs/abcsofdeath.jpg
 images:
- - /images/portfolio/abcsofdeath.gif
+ - images/portfolio/abcsofdeath.gif
 ---
 
 <dl>
