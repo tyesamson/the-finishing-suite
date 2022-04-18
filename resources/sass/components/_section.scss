@@ -5,7 +5,6 @@
 
   @apply bg-cover;
   @apply bg-center;
-  @apply bg-fixed;
 
   &.about {
     background-image: url('../images/backgrounds/resolve-panel.jpg');
@@ -52,5 +51,11 @@
       background-color: rgba(0,0,0,.3);
       backdrop-filter: blur(20px);
     }
+  }
+}
+
+@supports not (-webkit-touch-callout : none) {
+  .section {
+    @apply bg-fixed;
   }
 }
