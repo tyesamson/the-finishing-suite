@@ -2,8 +2,11 @@
   <div class="section portfolio py-4">
     <div class="container mx-auto">
       <h2 class="pt-0">Portfolio</h2>
+
+      {% include "components/portfolio-grid.njk" %}
     </div>
   </div>
-  {% include "components/portfolio-grid.njk" %}
-  {% include "components/portfolio-slides.njk" %}
+
 </section>
+
+{% include "components/portfolio-slides.njk" %}

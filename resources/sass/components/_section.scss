@@ -15,8 +15,11 @@
   }
 
   &.portfolio {
+    background-image: url('../images/backgrounds/texture.jpg');
+
     @apply bg-no-repeat;
     @apply bg-scroll;
+
   }
 
   &.services {
@@ -30,6 +33,13 @@
         @apply mt-5;
       }
     }
+  }
+
+  &.suite {
+    @apply bg-scroll;
+
+    aspect-ratio: 2.35 / 1;
+    background-image: url('../images/backgrounds/suite.jpg');
   }
 
   &.upload {
