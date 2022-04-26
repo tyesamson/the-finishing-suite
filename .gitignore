@@ -1,1 +1,8 @@
-src.copy/
+*.log
+
+mix-manifest.json
+
+.publish/
+dist/
+node_modules/
+

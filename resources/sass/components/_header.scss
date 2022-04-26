@@ -1,0 +1,9 @@
+//==========  Header ==========//
+
+.header {
+  height: 100vh;
+
+  @screen sm {
+    height: calc(100vh - 64px);
+  }
+}

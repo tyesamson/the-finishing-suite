@@ -1,0 +1,71 @@
+//==========  Section ==========//
+
+.section {
+  @apply py-20;
+
+  @apply bg-cover;
+  @apply bg-center;
+
+  &.about {
+    background-image: url('../images/backgrounds/resolve-panel.jpg');
+  }
+
+  &.news {
+    background-image: url('../images/backgrounds/bricks.jpg');
+  }
+
+  &.portfolio {
+    background-image: url('../images/backgrounds/texture.jpg');
+
+    @apply bg-no-repeat;
+    @apply bg-scroll;
+
+  }
+
+  &.services {
+    background-image: url('../images/backgrounds/couch.jpg');
+
+    ul {
+      @apply list-disc;
+      @apply list-inside;
+
+      + h4 {
+        @apply mt-5;
+      }
+    }
+  }
+
+  &.suite {
+    @apply bg-scroll;
+
+    aspect-ratio: 2.35 / 1;
+    background-image: url('../images/backgrounds/suite.jpg');
+  }
+
+  &.upload {
+    // background-image: url('../images/backgrounds/cans.jpg');
+  }
+
+  .container {
+    @apply p-8;
+
+    max-width: 90vw;
+
+    @screen md {
+      max-width: 680px;
+    }
+
+    &.blur {
+      @apply rounded-lg;
+
+      background-color: rgba(0,0,0,.3);
+      backdrop-filter: blur(20px);
+    }
+  }
+}
+
+@supports not (-webkit-touch-callout : none) {
+  .section {
+    @apply bg-fixed;
+  }
+}

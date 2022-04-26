@@ -1,0 +1,69 @@
+//==========  Carousel ==========//
+
+.carousel {
+  position: relative;
+}
+
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-item {
+  display: none;
+  position: relative;
+  float: left;
+
+  width: 100%;
+  margin-right: -100%;
+
+  backface-visibility: hidden;
+  transition: transform .25s ease-in-out;
+
+  > img {
+    width: 100%;
+  }
+
+  &.active {
+    display: block;
+
+    &.carousel-item-left {
+      transform: translateX(-100%);
+    }
+
+    &.carousel-item-right {
+      transform: translateX(100%);
+    }
+  }
+
+  .aspect-ratio {
+    padding-bottom: 56.25%;
+  }
+
+  > iframe {
+    @apply absolute;
+    @apply left-0;
+    @apply top-0;
+    @apply w-full;
+    @apply h-full;
+    @apply object-cover;
+  }
+}
+
+.carousel-item-prev,
+.carousel-item-next {
+  display: block;
+}
+
+.carousel-item-next {
+  &:not(.carousel-item-left) {
+    transform: translateX(100%);
+  }
+}
+
+.carousel-item-prev {
+  &:not(.carousel-item-right) {
+    transform: translateX(-100%);
+  }
+}

@@ -1,0 +1,90 @@
+<div id="portfolioSlides" class="portfolio-slides">
+  <div id="portfolioSlidesContainer" class="portfolio-slides-container">
+
+    <button class="close" id="portfolioClose" type="button" aria-label="Close">
+      <span aria-hidden="true"><i class="fas fa-times-circle fa-2x"></i></span>
+    </button>
+
+    <div class="portfolio-images">
+      {%- for project in collections.portfolio | reverse -%}
+
+        <div class="slide carousel" id="portfolioCarousel{{loop.index}}">
+
+          {% set carouselNo = loop.index %}
+
+          <div class="carousel-inner">
+            {%- for image in project.data.images -%}
+              <div class="carousel-item{%if loop.first %} active{% endif %}" data-slide="{{ loop.index }}">
+                <img data-lazy-late="{{ image }}" />
+              </div>
+            {%- endfor -%}
+
+            {%- for video in project.data.videos -%}
+              <div class="carousel-item">
+                <div class="aspect-ratio"></div>
+                <iframe src="{{ video }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            {%- endfor -%}
+          </div>
+
+          {% set totalSlideCount = 0 %}
+          {% if project.data.images %}
+            {% set totalSlideCount = totalSlideCount + project.data.images.length %}
+          {% endif %}
+          {% if project.data.videos %}
+            {% set totalSlideCount = totalSlideCount + project.data.videos.length %}
+          {% endif %}
+
+          <div class="portfolio-images-controls">
+            {% if totalSlideCount > 1 -%}
+
+            <!--<div class="portfolio-image-prev" id="portfolioImagePrev" title="Previous Image">
+              <i class="fas fa-chevron-left fa-fw"></i>
+            </div>-->
+
+            {% set slideCount = 0 %}
+
+            {%- for image in project.data.images -%}
+              {% set slideCount = slideCount + 1 %}
+              <div class="indicator{%if loop.first %} active{% endif %}" data-target="portfolioCarousel{{carouselNo}}" data-slide="{{slideCount}}">
+                <i class="fas fa-circle fa-fw fa-sm"></i>
+              </div>
+            {%- endfor -%}
+            {%- for video in project.data.videos -%}
+              {% set slideCount = slideCount + 1 %}
+              <div class="indicator" data-target="portfolioCarousel{{carouselNo}}" data-slide="{{slideCount}}">
+                <i class="fas fa-circle fa-fw fa-sm"></i>
+              </div>
+            {%- endfor -%}
+
+            <!--<div class="portfolio-image-next" id="portfolioImageNext" title="Next Image">
+              <i class="fas fa-chevron-right fa-fw"></i>
+            </div>-->
+
+          {%- endif -%}
+          </div>
+
+        </div>
+
+      {%- endfor -%}
+    </div>
+
+    <div class="portfolio-text">
+      {%- for project in collections.portfolio | reverse -%}
+        <div class="slide" id="portfolioText{{loop.index}}">
+          <h3>{{ project.data.title }}</h3>
+          <p>{{ project.data.description}}</h3>
+          {{ project.templateContent | safe }}
+        </div>
+      {%- endfor -%}
+
+      <div class="portfolio-control prev" id="portfolioPrev" title="Previous Portfolio">
+        <i class="fas fa-chevron-left fa-2x"></i>
+      </div>
+
+      <div class="portfolio-control next" id="portfolioNext" title="Next Portfolio">
+        <i class="fas fa-chevron-right fa-2x"></i>
+      </div>
+    </div>
+  </div>
+</div>

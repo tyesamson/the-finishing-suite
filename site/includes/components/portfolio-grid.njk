@@ -1,0 +1,7 @@
+<div id="portfolioGrid" class="portfolio-grid">
+  {%- for project in collections.portfolio | reverse -%}
+    <div class="portfolio-item" id="portfolioItem{{ loop.index }}" title="{{ project.data.title }}">
+      <img data-lazy="{{ project.data.thumb }}" alt="{{ project.data.title }}">
+    </div>
+  {%- endfor -%}
+</div>

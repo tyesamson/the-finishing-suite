@@ -1,0 +1,51 @@
+//==========  Portfolio Grid ==========//
+
+.portfolio-grid {
+  @apply w-full;
+  @apply flex;
+  @apply flex-wrap;
+  @apply justify-start;
+
+  > div {
+    @apply w-1/2;
+    @apply flex-grow-0;
+    @apply flex-shrink-0;
+    @apply cursor-pointer;
+
+    > img {
+      width: 100%;
+    }
+  }
+}
+
+@screen sm {
+  .portfolio-grid {
+    > div {
+      @apply w-1/3;
+    }
+  }
+}
+
+@screen md {
+  .portfolio-grid {
+    > div {
+      @apply w-1/4;
+    }
+  }
+}
+
+@screen lg {
+  .portfolio-grid {
+    > div {
+      @apply w-1/5;
+    }
+  }
+}
+
+@screen xl {
+  .portfolio-grid {
+    > div {
+      @apply w-1/6;
+    }
+  }
+}

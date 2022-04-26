@@ -1,0 +1,32 @@
+//==========  Typography ==========//
+
+// Html
+html {
+  scroll-behavior: smooth;
+}
+
+// Headings
+h1, h2, h3, h4 {
+  @apply font-serif;
+}
+
+h2 {
+  @apply font-serif;
+  @apply text-center;
+  @apply text-5xl;
+
+  text-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.4)
+}
+
+h3 {
+  @apply text-3xl;
+}
+
+h4 {
+  @apply text-2xl;
+}
+
+// Paragraphs
+p {
+  @apply mb-5;
+}

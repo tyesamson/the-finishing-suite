@@ -1,0 +1,95 @@
+nav {
+
+  @apply z-50;
+}
+
+#nav-toggle {
+  @apply fixed;
+  @apply top-0;
+  @apply right-0;
+
+  @apply mt-1;
+  @apply mr-3;
+
+  @apply text-2xl;
+
+  @apply cursor-pointer;
+  @apply opacity-75;
+
+  z-index: $z-index-nav;
+}
+
+#nav {
+  @apply fixed;
+  @apply top-0;
+  @apply z-40;
+
+  @apply pt-1;
+
+  @apply flex;
+  @apply flex-col;
+  @apply items-center;
+
+  @apply w-full;
+
+  @apply bg-cover;
+  @apply bg-center;
+
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+
+  background-color: theme('colors.black');
+  background-image: url('../images/backgrounds/texture.jpg');
+
+  transition: height 300ms ease-in-out, opacity 300ms ease-in-out;
+
+  &.in {
+    height: 350px;
+    opacity: .95;
+  }
+
+  a {
+    @apply px-2;
+    @apply py-3;
+
+    @apply uppercase;
+
+    transition: color 300ms ease-in-out;
+
+    &.active,
+    &:hover {
+      color: theme('colors.red');
+    }
+  }
+}
+
+@screen sm {
+  #nav-toggle {
+    @apply hidden;
+  }
+
+  nav {
+    @apply sticky;
+    @apply top-0;
+  }
+
+  #nav {
+    @apply static;
+
+    @apply flex-row;
+    @apply justify-center;
+
+    height: auto;
+    opacity: 1;
+
+    &.in {
+      height: auto;
+      opacity: 1;
+    }
+
+    a {
+      @apply py-5;
+    }
+  }
+}

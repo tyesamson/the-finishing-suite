@@ -1,0 +1,184 @@
+//==========  Portfolio Slides ==========//
+
+.portfolio-open {
+  overflow: hidden;
+}
+
+.portfolio-backdrop {
+  @apply fixed;
+  @apply inset-0;
+  @apply bg-black;
+  @apply bg-opacity-75;
+
+  opacity: 0;
+  z-index: $z-index-portfolio-backdrop;
+
+  transition: opacity .25s ease-in-out;
+
+  &.show {
+    opacity: 1;
+  }
+}
+
+.portfolio-slides {
+  @apply fixed;
+  @apply inset-0;
+
+  display: none;
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: $z-index-portfolio;
+
+  opacity: 0;
+  transition: opacity .25s ease-in-out;
+
+  &.show {
+    opacity: 1;
+  }
+
+  .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    @apply mr-8;
+    @apply mt-8;
+    @apply z-50;
+
+    opacity: .25;
+    transition: opacity .15s ease-in-out;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .slide {
+    display: none;
+
+    h3 {
+      @apply font-sans;
+      @apply mb-4;
+
+      text-transform: uppercase;
+    }
+
+    &.show {
+      display: block;
+    }
+  }
+}
+
+.portfolio-slides-container {
+  @apply bg-black;
+
+  position: relative;
+
+  transform: translate(0, -20vh);
+  transition: transform .3s ease-out;
+
+  &.show {
+    transform: none;
+  }
+}
+
+.portfolio-images {
+  position: relative;
+}
+
+.portfolio-text {
+  position: relative;
+
+  text-align: center;
+
+  dl {
+    display: grid;
+    grid-template-columns: 100%;
+
+    dd {
+      text-transform: uppercase;
+
+      + dt {
+        @apply mt-4;
+      }
+    }
+
+    + dl {
+      @apply mt-4;
+    }
+  }
+
+  .slide {
+    @apply pb-8;
+  }
+}
+
+.portfolio-images-controls {
+  @apply py-4;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  > div {
+    @apply px-1;
+
+    cursor: pointer;
+    opacity: .25;
+    transition: opacity .25s ease-in-out;
+
+    &:hover,
+    &.active {
+      opacity: 1;
+    }
+  }
+}
+
+@screen sm {
+  .portfolio-text {
+    dl {
+      grid-template-columns: 50% 50%;
+      @apply col-gap-4;
+
+
+      dt {
+        text-align: right;
+      }
+
+      dd {
+        text-align: left;
+
+        + dt {
+          @apply mt-0;
+        }
+      }
+    }
+  }
+}
+
+.portfolio-control {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10%;
+
+  text-align: center;
+
+  cursor: pointer;
+  opacity: .25;
+  transition: opacity .15s ease-in-out;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &.prev { left: 0; }
+  &.next { right: 0; }
+}

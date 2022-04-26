@@ -1,0 +1,9 @@
+[data-lazy] {
+  @apply opacity-0 w-full;
+
+  transition: opacity .25s ease-in;
+
+  &.loaded {
+    @apply opacity-100;
+  }
+}
