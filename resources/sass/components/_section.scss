@@ -36,8 +36,6 @@
   }
 
   &.suite {
-    @apply bg-scroll;
-
     aspect-ratio: 2.35 / 1;
     background-image: url('../images/backgrounds/suite.jpg');
   }
