@@ -41,13 +41,7 @@
 
   iframe {
     @apply w-full;
-    @apply h-64;
+    height: 50vh;
     @apply mx-auto;
-
-    @screen sm {
-      @apply w-2/3;
-
-      height: 50vh;
-    }
   }
 }
