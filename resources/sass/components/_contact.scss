@@ -41,7 +41,9 @@
 
   iframe {
     @apply w-full;
-    height: 50vh;
     @apply mx-auto;
+
+    height: 50vh;
+    max-width: 90vw;
   }
 }
