@@ -1,10 +1,25 @@
 .section.services {
+  h2 {
+    @apply mb-4;
+  }
+
+  h4 {
+    @apply text-center;
+    @apply mb-4;
+  }
+
   ul {
     @apply list-disc;
     @apply list-inside;
 
     + h4 {
       @apply mt-5;
+    }
+  }
+
+  .grid {
+    + .grid {
+      @apply mt-16;
     }
   }
 }
