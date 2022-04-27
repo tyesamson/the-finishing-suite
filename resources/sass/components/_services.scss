@@ -1,0 +1,10 @@
+.section.services {
+  ul {
+    @apply list-disc;
+    @apply list-inside;
+
+    + h4 {
+      @apply mt-5;
+    }
+  }
+}

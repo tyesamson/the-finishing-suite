@@ -2,6 +2,7 @@
 
 .header {
   height: 100vh;
+  text-align: center;
 
   @screen sm {
     height: calc(100vh - 64px);

@@ -1,0 +1,41 @@
+//==========  Backgrounds ==========//
+
+.bg {
+  @apply bg-cover;
+  @apply bg-center;
+  @apply bg-no-repeat;
+
+  &.bricks {
+    aspect-ratio: 2.35 / 1;
+    background-image: url('../images/backgrounds/bricks.jpg');
+  }
+
+  &.cans {
+    aspect-ratio: 2.35 / 1;
+    background-image: url('../images/backgrounds/cans.jpg');
+  }
+
+  &.couch {
+    aspect-ratio: 2.35 / 1;
+    background-image: url('../images/backgrounds/couch.jpg');
+  }
+
+  &.header {
+    background-image: url('../images/backgrounds/tablet.jpg');
+  }
+
+  &.suite {
+    aspect-ratio: 2.35 / 1;
+    background-image: url('../images/backgrounds/suite.jpg');
+  }
+
+  &.texture {
+    background-image: url('../images/backgrounds/texture.jpg');
+  }
+}
+
+@supports not (-webkit-touch-callout : none) {
+  .bg {
+    @apply bg-fixed;
+  }
+}

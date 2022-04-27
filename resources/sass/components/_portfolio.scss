@@ -1,6 +1,7 @@
 .section.portfolio {
-  .container {
+  @apply py-4;
 
+  .container {
     h2 {
       padding-bottom: 2rem;
     }
