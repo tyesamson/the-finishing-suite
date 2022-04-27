@@ -53,6 +53,8 @@ class Carousel  {
       const target = indicator.dataset.target;
       indicator.addEventListener('click', _ => this.showSlide(target, slideNo));
     }
+
+    document.addEventListener('keyup', e => this._onKeyUp(e));
   }
 
   _doSlide(activeItem, nextItem, activeIndicator, nextIndicator, orderClassName, directionalClassName) {
@@ -93,6 +95,20 @@ class Carousel  {
     return itemIndex === -1
       ? items[items.length - 1]
       : items[itemIndex];
+  }
+
+  _onKeyUp(event) {
+    switch (event.key) {
+      case 'Left':
+      case 'ArrowLeft':
+        this.prev();
+        break;
+
+      case 'Right':
+      case 'ArrowRight':
+        this.next();
+        break;
+    }
   }
 
   _slide(direction) {

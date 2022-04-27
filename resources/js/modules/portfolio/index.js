@@ -91,6 +91,15 @@ class Portfolio {
         this.show(gridItem);
       });
     }
+
+    document.addEventListener('keyup', e => {
+      switch (e.key) {
+        case 'Esc':
+        case 'Escape':
+          this.hide();
+          break;
+      }
+    });
   }
 
   _hideCurrentGridItem() {
