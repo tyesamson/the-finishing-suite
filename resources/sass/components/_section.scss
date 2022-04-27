@@ -11,12 +11,5 @@
     @screen md {
       max-width: 680px;
     }
-
-    &.blur {
-      @apply rounded-lg;
-
-      background-color: rgba(0,0,0,.3);
-      backdrop-filter: blur(20px);
-    }
   }
 }
