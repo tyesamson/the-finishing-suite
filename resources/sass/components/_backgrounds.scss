@@ -4,34 +4,39 @@
   @apply bg-cover;
   @apply bg-center;
   @apply bg-no-repeat;
+}
 
-  &.bricks {
+.bg-aspect {
+  height: 50vh;
+
+  @screen md {
     aspect-ratio: 2.35 / 1;
-    background-image: url('../images/backgrounds/bricks.jpg');
+    height: auto;
   }
+}
 
-  &.cans {
-    aspect-ratio: 2.35 / 1;
-    background-image: url('../images/backgrounds/cans.jpg');
-  }
+.bg-bricks {
+  background-image: url('../images/backgrounds/bricks.jpg');
+}
 
-  &.couch {
-    aspect-ratio: 2.35 / 1;
-    background-image: url('../images/backgrounds/couch.jpg');
-  }
+.bg-cans {
+  background-image: url('../images/backgrounds/cans.jpg');
+}
 
-  &.header {
-    background-image: url('../images/backgrounds/tablet.jpg');
-  }
+.bg-couch {
+  background-image: url('../images/backgrounds/couch.jpg');
+}
 
-  &.suite {
-    aspect-ratio: 2.35 / 1;
-    background-image: url('../images/backgrounds/suite.jpg');
-  }
+.bg-suite {
+  background-image: url('../images/backgrounds/suite.jpg');
+}
 
-  &.texture {
-    background-image: url('../images/backgrounds/texture.jpg');
-  }
+.bg-tablet {
+  background-image: url('../images/backgrounds/tablet.jpg');
+}
+
+.bg-texture {
+  background-image: url('../images/backgrounds/texture.jpg');
 }
 
 @supports not (-webkit-touch-callout : none) {
