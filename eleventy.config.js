@@ -5,6 +5,7 @@ module.exports = eleventyConfig => {
   // Ignore gitignore so watching the CSS works
   eleventyConfig.setUseGitIgnore(false);
   eleventyConfig.setBrowserSyncConfig({
+    open: 'local',
     notify: true,
     watch: true
   });
