@@ -1,27 +1,36 @@
-<section id="about" class="section bg texture">
-  <div class="container blur mx-auto">
-    <h2>About</h2>
+<section id="about" class="section about bg texture">
 
-    <p class="text-lg text-center">Not long ago, high-end motion picture finishing required expensive turn-key systems and huge overheads, but not anymore.</p>
-    <p>A downside of technology becoming so accessible has been many in the new generation of post-production operators who don't fully understand the craft, what they're doing or why they’re doing it. They may be able to get your work through a tech check, but are they making it the best it can be, or letting down your project at the final hurdle?</p>
-    <p>At The Finishing Suite, you have the best of both worlds — the low overheads and flexibility of a modern boutique shop, driven by a finishing expert with 15 years of experience working in high-end facilities.</p>
-    <p>I’ve delivered hundreds of hours of finished material for distribution all over the world, transitioned from SD to HD and tape to digital, and had a hand in pioneering new workflows for bleeding-edge formats as they emerged over the years. I know how technology has evolved, and have a strong grip on where it's going tomorrow.</p>
-    <p>Online editing must be more than just a tech-check — while meeting technical specifications should be a given, it’s definitely not the whole end game. It’s also about delivering a quality finish of the highest production values that builds on the hard work the rest of your team has put into your project.</p>
-    <p>From TVCs to television to feature films and all points in between, I'm passionate about using the finishing process to tastefully enhance your storytelling and take your work to the next level.</p>
-    <p>Want to know more? Drop by, raid the beer fridge, and let's talk about how we can give your project the finish it deserves.</p>
-    <p>The Finishing Suite is conveniently located right in the heart of Ponsonby — just two minutes walk from Ponsonby Central.</p>
+  <div class="container mx-auto">
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+
+      <div>
+        <h2>About</h2>
+        <p class="text-lg text-center">Not long ago, high-end motion picture finishing required expensive turn-key systems and huge overheads, but not anymore.</p>
+        <p>A downside of technology becoming so accessible has been many in the new generation of post-production operators who don't fully understand the craft, what they're doing or why they’re doing it. They may be able to get your work through a tech check, but are they making it the best it can be, or letting down your project at the final hurdle?</p>
+        <p>At The Finishing Suite, you have the best of both worlds — the low overheads and flexibility of a modern boutique shop, driven by a finishing expert with 15 years of experience working in high-end facilities.</p>
+        <p>I’ve delivered hundreds of hours of finished material for distribution all over the world, transitioned from SD to HD and tape to digital, and had a hand in pioneering new workflows for bleeding-edge formats as they emerged over the years. I know how technology has evolved, and have a strong grip on where it's going tomorrow.</p>
+        <p>Online editing must be more than just a tech-check — while meeting technical specifications should be a given, it’s definitely not the whole end game. It’s also about delivering a quality finish of the highest production values that builds on the hard work the rest of your team has put into your project.</p>
+        <p>From TVCs to television to feature films and all points in between, I'm passionate about using the finishing process to tastefully enhance your storytelling and take your work to the next level.</p>
+        <p>Want to know more? Drop by, raid the beer fridge, and let's talk about how we can give your project the finish it deserves.</p>
+        <p>The Finishing Suite is conveniently located right in the heart of Ponsonby — just two minutes walk from Ponsonby Central.</p>
+      </div>
+
+      <div>
+        {%- for person in collections.people | reverse -%}
+          <a class="text-center" href="{{person.data.url}}" target="_blank">
+            <img class="mx-auto rounded-full w-1/2 md:w-2/5" src="{{person.data.image}}" alt="{{person.data.name}}">
+            <h3 class="pt-5">
+              {{person.data.name}}
+              <small class="block">{{person.data.title}}</small>
+            </h3>
+          </a>
+          {{ person.templateContent | safe }}
+        {%- endfor -%}
+      </div>
+
+    </div>
+
   </div>
 
-  {%- for person in collections.people | reverse -%}
-    <div class="container blur mx-auto mt-20">
-      <a class="text-center" href="{{person.data.url}}" target="_blank">
-        <img class="mx-auto rounded-full w-1/2 md:w-2/5" src="{{person.data.image}}" alt="{{person.data.name}}">
-        <h3 class="pt-5">
-          {{person.data.name}}
-          <small class="block">{{person.data.title}}</small>
-        </h3>
-      </a>
-      {{ person.templateContent | safe }}
-    </div>
-  {%- endfor -%}
 </section>
