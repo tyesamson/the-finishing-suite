@@ -79,8 +79,8 @@ class Portfolio {
       }
     });
     $$.portfolio.close.addEventListener('click', _ => this.hide());
-    $$.portfolio.next.addEventListener('click', _ => this._onPortfolioNext());
-    $$.portfolio.prev.addEventListener('click', _ => this._onPortfolioPrev());
+    // $$.portfolio.next.addEventListener('click', _ => this._onPortfolioNext());
+    // $$.portfolio.prev.addEventListener('click', _ => this._onPortfolioPrev());
 
     const gridItems = $$.portfolio.grid.children;
     this._slideCount = gridItems.length;
