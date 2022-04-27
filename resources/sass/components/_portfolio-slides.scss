@@ -29,6 +29,8 @@
   overflow-y: auto;
   z-index: $z-index-portfolio;
 
+  justify-content: center;
+
   opacity: 0;
   transition: opacity .25s ease-in-out;
 
@@ -71,6 +73,8 @@
 
 .portfolio-slides-container {
   @apply bg-black;
+  margin-top: auto;
+  margin-bottom: auto;
 
   position: relative;
 

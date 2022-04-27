@@ -174,7 +174,7 @@ class Portfolio {
     document.getElementById(`portfolioText${slideNo}`).classList.add(CLASS_NAME_SHOW);
 
     if (this._currentSlideNo < 1){
-      this._element.style.display = 'block';
+      this._element.style.display = 'flex';
 
       reflow(this._element);
 
