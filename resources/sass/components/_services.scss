@@ -10,7 +10,8 @@
 
   ul {
     @apply list-disc;
-    @apply list-inside;
+    @apply list-outside;
+    @apply ml-4;
 
     + h4 {
       @apply mt-5;
