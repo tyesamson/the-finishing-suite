@@ -2,4 +2,14 @@
   h2 {
     @apply mb-4;
   }
+
+  .divider {
+    @apply my-16;
+    @apply mx-auto;
+
+    height: .1rem;
+    max-width: 60vw;
+
+    background-color: rgba(255,255,255,.5);
+  }
 }
