@@ -1,5 +1,8 @@
 .section.portfolio {
-  @apply py-4;
+  .anchor {
+    position: relative;
+    top: -5rem;
+  }
 
   .container {
     h2 {
