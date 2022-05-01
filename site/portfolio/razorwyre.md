@@ -5,20 +5,27 @@ title: Razorwyre - "The Conjourer"
 description: Music Video
 thumb: images/portfolio/thumbs/conjourer.jpg
 images:
- - images/portfolio/conjourer.jpg
+ - images/portfolio/conjourer/conjourer1.jpg
+ - images/portfolio/conjourer/conjourer2.jpg
+ - images/portfolio/conjourer/conjourer3.jpg
+ - images/portfolio/conjourer/conjourer4.jpg
+ - images/portfolio/conjourer/conjourer5.jpg
 ---
 
 <dl>
-  <dt>Online &amp; Colour Grade</dt>
+  <dt>Post-Production</dt>
   <dd>The Finishing Suite</dd>
 
-  <dt>Finishing Artist</dt>
+  <dt>Colourist & Finishing Artist</dt>
   <dd>Alastair Tye Samson</dd>
 </dl>
 
 <dl>
   <dt>Cinematographer</dt>
   <dd>Matt Henley</dd>
+
+  <dt>VFX</dt>
+  <dd>Lucas Brooking</dd>
 
   <dt>Editor</dt>
   <dd>Bailey Palmer</dd>

@@ -11,10 +11,10 @@ videos:
 ---
 
 <dl>
-  <dt>Online &amp; Colour Grade</dt>
+  <dt>Post-Production</dt>
   <dd>The Finishing Suite</dd>
 
-  <dt>Finishing Artist</dt>
+  <dt>Colourist & Finishing Artist</dt>
   <dd>Alastair Tye Samson</dd>
 
   <dt>VFX</dt>

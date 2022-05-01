@@ -5,14 +5,16 @@ title: The Strat - "Top of the World"
 description: Superbowl Spot
 thumb: images/portfolio/thumbs/totw.jpg
 images:
- - images/portfolio/totw.jpg
----
+ - images/portfolio/totw/totw1.jpg
+ - images/portfolio/totw/totw2.jpg
+ - images/portfolio/totw/totw3.jpg
+ - images/portfolio/totw/totw4.jpg---
 
 <dl>
-  <dt>Online &amp; Colour Grade</dt>
+  <dt>Post-Production</dt>
   <dd>The Finishing Suite</dd>
 
-  <dt>Finishing Artist</dt>
+  <dt>Colourist & Finishing Artist</dt>
   <dd>Alastair Tye Samson</dd>
 
   <dt>Additional VFX</dt>

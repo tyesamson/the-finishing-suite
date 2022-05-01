@@ -5,14 +5,17 @@ title: Diamond Pasta - "Heat and Eat"
 description: 30" TV spot
 thumb: images/portfolio/thumbs/heatandeat.jpg
 images:
- - images/portfolio/heatandeat.jpg
+ - images/portfolio/heatandeat/heatandeat1.jpg
+ - images/portfolio/heatandeat/heatandeat2.jpg
+ - images/portfolio/heatandeat/heatandeat3.jpg
+ - images/portfolio/heatandeat/heatandeat4.jpg
 ---
 
 <dl>
-  <dt>Edit, Online, Colour Grade</dt>
+  <dt>Post-Production</dt>
   <dd>The Finishing Suite</dd>
 
-  <dt>Editor &amp; Finishing Artist</dt>
+  <dt>Colourist &amp; Finishing Artist</dt>
   <dd>Alastair Tye Samson</dd>
 </dl>
 
