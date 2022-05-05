@@ -5,7 +5,10 @@ title: Albi & The Wolves - "Story"
 description: Music Video
 thumb: images/portfolio/thumbs/aatwstory.jpg
 images:
- - images/portfolio/aatwstory.jpg
+ - images/portfolio/aatwstory/aatwstory1.jpg
+ - images/portfolio/aatwstory/aatwstory2.jpg
+ - images/portfolio/aatwstory/aatwstory3.jpg
+ - images/portfolio/aatwstory/aatwstory4.jpg
 ---
 
 <dl>

@@ -15,17 +15,17 @@ images:
   <dt>Post-Production</dt>
   <dd>The Finishing Suite</dd>
 
-  <dt>Colourist &amp; Finishing Artist</dt>
+  <dt>Editor & Colourist</dt>
   <dd>Alastair Tye Samson</dd>
 </dl>
 
 <dl>
-  <dt>Cinematography</dt>
-  <dd>Bevan Crothers</dd>
+  <dt>Agency</dt>
+  <dd>The Business Marketing Group</dd>
 
   <dt>Director</dt>
   <dd>Laura Sargisson</dd>
 
-  <dt>Agency</dt>
-  <dd>The Business Marketing Group</dd>
+  <dt>Cinematography</dt>
+  <dd>Bevan Crothers</dd>
 </dl>

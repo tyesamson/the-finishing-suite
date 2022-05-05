@@ -22,14 +22,14 @@ images:
 </dl>
 
 <dl>
+  <dt>Director</dt>
+  <dd>Carolyn Beaver</dd>
+
   <dt>Cinematographer</dt>
   <dd>Dave Garbett</dd>
 
   <dt>Editor</dt>
   <dd>Peter Evans</dd>
-
-  <dt>Director</dt>
-  <dd>Carolyn Beaver</dd>
 
   <dt>Production Co.</dt>
   <dd>Free Agent Films</dd>

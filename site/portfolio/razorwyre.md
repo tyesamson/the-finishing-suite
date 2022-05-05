@@ -21,17 +21,17 @@ images:
 </dl>
 
 <dl>
+  <dt>Director</dt>
+  <dd>Chris Calavrias</dd>
+
   <dt>Cinematographer</dt>
   <dd>Matt Henley</dd>
-
-  <dt>VFX</dt>
-  <dd>Lucas Brooking</dd>
 
   <dt>Editor</dt>
   <dd>Bailey Palmer</dd>
 
-  <dt>Director</dt>
-  <dd>Chris Calavrias</dd>
+  <dt>VFX</dt>
+  <dd>Lucas Brooking</dd>
 
   <dt>Label</dt>
   <dd>Napalm Records</dd>
