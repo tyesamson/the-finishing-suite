@@ -13,6 +13,7 @@
     @apply cursor-pointer;
 
     > img {
+      height: 45vw;
       width: 100%;
     }
   }
@@ -22,6 +23,10 @@
   .portfolio-grid {
     > div {
       @apply w-1/3;
+
+      > img {
+        height: 30vw;
+      }
     }
   }
 }
@@ -30,6 +35,10 @@
   .portfolio-grid {
     > div {
       @apply w-1/4;
+
+      > img {
+        height: 22.5vw;
+      }
     }
   }
 }
@@ -38,6 +47,10 @@
   .portfolio-grid {
     > div {
       @apply w-1/5;
+
+      > img {
+        height: 18vw;
+      }
     }
   }
 }
@@ -46,6 +59,10 @@
   .portfolio-grid {
     > div {
       @apply w-1/6;
+
+      > img {
+        height: 15vw;
+      }
     }
   }
 }
