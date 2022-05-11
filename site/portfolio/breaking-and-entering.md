@@ -5,7 +5,12 @@ title: Breaking and Entering
 description: Short Film
 thumb: images/portfolio/thumbs/breakingandentering.jpg
 images:
- - images/portfolio/breakingandentering.jpg
+ - images/portfolio/breakingandentering/breakingandentering1.jpg
+ - images/portfolio/breakingandentering/breakingandentering2.jpg
+ - images/portfolio/breakingandentering/breakingandentering3.jpg
+ - images/portfolio/breakingandentering/breakingandentering4.jpg
+ - images/portfolio/breakingandentering/breakingandentering5.jpg
+ - images/portfolio/breakingandentering/breakingandentering6.jpg
 ---
 
 <dl>
@@ -17,14 +22,14 @@ images:
 </dl>
 
 <dl>
+  <dt>Director</dt>
+  <dd>Carolyn Beaver</dd>
+
   <dt>Cinematographer</dt>
   <dd>Dave Garbett</dd>
 
   <dt>Editor</dt>
   <dd>Peter Evans</dd>
-
-  <dt>Director</dt>
-  <dd>Carolyn Beaver</dd>
 
   <dt>Production Co.</dt>
   <dd>Free Agent Films</dd>

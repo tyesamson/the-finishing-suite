@@ -5,14 +5,17 @@ title: Stälker — "Shocked to Death"
 description: Music Video
 thumb: images/portfolio/thumbs/shockedtodeath.jpg
 images:
- - images/portfolio/shockedtodeath.jpg
+ - images/portfolio/shockedtodeath/shockedtodeath1.jpg
+ - images/portfolio/shockedtodeath/shockedtodeath2.jpg
+ - images/portfolio/shockedtodeath/shockedtodeath3.jpg
+ - images/portfolio/shockedtodeath/shockedtodeath4.jpg
 ---
 
 <dl>
-  <dt>Online &amp; Colour Grade</dt>
+  <dt>Post-Production</dt>
   <dd>The Finishing Suite</dd>
 
-  <dt>Finishing Artist</dt>
+  <dt>Colourist & Finishing Artist</dt>
   <dd>Alastair Tye Samson</dd>
 </dl>
 
