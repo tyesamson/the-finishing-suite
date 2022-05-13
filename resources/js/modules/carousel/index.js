@@ -1,8 +1,11 @@
 import $$ from '@utilities/selectors';
-import {
-  getTransitionDurationFromElement,
-  reflow
-} from '@utilities/helpers'
+import { getTransitionDurationFromElement, reflow } from '@utilities/helpers'
+import Swipe from '@utilities/swipe';
+
+const DATA_KEY = 'tfs.carousel'
+const EVENT_KEY = `.${DATA_KEY}`
+
+const EVENT_DRAG_START = `dragstart${EVENT_KEY}`
 
 const ClassName = {
   ACTIVE: 'active',
@@ -27,8 +30,17 @@ class Carousel  {
 
   constructor() {
     this._isSliding = false;
+    this._swipeHelper = null;
 
     this._addEventListeners();
+  }
+
+  dispose() {
+    if (this._swipeHelper) {
+      this._swipeHelper.dispose();
+    }
+
+    super.dispose();
   }
 
 
@@ -55,6 +67,23 @@ class Carousel  {
     }
 
     document.addEventListener('keyup', e => this._onKeyUp(e));
+
+    if (Swipe.isSupported()) {
+      this._addTouchEventListeners();
+    }
+  }
+
+  _addTouchEventListeners() {
+    for (const item of $$.carousel.item) {
+      item.addEventListener(EVENT_DRAG_START, e => e.preventDefault());
+    }
+
+    const swipeConfig = {
+      leftCallback: () => this.prev(),
+      rightCallback: () => this.next()
+    };
+
+    this._swipeHelper = new Swipe($$.portfolio.images, swipeConfig);
   }
 
   _doSlide(activeItem, nextItem, activeIndicator, nextIndicator, orderClassName, directionalClassName) {

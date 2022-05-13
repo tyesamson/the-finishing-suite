@@ -3,9 +3,13 @@ const $$ = {
   nav           : document.getElementById('nav'),
   navItems      : document.querySelectorAll('#nav a'),
   navToggle     : document.getElementById('nav-toggle'),
+  carousel: {
+    item        : document.querySelectorAll('.carousel-item')
+  },
   portfolio: {
     close       : document.getElementById('portfolioClose'),
     grid        : document.getElementById('portfolioGrid'),
+    images      : document.getElementById('portfolioImages'),
     imageNext   : document.getElementsByClassName('portfolio-image-next'),
     imagePrev   : document.getElementsByClassName('portfolio-image-prev'),
     indicators  : document.getElementsByClassName('indicator'),
