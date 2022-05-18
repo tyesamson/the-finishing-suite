@@ -2,7 +2,7 @@
 tags: people
 date: 2020-01-01
 name: Alastair Tye Samson
-title: Finishing Artist
+title: Colourist & Finishing Artist
 image: images/people/alastair.jpg
 url: https://www.imdb.com/name/nm1403724
 ---
