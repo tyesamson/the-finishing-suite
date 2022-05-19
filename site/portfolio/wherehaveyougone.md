@@ -11,6 +11,9 @@ images:
  - images/portfolio/wherehaveyougone/wherehaveyougone5.jpg
  - images/portfolio/wherehaveyougone/wherehaveyougone6.jpg
  - images/portfolio/wherehaveyougone/wherehaveyougone4.jpg
+
+videos:
+- https://www.youtube.com/embed/8jCDmNcZ-UI?vq=hd1080
 ---
 
 <dl>
@@ -25,14 +28,14 @@ images:
 </dl>
 
 <dl>
+  <dt>Director</dt>
+  <dd>Gal Hochman</dd>
+
   <dt>Cinematographer</dt>
   <dd>Alexander Campbell</dd>
 
   <dt>Editor</dt>
   <dd>Laura McBeath</dd>
-
-  <dt>Director</dt>
-  <dd>Gal Hochman</dd>
 
   <dt>Label</dt>
   <dd>Second Hand Records</dd>

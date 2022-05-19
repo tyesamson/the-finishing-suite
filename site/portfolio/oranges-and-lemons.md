@@ -24,14 +24,14 @@ images:
 </dl>
 
 <dl>
+  <dt>Director</dt>
+  <dd>Robyn Grace</dd>
+
   <dt>Cinematographer</dt>
   <dd>John Cavill</dd>
 
   <dt>Editor</dt>
   <dd>Kerri Roggio</dd>
-
-  <dt>Director</dt>
-  <dd>Robyn Grace</dd>
 
   <dt>Production Co.</dt>
   <dd>Oranges and Lemons Ltd</dd>

@@ -24,12 +24,12 @@ videos:
 </dl>
 
 <dl>
-  <dt>Agency</dt>
-  <dd>FCB</dd>
-
   <dt>Director</dt>
   <dd>Laura Sargisson</dd>
 
   <dt>Cinematograher</dt>
   <dd>Olly Harris</dd>
+
+  <dt>Agency</dt>
+  <dd>FCB</dd>
 </dl>

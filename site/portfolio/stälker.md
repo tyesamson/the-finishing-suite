@@ -20,14 +20,14 @@ images:
 </dl>
 
 <dl>
+  <dt>Director</dt>
+  <dd>Dave Hampton</dd>
+
   <dt>Cinematographer</dt>
   <dd>Matt Henley</dd>
 
   <dt>Editor</dt>
   <dd>Bailey Palmer</dd>
-
-  <dt>Director</dt>
-  <dd>Dave Hampton</dd>
 
   <dt>Label</dt>
   <dd>Napalm Records</dd>

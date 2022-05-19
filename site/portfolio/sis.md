@@ -31,5 +31,5 @@ images:
   <dd>Jack Woon</dd>
 
   <dt>Networks</dt>
-  <dd>Sky TV and Comedy Central</dd>
+  <dd>Sky TV & Comedy Central</dd>
 </dl>
