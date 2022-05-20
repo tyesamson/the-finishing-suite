@@ -31,6 +31,7 @@ class Carousel  {
   constructor() {
     this._isSliding = false;
     this._swipeHelper = null;
+    this._ytPlayers = [];
 
     this._addEventListeners();
   }
@@ -90,6 +91,26 @@ class Carousel  {
     if (nextItem && nextItem.classList.contains(ClassName.ACTIVE)) {
       this._isSliding = false;
       return;
+    }
+
+    if (activeItem.firstChild?.nodeName === 'IFRAME') {
+      const activeIframeId = activeItem.firstChild.id;
+      this._ytPlayers[activeIframeId].stopVideo();
+    }
+
+    // Need to handle video players
+    if (nextItem.firstChild?.nodeName === 'IFRAME') {
+      const iframeId = nextItem.firstChild.id;
+
+      if (!this._ytPlayers[iframeId]) {
+        this._ytPlayers[iframeId] = new YT.Player(iframeId, {
+          events: {
+            'onReady': (e) => {
+              // e.target.playVideo();
+            }
+          }
+        });
+      }
     }
 
     this._isSliding = true;
