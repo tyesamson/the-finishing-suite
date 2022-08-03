@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" class="min-h-full antialiased">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <base href="/"/>
+
+  <title>{% if meta_title %}{{ meta_title }}{% else %}{{ title }}{% endif %} | {{ site.name }}</title>
+
+  {% if helpers.environment === "development" %}
+    <link rel="stylesheet" href="css/main.css">
+  {% else %}
+    <link rel="stylesheet" href="css/main.min.css">
+  {% endif %}
+
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600" />
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Vollkorn:400italic,400" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+
+  {% include "components/social-meta.njk" %}
+  {% include "components/icons.njk" %}
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.19/lodash.min.js" integrity="sha256-Jvh9+A4HNbbWsWl1Dw7kAzNsU3y8elGIjLnUSUNMtLg=" crossorigin="anonymous"></script>
+  {% if helpers.environment === "development" %}
+    <script src="js/main.js" defer></script>
+  {% else %}
+    <script src="js/main.min.js" defer></script>
+  {% endif %}
+</head>
+
+<body class="bg-black text-white">
+  <h1>I am the help content</h1>
+  {{ content | safe }}
+</body>
+
+</html>
