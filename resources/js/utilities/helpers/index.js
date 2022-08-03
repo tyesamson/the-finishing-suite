@@ -1,4 +1,10 @@
 
+const execute = callback => {
+  if (typeof callback === 'function') {
+    callback()
+  }
+}
+
 const exists = function(el) {
   return (el.length > 0)
 };
@@ -29,6 +35,7 @@ const getTransitionDurationFromElement = element => {
 const reflow = element => element.offsetHeight
 
 export {
+  execute,
   exists,
   getTransitionDurationFromElement,
   reflow

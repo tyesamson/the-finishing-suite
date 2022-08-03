@@ -17,6 +17,9 @@ images:
  - images/portfolio/newday/newday12.jpg
  - images/portfolio/newday/newday13.jpg
  - images/portfolio/newday/newday14.jpg
+
+videos:
+ - https://www.youtube.com/embed/MZIWWKpNkv0?vq=hd1080
 ---
 
 <dl>

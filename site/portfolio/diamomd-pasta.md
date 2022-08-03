@@ -20,12 +20,12 @@ images:
 </dl>
 
 <dl>
-  <dt>Agency</dt>
-  <dd>The Business Marketing Group</dd>
-
   <dt>Director</dt>
   <dd>Laura Sargisson</dd>
 
   <dt>Cinematography</dt>
   <dd>Bevan Crothers</dd>
+
+  <dt>Agency</dt>
+  <dd>The Business Marketing Group</dd>
 </dl>

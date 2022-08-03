@@ -5,7 +5,7 @@
       <span aria-hidden="true"><i class="fas fa-times-circle fa-2x"></i></span>
     </button>
 
-    <div class="portfolio-images">
+    <div id="portfolioImages" class="portfolio-images">
       {%- for project in collections.portfolio | reverse -%}
 
         <div class="slide carousel" id="portfolioCarousel{{loop.index}}">
@@ -21,7 +21,7 @@
 
             {%- for video in project.data.videos -%}
               <div class="carousel-item">
-                <iframe src="{{ video }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe id="video{{carouselNo}}_{{ loop.index }}" src="{{ video }}&enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
             {%- endfor -%}
           </div>

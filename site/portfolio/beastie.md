@@ -10,6 +10,9 @@ images:
  - images/portfolio/beastie/beastie3.jpg
  - images/portfolio/beastie/beastie4.jpg
  - images/portfolio/beastie/beastie5.jpg
+
+videos:
+   - https://www.youtube.com/embed/sLr-EBfbo8o?vq=hd1080
 ---
 
 <dl>

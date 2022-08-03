@@ -10,6 +10,9 @@ images:
  - images/portfolio/carboncopy/carboncopy1.jpg
  - images/portfolio/carboncopy/carboncopy4.jpg
  - images/portfolio/carboncopy/carboncopy5.jpg
+
+videos:
+ - https://www.youtube.com/embed/9RdrELmnI2s?vq=hd1080
 ---
 
 <dl>
@@ -19,7 +22,7 @@ images:
   <dt>Colourist & Finishing Artist</dt>
   <dd>Alastair Tye Samson</dd>
 
-  <dt>VFX Artist</dt>
+  <dt>Additional VFX Artist</dt>
   <dd>Rich Borg</dd>
 </dl>
 
