@@ -1,28 +1,18 @@
 ---
 layout: layouts/help/base.njk
 title: Help Center
-topics:
-  - Delivery
-  - Formats
-  - Something with a Space
 ---
 
 <h1>I am help/index.html</h1>
 
-length: {{ topics }}
+<p>Welcome to the help center intro text.</p>
 
-{% for topic in topics %}
-  {% set articleList = collections[topic] %}
-  <div>
-    <h2>Topic: {{ topic }}</h2>
-    <ul>
-      {% for article in articleList %}
-        <li><a href="{{ article.url }}">{{ article.data.title }}</a></li>
-      {% endfor %}
-    </ul>
-  </div>
-{% endfor %}
-
-{% for article in collections.help %}
-  <li><a href="{{ article.url }}">{{ article.data.title }}</a></li>
+{% for topic in helpTopics %}
+  {% set topicArticles = collections[topic] %}
+  <h2>Topic: {{ topic }}</h2>
+  <ul>
+    {% for article in topicArticles %}
+    <li><a href="{{ article.url }}">{{ article.data.title }}</a></li>
+    {% endfor %}
+  </ul>
 {% endfor %}

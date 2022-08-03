@@ -1,6 +1,6 @@
 ---
 title: Article 3
-tags: Something with a Space
+tags: ['Something With A Space']
 ---
 
 I am article 3.
