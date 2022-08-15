@@ -1,6 +1,7 @@
 ---
 title: Article 2
 tags:
+ - Delivery
  - Formats
 ---
 

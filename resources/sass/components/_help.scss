@@ -1,0 +1,31 @@
+.help {
+  .divider {
+    @apply my-8;
+    @apply mx-auto;
+
+    height: .1rem;
+    width: 100%;
+
+    background-color: rgba(255,255,255,.15);
+  }
+
+  .map {
+    display: none;
+  }
+
+  .nav-items {
+    z-index: 1000;
+
+    .active {
+      color: theme('colors.red');
+    }
+  }
+}
+
+@screen md {
+  .help {
+    .nav-items {
+      top: 112px;
+    }
+  }
+}

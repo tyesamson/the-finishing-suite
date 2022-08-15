@@ -73,23 +73,23 @@ class Portfolio {
   // Private
 
   _addEventListeners() {
-    $$.portfolio.slides.addEventListener('click', (e) => {
+    $$.portfolio.slides?.addEventListener('click', (e) => {
       if (e.target === $$.portfolio.slides) {
         this.hide();
       }
     });
-    $$.portfolio.close.addEventListener('click', _ => this.hide());
-    // $$.portfolio.next.addEventListener('click', _ => this._onPortfolioNext());
-    // $$.portfolio.prev.addEventListener('click', _ => this._onPortfolioPrev());
+    $$.portfolio.close?.addEventListener('click', _ => this.hide());
 
-    const gridItems = $$.portfolio.grid.children;
-    this._slideCount = gridItems.length;
-    for (let i = 0; i < gridItems.length; i++) {
-      const gridItem = gridItems[i];
+    const gridItems = $$.portfolio.grid?.children;
+    if (!!gridItems) {
+      this._slideCount = gridItems.length;
+      for (let i = 0; i < gridItems.length; i++) {
+        const gridItem = gridItems[i];
 
-      gridItem.addEventListener('click', (e) => {
-        this.show(gridItem);
-      });
+        gridItem.addEventListener('click', (e) => {
+          this.show(gridItem);
+        });
+      }
     }
 
     document.addEventListener('keyup', e => {

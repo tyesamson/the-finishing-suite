@@ -1,7 +1,7 @@
 const $$ = {
   body          : document.querySelector('body'),
   nav           : document.getElementById('nav'),
-  navItems      : document.querySelectorAll('#nav a'),
+  navItems      : document.querySelectorAll('.nav-items a'),
   navToggle     : document.getElementById('nav-toggle'),
   carousel: {
     item        : document.querySelectorAll('.carousel-item')

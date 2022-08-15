@@ -3,16 +3,32 @@ layout: layouts/help/base.njk
 title: Help Center
 ---
 
-<h1>I am help/index.html</h1>
+<p class="text-xl">Welcome to the help center intro text.</p>
 
-<p>Welcome to the help center intro text.</p>
+<div class="md:flex">
 
-{% for topic in helpTopics %}
-  {% set topicArticles = collections[topic] %}
-  <h2>Topic: {{ topic }}</h2>
-  <ul>
-    {% for article in topicArticles %}
-    <li><a href="{{ article.url }}">{{ article.data.title }}</a></li>
+  <div class="md:w-2/3 md:pr-8">
+    {% for topic in helpTopics %}
+      <div class="divider"></div>
+      <section id="{{topic | slugify}}" class="section py-4">
+        {% set topicArticles = collections[topic] %}
+        <h2 class="text-left">{{ topic }}</h2>
+        <ul class="list-disc list-inside md:flex flex-wrap">
+          {% for article in topicArticles %}
+          <li class="flex-none md:w-1/2"><a href="{{ article.url }}">{{ article.data.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </section>
     {% endfor %}
-  </ul>
-{% endfor %}
+  </div>
+
+  <div class="py-4 hidden md:block">
+    <ul class="nav-items relative md:sticky">
+      {% for topic in helpTopics %}
+      <li><a class="text-lg" href="/help/#{{ topic | slugify }}">{{ topic }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+{% include "components/contact.njk" %}

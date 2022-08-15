@@ -1,7 +1,7 @@
 import $$ from '@utilities/selectors';
 
 const MobileNav = function MobileNav() {
-  $$.navToggle.addEventListener('click', () => {
+  $$.navToggle?.addEventListener('click', () => {
     $$.nav.classList.toggle('in');
   });
 
