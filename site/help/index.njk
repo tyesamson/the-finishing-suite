@@ -7,9 +7,16 @@ title: Help Center
 
 <div class="md:flex">
 
-  <div class="md:w-2/3 md:pr-8">
+  <div class="md:w-1/4 py-4 hidden md:block">
+    <ul class="nav-items relative md:sticky">
+      {% for topic in helpTopics %}
+      <li><a class="text-lg" href="/help/#{{ topic | slugify }}">{{ topic }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="md:w-3/4 md:pl-8">
     {% for topic in helpTopics %}
-      <div class="divider"></div>
       <section id="{{topic | slugify}}" class="section py-4">
         {% set topicArticles = collections[topic] %}
         <h2 class="text-left">{{ topic }}</h2>
@@ -19,16 +26,8 @@ title: Help Center
           {% endfor %}
         </ul>
       </section>
+      <div class="divider"></div>
     {% endfor %}
   </div>
 
-  <div class="py-4 hidden md:block">
-    <ul class="nav-items relative md:sticky">
-      {% for topic in helpTopics %}
-      <li><a class="text-lg" href="/help/#{{ topic | slugify }}">{{ topic }}</a></li>
-      {% endfor %}
-    </ul>
-  </div>
 </div>
-
-{% include "components/contact.njk" %}

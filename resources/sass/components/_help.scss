@@ -1,4 +1,12 @@
 .help {
+  a {
+    transition: color 300ms ease-in-out;
+
+    &:hover {
+      color: theme('colors.red');
+    }
+  }
+
   .divider {
     @apply my-8;
     @apply mx-auto;
