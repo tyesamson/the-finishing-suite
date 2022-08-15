@@ -10,3 +10,11 @@ layout: layouts/help/base.njk
 
 {{ content | safe }}
 
+<section>
+  <h3>Related Articles</h3>
+  <ul>
+    {% for article in collections.help | filterRelated(tags, page.fileSlug) %}
+    <li><a href="{{ article.data.page.fileSlug }}">{{ article.data.title }}</a></li>
+    {% endfor %}
+  </ul>
+</section>

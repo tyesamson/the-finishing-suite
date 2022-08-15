@@ -10,6 +10,15 @@ module.exports = eleventyConfig => {
     watch: true
   });
 
+  // Related article filter
+  eleventyConfig.addFilter('filterRelated', (collection, relatedTags, exceptSlug) => {
+    relatedTags = relatedTags.filter(t => t !== 'help');
+
+    return collection
+      .filter(article => article.data.tags.some(t => relatedTags.includes(t)))
+      .filter(article => article.data.page.fileSlug !== exceptSlug);
+  });
+
   // Minify our HTML
   eleventyConfig.addTransform('htmlmin', (content, outputPath) => {
     if (!!outputPath && outputPath.endsWith('html')) {

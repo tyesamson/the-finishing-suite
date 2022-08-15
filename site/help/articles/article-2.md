@@ -1,6 +1,7 @@
 ---
 title: Article 2
-tags: Formats
+tags:
+ - Formats
 ---
 
 I am article 2.
