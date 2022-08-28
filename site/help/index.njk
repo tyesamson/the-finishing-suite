@@ -7,7 +7,7 @@ title: Help Center
 
 <div class="md:flex">
 
-  <div class="md:w-1/4 py-4 hidden md:block">
+  <div class="md:w-1/4 py-8 hidden md:block">
     <ul class="nav-items relative md:sticky">
       {% for topic in helpTopics %}
       <li><a class="text-lg" href="/help/#{{ topic | slugify }}">{{ topic }}</a></li>
@@ -15,7 +15,7 @@ title: Help Center
     </ul>
   </div>
 
-  <div class="md:w-3/4 md:pl-8">
+  <div class="article-topic-list md:w-3/4 md:pl-8">
     {% for topic in helpTopics %}
       <section id="{{topic | slugify}}" class="section py-4">
         {% set topicArticles = collections[topic] %}
@@ -26,7 +26,6 @@ title: Help Center
           {% endfor %}
         </ul>
       </section>
-      <div class="divider"></div>
     {% endfor %}
   </div>
 

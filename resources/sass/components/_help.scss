@@ -1,4 +1,7 @@
 .help {
+  background-color: theme('colors.white');
+  color: theme('colors.black');
+
   a {
     transition: color 300ms ease-in-out;
 
@@ -7,14 +10,34 @@
     }
   }
 
-  .divider {
-    @apply my-8;
-    @apply mx-auto;
+  h2 {
+    @apply font-sans;
+    @apply text-3xl;
 
-    height: .1rem;
-    width: 100%;
+    text-shadow: none;
+  }
 
-    background-color: rgba(255,255,255,.15);
+  nav {
+    color: theme('colors.white');
+
+    a {
+      @apply text-xl;
+      line-height: 1;
+
+      &:hover {
+        color: theme('colors.red');
+      }
+
+      &.contact {
+        margin-left: auto;
+      }
+    }
+  }
+
+  .article-topic-list {
+    section {
+      @apply py-8;
+    }
   }
 
   .map {
@@ -24,8 +47,24 @@
   .nav-items {
     z-index: 1000;
 
-    .active {
-      color: theme('colors.red');
+    a {
+      @apply block;
+      @apply px-4;
+      @apply py-2;
+      @apply rounded;
+
+      transition: all 300ms ease-in-out;
+
+      &.active {
+        background-color: theme('colors.red');
+        color: theme('colors.white');
+      }
+    }
+  }
+
+  .section {
+    &.contact {
+      color: theme('colors.white');
     }
   }
 }
