@@ -8,10 +8,12 @@ module.exports = {
     ]
   },
   theme: {
-    colors: {
-      black: '#111111',
-      white: '#e6e6dc',
-      red: '#cf2525'
+    extend: {
+      colors: {
+        black: '#111111',
+        white: '#e6e6dc',
+        red: '#cf2525'
+      },
     },
     fontFamily: {
       serif: [

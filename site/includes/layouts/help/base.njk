@@ -6,13 +6,13 @@ bodyClass: help
 <nav class="section navbar py-0 bg-black">
   <div class="container mx-auto flex items-center gap-x-4">
     <a href="/"><img class="h-12" src="images/logo/tfs-white.svg" alt="The Finishing Suite" /></a>
-    <a href="/help/">Help Center</a>
-    <a href="/help/#contact" class="contact">Contact Us</a>
+    <a href="/help/" class="text-right">Help Center</a>
+    <a href="/help/#contact" class="contact hidden sm:inline-block">Contact Us</a>
   </div>
 </nav>
 
 <section class="section py-0">
-  <div class="container mx-auto">
+  <div class="container mx-auto help-content-container">
     {{ content | safe }}
   </div>
 </section>

@@ -1,28 +1,29 @@
 ---
 layout: layouts/help/base.njk
+bodyClass: help article
 ---
 
-<ul class="flex text-sm">
+<ul class="breadcrumbs">
   <li><a href="/">The Finishing Suite</a>&nbsp;&gt;&nbsp;</li>
   <li><a href="/help">Help</a>&nbsp;&gt;&nbsp;</li>
   <li><a href="/help/#{{topic|slugify}}">{{topic}}</a>&nbsp;&gt;&nbsp;</li>
   <li><a href="">{{title}}</a></li>
 </ul>
 
-<h2 class="my-16">{{ title }}</h2>
+<div class="md:flex mt-8">
 
-<div class="md:flex">
-
-  <section class="md:w-1/4 hidden md:block">
-    <h4>Related Articles</h4>
+  <section class="hidden md:w-1/4 md:block">
+    <h4 class="my-2">Related Articles</h4>
     <ul>
       {% for article in collections.help | filterRelated(tags, page.fileSlug) %}
-      <li><a href="{{ article.url }}">{{ article.data.title }}</a></li>
+      <li><a class="text-lg" href="{{ article.url }}">{{ article.data.title }}</a></li>
       {% endfor %}
     </ul>
   </section>
 
   <article class="md:w-3/4 md:pl-8">
+    <h2 class="mb-4 text-left">{{ title }}</h2>
+
     {{ content | safe }}
   </article>
 

@@ -12,6 +12,7 @@
 
   h2 {
     @apply font-sans;
+    @apply font-bold;
     @apply text-3xl;
 
     text-shadow: none;
@@ -64,6 +65,29 @@
     position: relative;
     top: -96px;
   }
+}
+
+.help.article {
+  h4 {
+    @apply font-sans;
+    @apply font-semibold;
+    @apply text-xl;
+  }
+
+  .breadcrumbs {
+    @apply flex;
+    @apply flex-wrap;
+    @apply text-sm;
+    @apply text-gray-700;
+
+    li:last-child {
+      @apply text-black;
+    }
+  }
+}
+
+.help-content-container {
+  min-height: 50vh;
 }
 
 @screen md {
