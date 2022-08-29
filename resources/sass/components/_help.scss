@@ -44,35 +44,32 @@
     display: none;
   }
 
-  .nav-items {
+  .topicNav {
     z-index: 1000;
-
-    a {
-      @apply block;
-      @apply px-4;
-      @apply py-2;
-      @apply rounded;
-
-      transition: all 300ms ease-in-out;
-
-      &.active {
-        background-color: theme('colors.red');
-        color: theme('colors.white');
-      }
-    }
   }
 
   .section {
     &.contact {
       color: theme('colors.white');
     }
+
+    &.navbar {
+      .container {
+        @apply py-2;
+      }
+    }
+  }
+
+  .topicAnchor {
+    position: relative;
+    top: -96px;
   }
 }
 
 @screen md {
   .help {
-    .nav-items {
-      top: 112px;
+    .topicNav {
+      top: 96px;
     }
   }
 }
