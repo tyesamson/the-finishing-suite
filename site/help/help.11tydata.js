@@ -1,7 +1,7 @@
 module.exports = {
   eleventyComputed: {
     helpTopics: data => {
-      return ['Formats', 'Delivery', 'Something With A Space', 'Tools'];
+      return ['Popular', 'Handover', 'General', 'Tools'];
     }
   }
 };
