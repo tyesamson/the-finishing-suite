@@ -22,7 +22,8 @@
     color: theme('colors.white');
 
     a {
-      @apply text-xl;
+      font-size: 1.5rem;
+      font-weight: 600;
       line-height: 1;
 
       &:hover {
@@ -39,6 +40,14 @@
     section {
       @apply py-8;
     }
+
+    h2 {
+      color: #444;
+    }
+
+    ul {
+      columns: 2;
+    }
   }
 
   .map {
@@ -51,7 +60,18 @@
 
   .section {
     &.contact {
+      @apply py-0;
+
+      p {
+        @apply mb-0;
+      }
+
       color: theme('colors.white');
+
+      .logo {
+        display: none;
+      }
+
     }
 
     &.navbar {
@@ -80,6 +100,8 @@
     @apply text-sm;
     @apply text-gray-700;
 
+    text-transform: uppercase;
+
     li:last-child {
       @apply text-black;
     }
@@ -88,6 +110,41 @@
 
 .help-content-container {
   min-height: 50vh;
+}
+
+.help-article {
+  ul {
+    @apply list-inside;
+    @apply mb-4;
+
+    li {
+      list-style-type: disc;
+    }
+  }
+}
+
+.article-topic-sidebar {
+  h4 {
+    @apply font-sans;
+    @apply font-bold;
+    @apply text-xl;
+    color: #444;
+  }
+
+  li + li {
+    @apply mt-2;
+  }
+}
+
+.related-articles {
+  h4 {
+    color: #444;
+    font-weight: 700 !important;
+  }
+
+  li + li {
+    @apply mt-4;
+  }
 }
 
 @screen md {

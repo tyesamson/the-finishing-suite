@@ -12,16 +12,16 @@ bodyClass: help article
 
 <div class="md:flex mt-8">
 
-  <section class="hidden md:w-1/4 md:block">
+  <section class="related-articles hidden md:w-1/4 md:block">
     <h4 class="my-2">Related Articles</h4>
     <ul>
       {% for article in collections.help | filterRelated(tags, page.fileSlug) %}
-      <li><a class="text-lg" href="{{ article.url }}">{{ article.data.title }}</a></li>
+      <li><a class="" href="{{ article.url }}">{{ article.data.title }}</a></li>
       {% endfor %}
     </ul>
   </section>
 
-  <article class="md:w-3/4 md:pl-8">
+  <article class="help-article md:w-3/4 md:pl-8">
     <h2 class="mb-4 text-left">{{ title }}</h2>
 
     {{ content | safe }}
