@@ -1,6 +1,6 @@
 ---
-title: Why Pre-Conformed Workflows should only ever be a last resort
-topic: Formats
+title: Why Pre-Conformed Workflows Are A Shortcut That You Should Try To Avoid
+topic: Explainers
 tags:
  - Explainers
 ---

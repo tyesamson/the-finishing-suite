@@ -1,5 +1,5 @@
 ---
-title: Why You Shouldn't Look At Log Video
+title: How You Should Organise Your OCN
 topic: Explainers
 tags:
  - Explainers
