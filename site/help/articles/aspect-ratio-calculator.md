@@ -53,8 +53,6 @@ tags:
         return gcd(b, a % b);
       }
 
-      // if (numerator === denominator) { return '1 : 1'; }
-
       if (numerator < denominator) {
         temp = numerator;
         numerator = denominator;
