@@ -39,37 +39,30 @@ simply be a bin holding the locked sequence. Not strictly necessary, but good pr
 
 **External hard drives**
 
-Where possible, please deliver your project on a single external hard drive or SSD, ideally with a USB type C
-interface (left), and not requiring an external power supply. Micro USB type B interface (right) is also OK.
+Where possible, please deliver your project on a single external hard drive or SSD, ideally with a Micro USB type B interface (left) or USB type C interface (right) and not requiring an external power supply.
 
-Please note that I cannot accept drives with a Thunderbolt interface, which can be confusing because
-Thunderbolt versions 3 and 4 share a physical interface with USB type C. If you are handing over a drive
-with a USB type C interface, please make sure that it is indeed USB 3.1 gen 2 and not Thunderbolt 3 or 4.
+![Micro USB type B and USB type C](/images/help/usb.png "Micro USB type B and USB type C")
 
-Please make sure that your drive is formatted via Windows (NTFS) or MacOS (APFS/HFS+) because I
-cannot accept drives formatted using the Linux ext file systems for handover.
+Please note that I cannot accept drives with a Thunderbolt interface, which can be confusing because Thunderbolt versions 3 and 4 share a physical interface with USB type C. If you are handing over a drive with a USB type C interface, please make sure that it is indeed USB 3.1 gen 2 and not Thunderbolt 3 or 4.
 
-Please do not send USB cables, however, if you have no choice other than to send a drive with an external
-power supply, absolutely do send the power supply along with the drive!
+Please make sure that your drive is formatted via Windows (NTFS) or MacOS (APFS/HFS+) because I cannot accept drives formatted using the Linux ext file systems for handover.
+
+Please do not send USB cables, however, if you have no choice other than to send a drive with an external power supply, absolutely do send the power supply along with the drive!
 
 If you send a drive that is not labeled, please don’t be upset when you discover that I have labeled it myself.
 
 **Media — OCN vs. preconformed working masters**
 
 On almost all jobs, OCN is strongly preferred. For short-form jobs like
-commercial TV spots and music videos especially, OCN should be manageable to hand over on a single
-drive. When handing over OCN, please ensure that all camera-created directory structure and filenames
-remain in-tact.
+commercial TV spots and music videos especially, OCN should be manageable to hand over on a single drive. When handing over OCN, please ensure that all camera-created directory structure and filenames remain in-tact.
 
-For long-form jobs, especially documentary or entertainment/factual shows with a high shooting ratio, it is
-often not realistic to hand over your entire production’s worth of OCN. In these instances it is usually more
-sensible to handover a pre-conformed timeline. There are two potential approaches to delivering a preconformed timeline:
+For long-form jobs, especially documentary or entertainment/factual shows with a high shooting ratio, it is sometimes more sensible to handover a pre-conformed timeline.
 
-If your timeline is cuts only, simply exporting a Prores 4444 or DNxHR 444 Quicktime MOV will almost
-certainly be the easiest route. This will bake in any effects that you have applied in offline editing, so please
-make sure that they are signed off as final and make sure to remove any timeline effects that will need to be
-recreated during the finishing process. Any effects, whether baked into the MOV or removed, should be
-documented with programme timecode in a note file and included with deliverables.
+> See: Why Pre-Conformed Workflows Should Be Avoided If Possible
+
+There are two potential approaches to delivering a preconformed timeline.
+
+If your timeline is cuts only, simply exporting a Prores 4444 or DNxHR 444 Quicktime MOV will almost certainly be the easiest route. This will bake in any effects that you have applied in offline editing, so please make sure that they are signed off as final and make sure to remove any timeline effects that will need to be recreated during the finishing process. Any effects, whether baked into the MOV or removed, should be documented with programme timecode in a note file and included with deliverables.
 
 If your timeline is more complicated and has been cut in Avid Media Composer, you can hand over your
 timeline as an AAF with consolidated media. This will include 99.9% of timeline effects in the metadata,
