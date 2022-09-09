@@ -47,10 +47,6 @@
   background-image: url('../images/backgrounds/texture.jpg');
 }
 
-.bg-reb {
-  background-image: url('../images/portfolio/beastie/beastie1.jpg');
-}
-
 @supports not (-webkit-touch-callout : none) {
   .bg {
     @apply bg-fixed;
