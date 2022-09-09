@@ -1,10 +1,46 @@
 //==========  Header ==========//
 
 .header {
+  position: relative;
   height: 100vh;
+
   text-align: center;
 
   @screen sm {
     height: calc(100vh - 64px);
+  }
+
+  .bg {
+    // display: none;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    opacity: 0;
+
+    z-index: -1;
+
+    transition: opacity 2000ms ease-in-out;
+
+    &.active {
+      // display: block;
+      opacity: 1;
+    }
+  }
+
+  .logo {
+    opacity: .85;
+  }
+
+  a {
+    opacity: .65;
+    transition: opacity 300ms ease-in-out;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 }
