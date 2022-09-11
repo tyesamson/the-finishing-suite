@@ -6,10 +6,10 @@ tags:
 ---
 
 <label>Width 1</label>
-<input id="arcX1" type="number" value="2000" min="1" step="1">
+<input id="arcX1" type="number" value="3" min="1" step="1">
 
 <label>Height 1</label>
-<input id="arcY1" type="number" value="1000" min="1" step="1">
+<input id="arcY1" type="number" value="4" min="1" step="1">
 
 <label>Width 2</label>
 <input id="arcX2" type="number" value="" min="1" step="1">
@@ -17,7 +17,8 @@ tags:
 <label>Height 2</label>
 <input id="arcY2" type="number" value="" min="1" step="1">
 
-<div id="arcRatio">ratio?</div>
+<div id="arcRatioInteger"></div>
+<div id="arcRatioDecimal"></div>
 
 <script>
   const arc$ = {
@@ -25,7 +26,10 @@ tags:
     y1: document.getElementById('arcY1'),
     x2: document.getElementById('arcX2'),
     y2: document.getElementById('arcY2'),
-    ratio: document.getElementById('arcRatio')
+    ratio: {
+      integer: document.getElementById('arcRatioInteger'),
+      decimal: document.getElementById('arcRatioDecimal')
+    }
   }
 
   class ARC {
@@ -74,11 +78,15 @@ tags:
         right = 10;
       }
 
-      const ratio = `${left} : ${right}`; console.error('ratio', ratio);
+      const integerRatio = `${left} : ${right}`; console.error('integerRatio', integerRatio);
+      const decimalRatio = left > right
+        ? `${(left / right).toFixed(2)} : 1`
+        : `1 : ${(right / left).toFixed(2)}`;
 
-      arc$.ratio.innerHTML = ratio;
+      arc$.ratio.integer.innerHTML = integerRatio;
+      arc$.ratio.decimal.innerHTML = decimalRatio;
 
-      return ratio;
+      return integerRatio;
     }
 
     _recalculate(e) {
