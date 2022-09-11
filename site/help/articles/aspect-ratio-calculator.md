@@ -5,20 +5,29 @@ tags:
  - Tools
 ---
 
-<label>Width 1</label>
-<input id="arcX1" type="number" value="3" min="1" step="1">
+<div class="flex flex-row mb-4">
 
-<label>Height 1</label>
-<input id="arcY1" type="number" value="4" min="1" step="1">
+  <div class="flex flex-col align-center text-center">
+    <label>Width</label>
+    <input id="arcX1" class="my-4" type="number" value="1920" min="1" step="1">
+    <input id="arcX2" type="number" value="" min="1" step="1" placeholder="New width">
+  </div>
 
-<label>Width 2</label>
-<input id="arcX2" type="number" value="" min="1" step="1">
+  <div class="mx-4">x</div>
 
-<label>Height 2</label>
-<input id="arcY2" type="number" value="" min="1" step="1">
+  <div class="flex flex-col align-center text-center">
+    <label>Height</label>
+    <input id="arcY1" class="my-4" type="number" value="1080" min="1" step="1">
+    <input id="arcY2" type="number" value="" min="1" step="1" placeholder="New height">
+  </div>
 
-<div id="arcRatioInteger"></div>
-<div id="arcRatioDecimal"></div>
+</div>
+
+<div class="flex flex-row">
+  <div>Aspect Ratio</div>
+  <div id="arcRatioInteger" class="ml-4"></div>
+  <div id="arcRatioDecimal" class="ml-4"></div>
+</div>
 
 <script>
   const arc$ = {
