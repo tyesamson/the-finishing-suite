@@ -47,6 +47,9 @@ An export of the locked cut as it was in offline. Best practice is to include TC
 **TCIP**  
 A window of text burned into a video file that contains timecode and other metadata. Stands for Timecode In Picture. Sometimes interchangeably referred to as BITC (Burned In Timecode)
 
+**Timecode**  
+
+
 **WAV**    
 
 
