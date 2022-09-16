@@ -116,6 +116,20 @@
 }
 
 .help-article {
+  blockquote {
+    @apply px-4;
+    @apply py-2;
+    @apply mb-4;
+
+    border: 1px solid theme('colors.red');
+    background-color: rgba($red, .2);
+    color: $red;
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
   h3, h4, h5, h6 {
     @apply mb-4;
   }
