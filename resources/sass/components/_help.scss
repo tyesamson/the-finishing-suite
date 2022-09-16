@@ -18,6 +18,14 @@
     text-shadow: none;
   }
 
+  h3, h4, h5, h6 {
+    @apply font-sans;
+    @apply font-semibold;
+  }
+
+  h4 { @apply text-xl; }
+  h5 { @apply text-lg; }
+
   nav {
     color: theme('colors.white');
 
@@ -88,11 +96,6 @@
 }
 
 .help.article {
-  h4 {
-    @apply font-sans;
-    @apply font-semibold;
-    @apply text-xl;
-  }
 
   .breadcrumbs {
     @apply flex;
@@ -113,6 +116,10 @@
 }
 
 .help-article {
+  h3, h4, h5, h6 {
+    @apply mb-4;
+  }
+
   ul {
     @apply list-inside;
     @apply mb-4;
