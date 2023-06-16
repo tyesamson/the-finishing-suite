@@ -6,10 +6,13 @@ const arc$ = {
   ratio: {
     integer: document.getElementById('arcRatioInteger'),
     decimal: document.getElementById('arcRatioDecimal')
-  }
+  },
+  round: document.getElementById('arcRound')
 }
 
 class ARC {
+
+  _lastTarget = undefined;
 
   constructor() {
     this._addEventListeners();
@@ -24,6 +27,7 @@ class ARC {
     arc$.y1.addEventListener('keyup', e => this._recalculate(e));
     arc$.x2.addEventListener('keyup', e => this._recalculate(e));
     arc$.y2.addEventListener('keyup', e => this._recalculate(e));
+    arc$.round.addEventListener('change', e => this._recalculate(undefined));
   }
 
   _ratio(numerator, denominator) {
@@ -55,7 +59,7 @@ class ARC {
       right = 10;
     }
 
-    const integerRatio = `${left} : ${right}`; // console.error('integerRatio', integerRatio);
+    const integerRatio = `${left}:${right}`; // console.error('integerRatio', integerRatio);
     const decimalRatio = left > right
       ? `${(left / right).toFixed(2)}:1`
       : `1:${(right / left).toFixed(2)}`;
@@ -81,7 +85,9 @@ class ARC {
       return;
     }
 
-    switch (e.target) {
+    const target = e === undefined ? this._lastTarget : e.target;
+
+    switch (target) {
       case arc$.x1:
         arc$.x2.value = this._solve(undefined, y2, x1, y1);
         break;
@@ -98,16 +104,26 @@ class ARC {
         arc$.x2.value = this._solve(undefined, y2, x1, y1);
         break;
     }
+
+    if (e?.target !== undefined) {
+      this._lastTarget = e.target;
+    }
   }
 
   _solve(width, height, numerator, denominator) {
+    let result = undefined;
+
     if (width !== undefined) {
-      return Math.round(width / (numerator / denominator));
+      result = width / (numerator / denominator);
     } else if (height !== undefined) {
-      return Math.round(height * (numerator / denominator));
+      result = height * (numerator / denominator);
     } else {
-      return undefined;
+      result = undefined;
     }
+
+    if (result === undefined) { return undefined; }
+
+    return arc$.round.checked ? Math.round(result) : result;
   }
 
 }

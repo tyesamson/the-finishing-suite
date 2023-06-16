@@ -11,7 +11,7 @@ tags:
 
   <div class="flex flex-col w-3/7 md:w-auto align-center text-center">
     <label>Width</label>
-    <input id="arcX1" class="my-4" type="number" value="1920" min="1" step="1" tabindex="1">
+    <input id="arcX1" class="my-4" type="number" value="1920" min="1" step="1" placeholder="Existing width" tabindex="1">
     <input id="arcX2" class="w-full" type="number" value="" min="1" step="1" placeholder="New width" tabindex="3">
   </div>
 
@@ -19,10 +19,17 @@ tags:
 
   <div class="flex flex-col w-3/7 md:w-auto align-center text-center">
     <label>Height</label>
-    <input id="arcY1" class="my-4" type="number" value="1080" min="1" step="1" tabindex="2">
+    <input id="arcY1" class="my-4" type="number" value="1080" min="1" step="1" placeholder="Existing height" tabindex="2">
     <input id="arcY2" type="number" value="" min="1" step="1" placeholder="New height" tabindex="4">
   </div>
 
+</div>
+
+<div class="mb-4">
+  <label>
+    <input id="arcRound" type="checkbox" checked>
+    <span>Round to nearest whole number</span>
+  </label>
 </div>
 
 <div>
