@@ -5,7 +5,10 @@ require('laravel-mix-purgecss');
 
 const paths = {
   javascript: {
-    src: './resources/js/main.js',
+    src: {
+      main: './resources/js/main.js',
+      arc: './resources/js/arc.js'
+    },
     dest: './dist/js/'
   },
   sass: {
@@ -26,7 +29,8 @@ mix
   })
 
   // Javascript
-  .js(paths.javascript.src, paths.javascript.dest)
+  .js(paths.javascript.src.main, paths.javascript.dest)
+  .js(paths.javascript.src.arc, paths.javascript.dest)
 
   // Sass
   .sass(paths.sass.src, paths.sass.dest)
@@ -39,4 +43,5 @@ mix
     mix
       .minify(paths.sass.dest + 'main.css')
       .minify(paths.javascript.dest + 'main.js')
+      .minify(paths.javascript.dest + 'arc.js')
   }

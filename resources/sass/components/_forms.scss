@@ -1,0 +1,8 @@
+input[type="number"],
+input[type="text"] {
+  @apply p-2;
+
+  @apply text-lg;
+
+  @apply rounded;
+}
