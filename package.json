@@ -12,6 +12,7 @@
     "build": "yarn run build:webpack && npx @11ty/eleventy --config=eleventy.config.js",
     "build:webpack": "cross-env NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "dev": "cross-env ELEVENTY_ENV=development run-p eleventy:serve webpack:watch",
+    "dev:windows": "set NODE_OPTIONS=--openssl-legacy-provider && yarn run dev",
     "eleventy:serve": "npx @11ty/eleventy --config=eleventy.config.js --serve",
     "webpack:watch": "webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
   },
