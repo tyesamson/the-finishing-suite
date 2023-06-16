@@ -18,6 +18,14 @@
     text-shadow: none;
   }
 
+  h3, h4, h5, h6 {
+    @apply font-sans;
+    @apply font-semibold;
+  }
+
+  h4 { @apply text-xl; }
+  h5 { @apply text-lg; }
+
   nav {
     color: theme('colors.white');
 
@@ -88,11 +96,6 @@
 }
 
 .help.article {
-  h4 {
-    @apply font-sans;
-    @apply font-semibold;
-    @apply text-xl;
-  }
 
   .breadcrumbs {
     @apply flex;
@@ -113,6 +116,24 @@
 }
 
 .help-article {
+  blockquote {
+    @apply px-4;
+    @apply py-2;
+    @apply mb-4;
+
+    border: 1px solid theme('colors.red');
+    background-color: rgba($red, .2);
+    color: $red;
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  h3, h4, h5, h6 {
+    @apply mb-4;
+  }
+
   ul {
     @apply list-inside;
     @apply mb-4;
