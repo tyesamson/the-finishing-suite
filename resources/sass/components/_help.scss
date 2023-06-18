@@ -1,6 +1,18 @@
-.help {
+body.help {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
   background-color: theme('colors.white');
   color: theme('colors.black');
+
+  > .main {
+    flex: 1;
+  }
+
+  > .contact {
+    margin-top: auto;
+  }
 
   a {
     transition: color 300ms ease-in-out;
