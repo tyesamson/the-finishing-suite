@@ -82,7 +82,7 @@ class ServicesCarousel {
     this._swipeHelper = new Swipe(services$$.carousel.inner, swipeConfig);
   }
 
-  _doSlide(activeItem, nextItem, activeIndicator, nextIndicator, orderClassName, directionalClassName) {
+  _doSlide(activeItem, nextItem, activeIndicator, nextIndicator) {
     if (nextItem && nextItem.classList.contains(ClassName.ACTIVE)) {
       this._isSliding = false;
       return;
@@ -90,12 +90,7 @@ class ServicesCarousel {
 
     this._isSliding = true;
 
-    nextItem.classList.add(orderClassName);
-
     reflow(nextItem);
-
-    activeItem.classList.add(directionalClassName);
-    nextItem.classList.add(directionalClassName);
 
     activeIndicator.classList.remove(ClassName.ACTIVE);
     nextIndicator.classList.add(ClassName.ACTIVE);
@@ -135,18 +130,7 @@ class ServicesCarousel {
     const activeIndicator = indicators.find(indicator => indicator.classList.contains(ClassName.ACTIVE));
     const nextIndicator = this._getItemByDirection(direction, indicators, activeIndicator);
 
-    let directionalClassName;
-    let orderClassName;
-
-    if (direction === Direction.NEXT) {
-      directionalClassName = ClassName.LEFT
-      orderClassName = ClassName.NEXT;
-    } else {
-      directionalClassName = ClassName.RIGHT
-      orderClassName = ClassName.PREV;
-    }
-
-    this._doSlide(activeItem, nextItem, activeIndicator, nextIndicator, orderClassName, directionalClassName);
+    this._doSlide(activeItem, nextItem, activeIndicator, nextIndicator);
   }
 
   next() {
