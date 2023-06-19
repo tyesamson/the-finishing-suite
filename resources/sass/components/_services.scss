@@ -23,13 +23,22 @@
   }
 
   .services-list-inner {
-    display: flex;
-    flex-direction: row;
+    position: relative;
 
     overflow-x: hidden;
     overscroll-behavior-x: contain;
 
     -webkit-mask-image: linear-gradient(to right, #0000, #000, #000, #0000);
+  }
+
+  .services-list-slides-container {
+    position: relative;
+    left: 0;
+
+    display: flex;
+    flex-direction: row;
+
+    transition: 0.5s ease;
   }
 
   .services-slide,
@@ -55,6 +64,8 @@
   }
 
   .services-list-indicator {
+    @apply mt-6;
+
     width: 3rem;
     height: .3rem;
 
