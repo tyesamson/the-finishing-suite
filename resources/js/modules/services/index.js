@@ -16,7 +16,12 @@ const servicesSwiper = new Swiper('.services-swiper', {
   },
 
   breakpoints: {
-    1024: {
+    768: {
+      centeredSlides: false,
+      slidesPerView: 2
+    },
+    1200: {
+      centeredSlides: true,
       slidesPerView: 3
     }
   }
