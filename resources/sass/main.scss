@@ -17,6 +17,10 @@
 @import 'components/all';
 
 
+// Import plugins
+@import 'plugins/all';
+
+
 // Import Tailwind utilities
 // TailwindCSS recommends leaving utilities till last to ensure they aren't overwritten.
 @tailwind utilities;

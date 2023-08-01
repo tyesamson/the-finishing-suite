@@ -6,6 +6,9 @@ const $$ = {
   carousel: {
     item        : document.querySelectorAll('.carousel-item')
   },
+  header: {
+    backgrounds : document.querySelectorAll('.header .bg')
+  },
   portfolio: {
     close       : document.getElementById('portfolioClose'),
     grid        : document.getElementById('portfolioGrid'),
