@@ -1,4 +1,10 @@
 .section.services {
+
+  > .container {
+    @apply max-w-none;
+    @apply px-0;
+  }
+
   h2 {
     @apply mb-4;
   }
@@ -18,9 +24,30 @@
     }
   }
 
-  .grid {
-    + .grid {
-      @apply mt-16;
+  .services-swiper {
+    max-width: 600px;
+
+    @apply pb-10;
+
+    @screen md {
+      max-width: 90vw;
+    }
+
+    .swiper-slide {
+      @apply px-10;
+      height: auto;
+    }
+
+    .slide-content {
+      margin-left: auto;
+      margin-right: auto;
+      padding: 3rem;
+      max-width: 24.75rem; // (300/16)+6
+      height: 100%;
+
+      background-color: rgba(0,0,0,.25);
+      border-radius: 2rem;
     }
   }
+
 }
