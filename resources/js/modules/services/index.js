@@ -1,8 +1,9 @@
 const servicesSwiper = new Swiper('.services-swiper', {
   centeredSlides: true,
+  autoHeight: false,
   loop: true,
   slidesPerView: 1,
-  spaceBetween: 30,
+  spaceBetween: 0,
 
   // If we need pagination
   pagination: {

@@ -25,10 +25,6 @@
   }
 
   .services-swiper {
-    // max-width: 75vw;
-    // margin-left: auto;
-    // margin-right: auto;
-
     max-width: 600px;
 
     @apply pb-10;
@@ -38,13 +34,19 @@
     }
 
     .swiper-slide {
-      @apply px-12;
+      @apply px-10;
+      height: auto;
     }
 
     .slide-content {
       margin-left: auto;
       margin-right: auto;
-      max-width: 300px;
+      padding: 3rem;
+      max-width: 24.75rem; // (300/16)+6
+      height: 100%;
+
+      background-color: rgba(0,0,0,.25);
+      border-radius: 2rem;
     }
   }
 
