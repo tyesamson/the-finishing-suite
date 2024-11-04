@@ -32,5 +32,6 @@
     "sass-loader": "^9.0.2",
     "tailwindcss": "^1.6.2",
     "vue-template-compiler": "^2.6.11"
-  }
+  },
+  "dependencies": {}
 }
