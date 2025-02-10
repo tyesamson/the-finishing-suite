@@ -2,7 +2,7 @@
 tags: portfolio
 date: 2020-11-18
 title: Young And Can't Cum
-description: 22'00" Documentary
+description: Documentary special
 thumb: images/portfolio/thumbs/youngandcantcum.jpg
 images:
  - images/portfolio/youngandcantcum/youngandcantcum1.jpg

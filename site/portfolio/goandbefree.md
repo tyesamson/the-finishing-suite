@@ -17,7 +17,7 @@ images:
  - images/portfolio/goandbefree/goandbefree_37.jpg
 
 videos:
- - https://www.youtube.com/embed/FxcdfVPg7Y0&ab?vq=hd1080
+ - https://www.youtube.com/embed/FxcdfVPg7Y0?vq=hd1080
 ---
 
 <dl>
