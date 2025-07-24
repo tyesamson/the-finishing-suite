@@ -27,7 +27,4 @@ images:
 
   <dt>Cinematographer</dt>
   <dd>Alex McDonald</dd>
-
-  <dt>Editor</dt>
-  <dd>Rajneel Singh</dd>
 </dl>
