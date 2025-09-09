@@ -20,6 +20,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0",
     "browser-sync-webpack-plugin": "^2.2.2",
+    "browserslist": "^4.25.4",
     "cross-env": "^7.0.2",
     "gulp": "^4.0.2",
     "gulp-gh-pages": "^0.5.4",
