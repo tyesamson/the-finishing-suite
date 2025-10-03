@@ -3,18 +3,18 @@ tags: portfolio
 date: 2025-02-13
 title: KLOOZ — "LAZY DAZE"
 description: Music Video
-thumb: images/portfolio/thumbs/kloos-lazy-days.jpg
+thumb: images/portfolio/thumbs/kloos-lazy-daze.jpg
 images:
- - images/portfolio/kloos-lazy-days/kloos-lazy-days_14.jpg
- - images/portfolio/kloos-lazy-days/kloos-lazy-days_24.jpg
- - images/portfolio/kloos-lazy-days/kloos-lazy-days_02.jpg
- - images/portfolio/kloos-lazy-days/kloos-lazy-days_07.jpg
- - images/portfolio/kloos-lazy-days/kloos-lazy-days_04.jpg
- - images/portfolio/kloos-lazy-days/kloos-lazy-days_12.jpg
- - images/portfolio/kloos-lazy-days/kloos-lazy-days_29.jpg
- - images/portfolio/kloos-lazy-days/kloos-lazy-days_20.jpg
- - images/portfolio/kloos-lazy-days/kloos-lazy-days_11.jpg
- - images/portfolio/kloos-lazy-days/kloos-lazy-days_18.jpg
+ - images/portfolio/kloos-lazy-daze/kloos-lazy-daze_14.jpg
+ - images/portfolio/kloos-lazy-daze/kloos-lazy-daze_24.jpg
+ - images/portfolio/kloos-lazy-daze/kloos-lazy-daze_02.jpg
+ - images/portfolio/kloos-lazy-daze/kloos-lazy-daze_07.jpg
+ - images/portfolio/kloos-lazy-daze/kloos-lazy-daze_04.jpg
+ - images/portfolio/kloos-lazy-daze/kloos-lazy-daze_12.jpg
+ - images/portfolio/kloos-lazy-daze/kloos-lazy-daze_29.jpg
+ - images/portfolio/kloos-lazy-daze/kloos-lazy-daze_20.jpg
+ - images/portfolio/kloos-lazy-daze/kloos-lazy-daze_11.jpg
+ - images/portfolio/kloos-lazy-daze/kloos-lazy-daze_18.jpg
 
 videos:
  - https://www.youtube.com/embed/xPWs38Lncfk?vq=hd1080
