@@ -7,7 +7,7 @@ const servicesSwiper = new Swiper('.services-swiper', {
 
   pagination: {
     el: '.swiper-pagination',
-    clickable: false
+    clickable: true
   },
 
   navigation: {
